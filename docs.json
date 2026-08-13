@@ -22,7 +22,7 @@
             ]
           },
           {
-            "group": "Design Tokens",
+            "group": "Foundation",
             "pages": [
               "foundation/colors",
               "foundation/typography",

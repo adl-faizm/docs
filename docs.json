@@ -1,10 +1,10 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "name": "XLSmart Design System",
-  "theme": "willow",
+  "theme": "mint",
   "colors": {
-    "primary": "#ef7025",
-    "light": "#eec9bc",
+    "primary": "#1E22AA",
+    "light": "#ffffff",
     "dark": "#4fa1ab"
   },
   "favicon": "/favicon.svg",
@@ -113,5 +113,9 @@
         ]
       }
     ]
+  },
+  "appearance": {
+    "default": "light",
+    "strict": true
   }
 }

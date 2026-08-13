@@ -1,0 +1,77 @@
+---
+title: "Pagination: Multi-Page Navigation Control"
+sidebarTitle: "Pagination"
+description: "The XLSmart Pagination component lets users navigate through pages of data with previous/next buttons and direct page number access."
+---
+
+The `Pagination` component provides controls for navigating large datasets split across multiple pages. It renders page number buttons, previous/next arrows, and optional page-size selection.
+
+## Import
+
+```tsx
+import { Pagination } from '@xlsmart/design-system';
+```
+
+## Basic usage
+
+```tsx pagination-basic.tsx
+<Pagination
+  currentPage={currentPage}
+  totalPages={24}
+  onPageChange={setCurrentPage}
+/>
+```
+
+## With page size selector
+
+```tsx pagination-page-size.tsx
+<Pagination
+  currentPage={currentPage}
+  totalPages={totalPages}
+  pageSize={pageSize}
+  pageSizeOptions={[10, 25, 50, 100]}
+  onPageChange={setCurrentPage}
+  onPageSizeChange={setPageSize}
+/>
+```
+
+## Compact mode
+
+```tsx pagination-compact.tsx
+<Pagination
+  currentPage={currentPage}
+  totalPages={10}
+  onPageChange={setCurrentPage}
+  compact
+/>
+```
+
+## Props
+
+<ParamField path="currentPage" type="number" required>
+  The currently active page number (1-based).
+</ParamField>
+
+<ParamField path="totalPages" type="number" required>
+  Total number of pages.
+</ParamField>
+
+<ParamField path="onPageChange" type="(page: number) => void" required>
+  Callback fired when the user navigates to a different page.
+</ParamField>
+
+<ParamField path="pageSize" type="number">
+  Current page size (items per page).
+</ParamField>
+
+<ParamField path="pageSizeOptions" type="number[]">
+  Available page size options. Shows a page-size selector when provided.
+</ParamField>
+
+<ParamField path="onPageSizeChange" type="(size: number) => void">
+  Callback fired when the user changes the page size.
+</ParamField>
+
+<ParamField path="compact" type="boolean">
+  Shows only previous/next buttons with a "Page X of Y" label. Defaults to `false`.
+</ParamField>

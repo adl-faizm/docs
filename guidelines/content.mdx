@@ -1,0 +1,90 @@
+---
+title: "Content and Writing Style Guidelines"
+sidebarTitle: "Content"
+description: "XLSmart Design System content guidelines cover voice and tone, UI copy patterns, error messages, and writing conventions for consistent product language."
+---
+
+Consistent language is as important as consistent visuals. XLSmart Design System's content guidelines help product teams write UI copy that is clear, helpful, and on-brand — from button labels to error messages.
+
+## Voice and tone
+
+XLSmart products speak with a voice that is:
+
+- **Clear** — Plain language, no jargon. Write for someone encountering the concept for the first time.
+- **Direct** — Get to the point. Lead with the action or outcome, not the explanation.
+- **Helpful** — Tell users what to do next, not just what went wrong.
+- **Respectful** — Treat users as capable adults. Avoid condescending language.
+
+## Button labels
+
+Button labels tell users exactly what will happen when they click. Follow these rules:
+
+<Tabs>
+  <Tab title="Do">
+    - Use a verb + noun: **Save changes**, **Delete item**, **Send message**
+    - Match the outcome: a button that creates uses **Create**, not **Submit**
+    - Use sentence case: **Add user**, not **Add User** or **ADD USER**
+  </Tab>
+  <Tab title="Don't">
+    - Avoid vague labels: ~~OK~~, ~~Yes~~, ~~Click here~~
+    - Don't repeat context already on screen: ~~Save account settings~~ → **Save changes**
+    - Don't use ALL CAPS for emphasis
+  </Tab>
+</Tabs>
+
+## Error messages
+
+Good error messages explain what went wrong and how to fix it:
+
+| Pattern | Bad example | Good example |
+|---------|-------------|---------------|
+| Be specific | "An error occurred" | "We couldn't save your changes. Check your internet connection and try again." |
+| Suggest a fix | "Invalid input" | "Enter a valid email address, like name@example.com" |
+| Avoid blame | "You entered the wrong password" | "That password doesn't match. Try again or reset your password." |
+
+## Form labels and placeholders
+
+- **Labels** are required on every input — never use placeholder text as a substitute for a label
+- **Placeholder text** should show an example value, not restate the label
+- **Helper text** appears below the input for additional context or formatting guidance
+
+```tsx form-example.tsx
+// Good: label + placeholder as example + helper text
+<Input
+  label="Email address"
+  placeholder="you@example.com"
+  helperText="We'll send your receipt to this address."
+/>
+
+// Bad: no label, placeholder used as label
+<Input placeholder="Enter email address" />
+```
+
+## Empty states
+
+When a list, table, or view has no data, the empty state should:
+
+1. Tell the user why there's nothing here
+2. Explain what they can do to add content
+3. Provide a direct action when possible
+
+```tsx empty-state.tsx
+<EmptyState
+  icon={<Folder size={48} />}
+  title="No projects yet"
+  description="Create your first project to get started."
+  action={<Button variant="primary">Create project</Button>}
+/>
+```
+
+## Capitalization conventions
+
+| Element | Convention | Example |
+|---------|------------|---------|
+| Headings | Sentence case | "Getting started with projects" |
+| Button labels | Sentence case | "Create project" |
+| Navigation labels | Title case | "Design Tokens" |
+| Error messages | Sentence case | "Something went wrong." |
+| Tooltips | Sentence case | "Copy to clipboard" |
+
+<Tip>When in doubt, use sentence case. Title case is reserved for navigation labels and proper nouns.</Tip>

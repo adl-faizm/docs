@@ -1,0 +1,54 @@
+---
+title: "Elevation and Shadow Tokens"
+sidebarTitle: "Elevation"
+description: "XLSmart Design System elevation tokens define box shadow layers that communicate depth and stacking order in your UI."
+---
+
+Elevation tokens give you a consistent set of shadow values to communicate depth and hierarchy. Use higher elevation values for elements that appear on top of others — like modals, dropdowns, and tooltips.
+
+## Shadow scale
+
+| Token | Value | Usage |
+|-------|-------|-------|
+| `--shadow-none` | `none` | Flat surfaces, no depth |
+| `--shadow-xs` | `0 1px 2px rgba(0,0,0,0.05)` | Subtle separation (table rows, avatars) |
+| `--shadow-sm` | `0 1px 3px rgba(0,0,0,0.10), 0 1px 2px rgba(0,0,0,0.06)` | Cards, contained components |
+| `--shadow-md` | `0 4px 6px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.06)` | Dropdowns, popovers |
+| `--shadow-lg` | `0 10px 15px rgba(0,0,0,0.10), 0 4px 6px rgba(0,0,0,0.05)` | Floating panels, dialogs |
+| `--shadow-xl` | `0 20px 25px rgba(0,0,0,0.10), 0 10px 10px rgba(0,0,0,0.04)` | Modals, overlays |
+| `--shadow-2xl` | `0 25px 50px rgba(0,0,0,0.25)` | Full-screen drawers, sheets |
+
+## Z-index scale
+
+Elevation is also communicated through z-index. Use the provided z-index tokens to avoid stacking conflicts:
+
+| Token | Value | Usage |
+|-------|-------|-------|
+| `--z-base` | 0 | Normal document flow |
+| `--z-raised` | 10 | Sticky headers, inline overlays |
+| `--z-dropdown` | 100 | Dropdowns, select menus |
+| `--z-sticky` | 200 | Sticky navigation bars |
+| `--z-modal-backdrop` | 300 | Modal backdrop overlay |
+| `--z-modal` | 400 | Modal dialogs |
+| `--z-toast` | 500 | Toast notifications |
+| `--z-tooltip` | 600 | Tooltips (always on top) |
+
+## Usage example
+
+```css card.css
+.card {
+  box-shadow: var(--shadow-sm);
+}
+
+.dropdown-menu {
+  box-shadow: var(--shadow-md);
+  z-index: var(--z-dropdown);
+}
+
+.modal {
+  box-shadow: var(--shadow-xl);
+  z-index: var(--z-modal);
+}
+```
+
+<Tip>Never use arbitrary z-index values like `z-index: 9999`. Always use a token from the z-index scale to avoid stacking conflicts across components.</Tip>

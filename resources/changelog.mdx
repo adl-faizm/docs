@@ -1,0 +1,89 @@
+---
+title: "XLSmart Design System Changelog"
+sidebarTitle: "Changelog"
+description: "Release notes for XLSmart Design System, including new components, breaking changes, deprecations, and bug fixes for each version."
+---
+
+This changelog documents all notable changes to `@xlsmart/design-system`. The design system follows [Semantic Versioning](https://semver.org/): patch releases for bug fixes, minor releases for new features, and major releases for breaking changes.
+
+<Info>Token changes are always considered breaking changes and are only shipped in major releases. Component API changes that are backwards-compatible ship in minor releases.</Info>
+
+## v2.0.0 — Current
+
+**Released:** Q1 2025
+
+### Breaking changes
+
+- **Token rename**: All spacing tokens renamed from `--spacing-*` to `--space-*` to align with the internal naming convention. Update your CSS overrides accordingly.
+- **Button API**: The `colorScheme` prop has been removed. Use `variant` instead (`variant="primary"` replaces `colorScheme="brand"`).
+- **Modal**: The `isOpen` prop has been renamed to `open` for consistency with other overlay components.
+
+### New components
+
+- Added `Tag` component for removable labels in filtering and multi-select contexts
+- Added `Toggle` component as a dedicated on/off switch (distinct from `Checkbox`)
+- Added `Pagination` component for multi-page data navigation
+
+### Improvements
+
+- All form components now support `helperText` and `error` as string props (previously required custom wrappers)
+- `Select` now supports `searchable` and `multiple` props natively
+- `Toast` now supports an `action` prop for undo-style interactions
+- Dark mode token set is now complete — all components have tested dark mode support
+
+### Bug fixes
+
+- Fixed: `Modal` did not restore scroll position when closed on iOS Safari
+- Fixed: `Checkbox` indeterminate state was not correctly announced by VoiceOver
+- Fixed: `Tooltip` did not appear on keyboard focus when inside a disabled parent
+
+---
+
+## v1.5.0
+
+**Released:** Q3 2024
+
+### New components
+
+- Added `Breadcrumb` and `BreadcrumbItem`
+- Added `Divider` with horizontal and vertical orientations and optional label
+
+### Improvements
+
+- `Grid` now supports `rowGap` as a separate prop from `gap`
+- `Stack` now accepts responsive values for `direction`, `gap`, and `align`
+- Added `iconLeft` and `iconRight` props to `Button`
+
+### Bug fixes
+
+- Fixed: `Select` dropdown clipped by overflow containers
+- Fixed: `Alert` action area spacing inconsistency on small screens
+
+---
+
+## v1.4.0
+
+**Released:** Q1 2024
+
+### New components
+
+- Added `Tabs` with controlled and uncontrolled modes, vertical layout, and badge support
+
+### Improvements
+
+- Motion tokens added: duration and easing scales for consistent animation
+- Elevation tokens added: shadow and z-index scales
+- `Button` now supports `loading` state with built-in spinner
+
+---
+
+## v1.0.0
+
+**Released:** Q3 2023
+
+Initial release of XLSmart Design System with:
+
+- Core component library: `Button`, `Input`, `Select`, `Checkbox`, `Radio`, `Modal`, `Alert`, `Toast`, `Tooltip`, `Badge`, `Grid`, `Stack`
+- Design token system: colors, typography, spacing
+- Figma library (beta)
+- WCAG 2.1 AA compliance across all components

@@ -1,0 +1,86 @@
+---
+title: "Theming XLSmart Design System for Your Brand"
+sidebarTitle: "Theming"
+description: "Learn how to customize XLSmart Design System colors, typography, and tokens to match your product's brand using CSS custom properties and theme config."
+---
+
+XLSmart Design System is built on a token layer that separates design decisions from component implementation. By overriding token values, you can adapt the system to any brand without touching component code.
+
+## How theming works
+
+Every design decision — color, typography, spacing, elevation — is expressed as a CSS custom property (variable). Override these at the `:root` level to theme the entire system:
+
+```css theme.css
+:root {
+  /* Brand colors */
+  --color-primary-500: #3b82f6;   /* your brand blue */
+  --color-primary-700: #1d4ed8;   /* darker shade for hover */
+  --color-primary-300: #93c5fd;   /* lighter shade for backgrounds */
+
+  /* Typography */
+  --font-family-sans: 'Roboto', system-ui, sans-serif;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 12px;
+}
+```
+
+## Token categories you can override
+
+| Category | What it controls |
+|----------|------------------|
+| `--color-primary-*` | Brand color scale (50–900) |
+| `--color-neutral-*` | Gray scale (0–900) |
+| `--color-success-*` | Success semantic scale |
+| `--color-warning-*` | Warning semantic scale |
+| `--color-error-*` | Error semantic scale |
+| `--font-family-sans` | Body and UI font |
+| `--font-family-mono` | Code and monospace font |
+| `--radius-sm/md/lg/xl` | Border radius scale |
+| `--shadow-*` | Box shadow scale |
+
+## Per-product theming
+
+If you are building multiple products that each need different branding, apply themes by wrapping each product's root element with a themed class:
+
+```css themes.css
+.theme-product-a {
+  --color-primary-500: #ef7025;
+  --font-family-sans: 'Inter', sans-serif;
+}
+
+.theme-product-b {
+  --color-primary-500: #6366f1;
+  --font-family-sans: 'DM Sans', sans-serif;
+}
+```
+
+```tsx app.tsx
+<div className="theme-product-a">
+  <ProductAApp />
+</div>
+```
+
+## Dark mode
+
+XLSmart Design System includes a dark mode token set. Enable it by adding the `data-theme="dark"` attribute to your root element:
+
+```tsx dark-mode.tsx
+<html data-theme={isDarkMode ? 'dark' : 'light'}>
+  {/* ... */}
+</html>
+```
+
+To customize dark mode colors, override the tokens inside the `[data-theme="dark"]` selector:
+
+```css dark-mode.css
+[data-theme="dark"] {
+  --color-bg-surface: #1a1a1a;
+  --color-text-primary: #f5f5f5;
+  --color-primary-500: #fb923c;  /* lighter orange for dark backgrounds */
+}
+```
+
+<Tip>Override semantic alias tokens (`--color-text-primary`, `--color-bg-surface`) for dark mode rather than the raw palette tokens. This gives you finer control over how the UI adapts to dark backgrounds.</Tip>

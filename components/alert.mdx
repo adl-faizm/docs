@@ -1,0 +1,75 @@
+---
+title: "Alert: Inline Feedback Banners"
+sidebarTitle: "Alert"
+description: "The XLSmart Alert component displays inline feedback messages with success, warning, error, and info variants, including optional dismiss and actions."
+---
+
+The `Alert` component displays persistent inline feedback messages within the page layout. Use alerts for important status messages that the user must acknowledge before proceeding — not for transient notifications (use `Toast` for those).
+
+## Import
+
+```tsx
+import { Alert } from '@xlsmart/design-system';
+```
+
+## Variants
+
+```tsx alert-variants.tsx
+<Alert variant="success" title="Changes saved">
+  Your profile has been updated successfully.
+</Alert>
+
+<Alert variant="warning" title="Action required">
+  Your trial expires in 3 days. Upgrade to continue.
+</Alert>
+
+<Alert variant="error" title="Submission failed">
+  Please correct the errors below before continuing.
+</Alert>
+
+<Alert variant="info" title="New version available">
+  A new version of this feature is available. Refresh to update.
+</Alert>
+```
+
+## Dismissible alert
+
+```tsx alert-dismiss.tsx
+<Alert
+  variant="info"
+  title="Tip"
+  onDismiss={() => setShowAlert(false)}
+>
+  You can customize your dashboard layout from Settings.
+</Alert>
+```
+
+## With action
+
+```tsx alert-action.tsx
+<Alert
+  variant="warning"
+  title="Storage almost full"
+  action={<Button variant="secondary" size="sm">Upgrade plan</Button>}
+>
+  You have used 90% of your storage. Upgrade to add more space.
+</Alert>
+```
+
+## Props
+
+<ParamField path="variant" type="'success' | 'warning' | 'error' | 'info'" required>
+  Semantic variant that controls the color and icon.
+</ParamField>
+
+<ParamField path="title" type="string">
+  Short summary shown in bold above the description.
+</ParamField>
+
+<ParamField path="onDismiss" type="() => void">
+  If provided, renders a dismiss button in the top-right corner.
+</ParamField>
+
+<ParamField path="action" type="ReactNode">
+  Optional action element (usually a `Button`) rendered below the message.
+</ParamField>

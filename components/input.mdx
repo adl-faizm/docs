@@ -1,0 +1,123 @@
+---
+title: "Input: Text Field with Validation States"
+sidebarTitle: "Input"
+description: "The XLSmart Input component supports text, email, password, and number types with label, helper text, error, and disabled states."
+---
+
+The `Input` component is the standard text field in XLSmart Design System. It handles all common input types, validation states, and accessibility requirements out of the box.
+
+## Import
+
+```tsx
+import { Input } from '@xlsmart/design-system';
+```
+
+## Basic usage
+
+```tsx input-basic.tsx
+<Input
+  label="Email address"
+  type="email"
+  placeholder="you@example.com"
+/>
+```
+
+## With helper text
+
+```tsx input-helper.tsx
+<Input
+  label="Password"
+  type="password"
+  helperText="Must be at least 8 characters."
+/>
+```
+
+## Validation states
+
+```tsx input-states.tsx
+// Error state
+<Input
+  label="Username"
+  value={username}
+  onChange={setUsername}
+  error="This username is already taken."
+/>
+
+// Success state
+<Input
+  label="Username"
+  value={username}
+  success="Username is available!"
+/>
+
+// Disabled
+<Input
+  label="Account ID"
+  value="acc_12345"
+  disabled
+/>
+```
+
+## With icons
+
+```tsx input-icons.tsx
+import { MagnifyingGlass, Lock } from '@phosphor-icons/react';
+
+<Input
+  label="Search"
+  placeholder="Search items..."
+  iconLeft={<MagnifyingGlass />}
+/>
+
+<Input
+  label="Password"
+  type="password"
+  iconRight={<Lock />}
+/>
+```
+
+## Props
+
+<ParamField path="label" type="string">
+  Visible label rendered above the input. Always provide a label for accessibility.
+</ParamField>
+
+<ParamField path="type" type="'text' | 'email' | 'password' | 'number' | 'tel' | 'url' | 'search'">
+  HTML input type. Defaults to `'text'`.
+</ParamField>
+
+<ParamField path="placeholder" type="string">
+  Placeholder text shown when the input is empty.
+</ParamField>
+
+<ParamField path="helperText" type="string">
+  Secondary text below the input providing additional context.
+</ParamField>
+
+<ParamField path="error" type="string">
+  Error message displayed below the input. Sets the input into an error state.
+</ParamField>
+
+<ParamField path="success" type="string">
+  Success message displayed below the input. Sets the input into a success state.
+</ParamField>
+
+<ParamField path="disabled" type="boolean">
+  Disables the input. Defaults to `false`.
+</ParamField>
+
+<ParamField path="iconLeft" type="ReactNode">
+  Icon rendered inside the left side of the input.
+</ParamField>
+
+<ParamField path="iconRight" type="ReactNode">
+  Icon rendered inside the right side of the input.
+</ParamField>
+
+<ParamField path="value" type="string">
+  Controlled value of the input.
+</ParamField>
+
+<ParamField path="onChange" type="(value: string) => void">
+  Callback fired when the input value changes.
+</ParamField>

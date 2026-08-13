@@ -1,0 +1,105 @@
+---
+title: "Tabs: Horizontal and Vertical Navigation Panels"
+sidebarTitle: "Tabs"
+description: "The XLSmart Tabs component provides accessible tabbed navigation for switching between related content panels within a single view."
+---
+
+The `Tabs` component organizes related content into separate panels, keeping the page compact while letting users switch between views without navigating away. It supports horizontal and vertical layouts and full keyboard navigation.
+
+## Import
+
+```tsx
+import { Tabs, Tab, TabPanel } from '@xlsmart/design-system';
+```
+
+## Basic usage
+
+```tsx tabs-basic.tsx
+<Tabs defaultValue="overview">
+  <Tab value="overview">Overview</Tab>
+  <Tab value="settings">Settings</Tab>
+  <Tab value="activity">Activity</Tab>
+
+  <TabPanel value="overview">
+    <OverviewContent />
+  </TabPanel>
+  <TabPanel value="settings">
+    <SettingsContent />
+  </TabPanel>
+  <TabPanel value="activity">
+    <ActivityContent />
+  </TabPanel>
+</Tabs>
+```
+
+## Controlled tabs
+
+```tsx tabs-controlled.tsx
+const [activeTab, setActiveTab] = useState('overview');
+
+<Tabs value={activeTab} onChange={setActiveTab}>
+  <Tab value="overview">Overview</Tab>
+  <Tab value="settings">Settings</Tab>
+
+  <TabPanel value="overview"><OverviewContent /></TabPanel>
+  <TabPanel value="settings"><SettingsContent /></TabPanel>
+</Tabs>
+```
+
+## Vertical layout
+
+```tsx tabs-vertical.tsx
+<Tabs orientation="vertical" defaultValue="general">
+  <Tab value="general">General</Tab>
+  <Tab value="security">Security</Tab>
+  <Tab value="billing">Billing</Tab>
+
+  <TabPanel value="general"><GeneralSettings /></TabPanel>
+  <TabPanel value="security"><SecuritySettings /></TabPanel>
+  <TabPanel value="billing"><BillingSettings /></TabPanel>
+</Tabs>
+```
+
+## With badges
+
+```tsx tabs-badge.tsx
+import { Badge } from '@xlsmart/design-system';
+
+<Tabs defaultValue="inbox">
+  <Tab value="inbox" badge={<Badge count={12} />}>Inbox</Tab>
+  <Tab value="sent">Sent</Tab>
+  <Tab value="drafts" badge={<Badge count={3} variant="warning" />}>Drafts</Tab>
+</Tabs>
+```
+
+## Props — Tabs
+
+<ParamField path="defaultValue" type="string">
+  The value of the tab selected by default (uncontrolled).
+</ParamField>
+
+<ParamField path="value" type="string">
+  Controlled active tab value.
+</ParamField>
+
+<ParamField path="onChange" type="(value: string) => void">
+  Callback fired when the active tab changes.
+</ParamField>
+
+<ParamField path="orientation" type="'horizontal' | 'vertical'">
+  Layout direction of the tab list. Defaults to `'horizontal'`.
+</ParamField>
+
+## Props — Tab
+
+<ParamField path="value" type="string" required>
+  Unique identifier for this tab.
+</ParamField>
+
+<ParamField path="disabled" type="boolean">
+  Disables this tab. Defaults to `false`.
+</ParamField>
+
+<ParamField path="badge" type="ReactNode">
+  Badge element rendered after the tab label.
+</ParamField>

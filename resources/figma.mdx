@@ -1,0 +1,54 @@
+---
+title: "XLSmart Design System Figma Library Guide"
+sidebarTitle: "Figma Library"
+description: "Learn how to access and use the XLSmart Design System Figma component library, including setup, component usage, and staying in sync with code."
+---
+
+The XLSmart Design System Figma library provides a complete set of components, styles, and variables that mirror the production code library. When you use the Figma library, your designs are already aligned with what developers will build — no redlines, no guesswork.
+
+## Getting access
+
+<Steps>
+  <Step title="Request library access">
+    Ask your design team admin to add you to the XLSmart Design System Figma organization. You'll receive an invitation to the team workspace.
+  </Step>
+  <Step title="Enable the library">
+    In your Figma file, open the **Assets** panel (⇧⌥O), click the **book icon** at the top, and enable **XLSmart Design System** under Team Libraries.
+  </Step>
+  <Step title="Start using components">
+    Search for any component in the Assets panel and drag it onto your canvas. All components are already using the correct tokens for color, typography, and spacing.
+  </Step>
+</Steps>
+
+## What's in the library
+
+The Figma library includes everything in the component documentation:
+
+- **All UI components** — every component in the Components tab is available in Figma, with all variants and states
+- **Design tokens** — colors, typography, spacing, elevation, and motion are set up as Figma Variables, synced to the code tokens
+- **Icons** — the full Phosphor icon set is available as Figma components
+- **Layout templates** — pre-built page templates and responsive grids
+
+## Using variables (tokens)
+
+To maintain consistency, apply color and typography using Figma Variables rather than raw hex values:
+
+1. Select a layer
+2. In the **Fill** or **Typography** section of the right panel, click the style icon
+3. Choose a variable from the XLSmart library (e.g., `color/primary/500`)
+
+This ensures your designs update automatically if the design system tokens are updated.
+
+## Staying in sync
+
+The Figma library is updated alongside code releases. When a library update is available:
+
+1. Figma will notify you with a banner in your file: **"Updates available in your library"**
+2. Click **Review** to see what changed
+3. Click **Update all** to apply the changes
+
+<Tip>Enable Figma notification emails for library updates so you're always aware when the design system has changed.</Tip>
+
+## Contribution and feedback
+
+If you find a component missing from the Figma library or notice a discrepancy between Figma and code, follow the process in the [Contributing](/contributing) guide.

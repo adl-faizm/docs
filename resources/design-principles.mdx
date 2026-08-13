@@ -1,0 +1,59 @@
+---
+title: "Design Principles Behind XLSmart Design System"
+sidebarTitle: "Design Principles"
+description: "The XLSmart Design System is guided by five principles: clarity, consistency, accessibility, efficiency, and flexibility. Learn how these shape every component decision."
+---
+
+Every component, token, and guideline in XLSmart Design System is shaped by five core design principles. Understanding these principles helps you use the system effectively and make good design decisions when you're working beyond the boundaries of existing components.
+
+## 1. Clarity
+
+**Good design communicates without explanation.**
+
+Components should express their purpose immediately. Labels must be explicit, states must be obvious, and feedback must be direct. We avoid clever or subtle design patterns that require users to figure out how something works.
+
+- Use clear, specific button labels (not "OK" or "Yes")
+- Error messages explain what went wrong and how to fix it
+- Empty states guide the user toward the next action
+
+## 2. Consistency
+
+**Familiar patterns reduce cognitive load.**
+
+The same component should look and behave the same way everywhere it appears. Consistency lets users build a mental model of the product and use it more confidently over time.
+
+- Use design system components instead of building custom variants
+- Follow the same interaction patterns across all product areas
+- Use tokens — never hard-code values that deviate from the system
+
+## 3. Accessibility
+
+**Every user deserves the same experience.**
+
+Accessibility is not an afterthought or a compliance checkbox. It is a fundamental quality attribute. XLSmart products must work for users of assistive technologies, users with motor impairments, and users in challenging conditions.
+
+- All components meet WCAG 2.1 AA standards
+- Test with keyboards and screen readers, not just mice
+- Design for context: sunlight, one hand, distraction, and urgency
+
+## 4. Efficiency
+
+**Reduce effort at every step.**
+
+Design system components should make it faster to build quality interfaces, not slower. Good defaults mean you spend less time configuring and more time solving product problems. Components should require minimal code to achieve common outcomes.
+
+- Sensible defaults for every prop
+- Single import, ready to use
+- Composed layouts in minutes, not hours
+
+## 5. Flexibility
+
+**The system should adapt to the product, not the other way around.**
+
+No design system can anticipate every product need. The system is built to be extended: tokens can be overridden for theming, components accept custom rendering via render props and slots, and the layout system is open-ended. Flexibility means teams can stay in the system without feeling constrained.
+
+- Token-based theming for any brand
+- Composition-first API: build complex patterns from simple primitives
+- Escape hatches for truly custom requirements
+
+<Tip>When a component doesn't quite fit your use case, explore composition before reaching for a fully custom solution. Most complex UIs can be built from `Stack`, `Grid`, and a few primitives.</Tip>

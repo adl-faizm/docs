@@ -1,0 +1,107 @@
+---
+title: "Button: Primary Action Component"
+sidebarTitle: "Button"
+description: "The XLSmart Button component supports primary, secondary, ghost, and danger variants with built-in loading, disabled, and icon states."
+---
+
+The `Button` component is the most commonly used interactive element in XLSmart Design System. It supports four visual variants, multiple sizes, icon placement, loading states, and full keyboard and screen reader accessibility.
+
+## Import
+
+```tsx
+import { Button } from '@xlsmart/design-system';
+```
+
+## Variants
+
+```tsx button-variants.tsx
+// Primary — main call to action
+<Button variant="primary">Save changes</Button>
+
+// Secondary — supporting action
+<Button variant="secondary">Cancel</Button>
+
+// Ghost — low-emphasis action
+<Button variant="ghost">Learn more</Button>
+
+// Danger — destructive action
+<Button variant="danger">Delete account</Button>
+```
+
+## Sizes
+
+```tsx button-sizes.tsx
+<Button size="sm">Small</Button>
+<Button size="md">Medium</Button>  {/* default */}
+<Button size="lg">Large</Button>
+```
+
+## With icons
+
+```tsx button-icons.tsx
+import { Plus, ArrowRight } from '@phosphor-icons/react';
+
+<Button variant="primary" iconLeft={<Plus />}>
+  Add item
+</Button>
+
+<Button variant="secondary" iconRight={<ArrowRight />}>
+  Continue
+</Button>
+```
+
+## Loading state
+
+```tsx button-loading.tsx
+<Button variant="primary" loading={isSubmitting}>
+  {isSubmitting ? 'Saving...' : 'Save changes'}
+</Button>
+```
+
+## Full-width button
+
+```tsx button-full-width.tsx
+<Button variant="primary" fullWidth>
+  Sign in
+</Button>
+```
+
+## Props
+
+<ParamField path="variant" type="'primary' | 'secondary' | 'ghost' | 'danger'">
+  Visual style of the button. Defaults to `'primary'`.
+</ParamField>
+
+<ParamField path="size" type="'sm' | 'md' | 'lg'">
+  Size of the button. Defaults to `'md'`.
+</ParamField>
+
+<ParamField path="iconLeft" type="ReactNode">
+  Icon element displayed before the label.
+</ParamField>
+
+<ParamField path="iconRight" type="ReactNode">
+  Icon element displayed after the label.
+</ParamField>
+
+<ParamField path="loading" type="boolean">
+  Shows a spinner and disables the button when `true`. Defaults to `false`.
+</ParamField>
+
+<ParamField path="disabled" type="boolean">
+  Disables the button. Defaults to `false`.
+</ParamField>
+
+<ParamField path="fullWidth" type="boolean">
+  Stretches the button to fill its container width. Defaults to `false`.
+</ParamField>
+
+<ParamField path="type" type="'button' | 'submit' | 'reset'">
+  HTML button type attribute. Defaults to `'button'`.
+</ParamField>
+
+<ParamField path="onClick" type="(event: MouseEvent) => void">
+  Click handler function.
+</ParamField>
+
+<Warning>Always use `variant="danger"` for destructive actions and pair it with a confirmation dialog. Never place a danger button as the primary action in a form.</Warning>

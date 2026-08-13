@@ -1,0 +1,64 @@
+---
+title: "Contributing to XLSmart Design System"
+sidebarTitle: "Contributing"
+description: "Learn how to propose new components, report issues, and work with the XLSmart Design System team to evolve the shared component library."
+---
+
+XLSmart Design System is a living system maintained by a cross-functional team. If you use the design system to build products, you can contribute by requesting new components, reporting bugs, proposing token changes, or submitting design feedback.
+
+## How to contribute
+
+<CardGroup cols={2}>
+  <Card title="Request a Component" icon="plus" href="#request-a-component">
+    Propose a new component for the library.
+  </Card>
+  <Card title="Report a Bug" icon="bug" href="#report-a-bug">
+    Submit an issue for broken behavior or visual defects.
+  </Card>
+  <Card title="Propose a Token" icon="palette" href="#propose-a-token-change">
+    Suggest changes to design tokens.
+  </Card>
+  <Card title="Design Feedback" icon="comment" href="#design-feedback">
+    Share feedback on component design or UX patterns.
+  </Card>
+</CardGroup>
+
+## Request a component
+
+Before requesting a new component, check the existing [component library](/components/button) to make sure it doesn't already exist. Then:
+
+1. Open a ticket in the design system issue tracker with the label `component-request`
+2. Describe the use case and which product team needs it
+3. Attach reference designs or Figma frames if available
+4. The design system team will review and prioritize during the next planning cycle
+
+<Info>Components are added to the system when they are needed by at least two different product teams. Single-use components should live in your product's local component library.</Info>
+
+## Report a bug
+
+If a component is broken, inaccessible, or behaving unexpectedly:
+
+1. Confirm you are using the latest version of `@xlsmart/design-system`
+2. Open an issue with the label `bug` and include:
+   - The component name and version
+   - Steps to reproduce
+   - Expected vs. actual behavior
+   - Screenshots or a minimal reproduction if possible
+
+## Propose a token change
+
+Design tokens power every component in the system. Before proposing a change:
+
+- Review the [Design Tokens](/foundation/colors) documentation to understand the current token structure
+- Consider the downstream impact on all components that use the token
+- Submit your proposal as a ticket with the label `token-change`, including a rationale and the proposed new value
+
+<Warning>Token changes are breaking changes. They are batched into major version releases and communicated through the [Changelog](/resources/changelog).</Warning>
+
+## Design feedback
+
+For feedback on visual design, interaction patterns, or UX improvements, reach out to the design system team through your company's design channel. Attach Figma links or screenshots to keep the conversation grounded.
+
+## Code of conduct
+
+All contributors are expected to be respectful, constructive, and inclusive. The design system team reviews all contributions and reserves the right to decline requests that do not align with the system's principles. See the [Design Principles](/resources/design-principles) page for the values that guide design decisions.

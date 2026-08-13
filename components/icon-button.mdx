@@ -1,0 +1,55 @@
+---
+title: "IconButton: Accessible Icon-Only Button"
+sidebarTitle: "Icon Button"
+description: "The XLSmart IconButton renders a button with an icon and no visible label, with built-in accessibility via aria-label."
+---
+
+The `IconButton` component is a square button containing only an icon. Use it for compact UI actions like close, delete, edit, or expand. Because there is no visible text label, an `aria-label` is required for screen reader users.
+
+## Import
+
+```tsx
+import { IconButton } from '@xlsmart/design-system';
+```
+
+## Usage
+
+```tsx icon-button-example.tsx
+import { X, Pencil, DotsThree } from '@phosphor-icons/react';
+
+<IconButton icon={<X />} aria-label="Close" />
+<IconButton icon={<Pencil />} aria-label="Edit item" />
+<IconButton icon={<DotsThree />} aria-label="More options" />
+```
+
+## Variants and sizes
+
+```tsx icon-button-variants.tsx
+<IconButton icon={<X />} variant="ghost" size="sm" aria-label="Dismiss" />
+<IconButton icon={<Pencil />} variant="secondary" size="md" aria-label="Edit" />
+<IconButton icon={<Trash />} variant="danger" size="lg" aria-label="Delete" />
+```
+
+## Props
+
+<ParamField path="icon" type="ReactNode" required>
+  Icon element to display inside the button.
+</ParamField>
+
+<ParamField path="aria-label" type="string" required>
+  Accessible label for screen readers. Required because there is no visible text.
+</ParamField>
+
+<ParamField path="variant" type="'primary' | 'secondary' | 'ghost' | 'danger'">
+  Visual style. Defaults to `'ghost'`.
+</ParamField>
+
+<ParamField path="size" type="'sm' | 'md' | 'lg'">
+  Size of the button. Defaults to `'md'`.
+</ParamField>
+
+<ParamField path="disabled" type="boolean">
+  Disables the button. Defaults to `false`.
+</ParamField>
+
+<Warning>The `aria-label` prop is required on every `IconButton`. Omitting it will fail accessibility audits and make the button unusable for screen reader users.</Warning>

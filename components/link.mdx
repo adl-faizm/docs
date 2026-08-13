@@ -1,0 +1,60 @@
+---
+title: "Link: Inline Navigation Element"
+sidebarTitle: "Link"
+description: "The XLSmart Link component renders accessible inline hyperlinks with consistent styling and support for external, download, and router-based navigation."
+---
+
+The `Link` component wraps the HTML `<a>` element with consistent styling and accessibility features. Use it for inline navigation within text, standalone call-to-action links, and external references.
+
+## Import
+
+```tsx
+import { Link } from '@xlsmart/design-system';
+```
+
+## Basic usage
+
+```tsx link-basic.tsx
+// Internal link
+<Link href="/dashboard">Go to Dashboard</Link>
+
+// External link (opens in new tab, adds rel="noopener noreferrer" automatically)
+<Link href="https://example.com" external>
+  Visit our website
+</Link>
+
+// Download link
+<Link href="/reports/q4.pdf" download>
+  Download Q4 report
+</Link>
+```
+
+## Variants
+
+```tsx link-variants.tsx
+<Link href="/" variant="primary">Primary link</Link>
+<Link href="/" variant="subtle">Subtle link</Link>
+<Link href="/" variant="danger">Danger link</Link>
+```
+
+## Props
+
+<ParamField path="href" type="string" required>
+  The URL the link points to.
+</ParamField>
+
+<ParamField path="variant" type="'primary' | 'subtle' | 'danger'">
+  Visual style of the link. Defaults to `'primary'`.
+</ParamField>
+
+<ParamField path="external" type="boolean">
+  When `true`, adds `target="_blank"` and `rel="noopener noreferrer"` automatically. Defaults to `false`.
+</ParamField>
+
+<ParamField path="download" type="boolean | string">
+  Triggers a file download. Pass a string to set the downloaded file's name.
+</ParamField>
+
+<ParamField path="underline" type="'always' | 'hover' | 'never'">
+  Controls underline visibility. Defaults to `'hover'`.
+</ParamField>

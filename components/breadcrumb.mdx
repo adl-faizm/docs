@@ -1,0 +1,66 @@
+---
+title: "Breadcrumb: Hierarchical Navigation Trail"
+sidebarTitle: "Breadcrumb"
+description: "The XLSmart Breadcrumb component shows the current page's location within a site hierarchy and allows users to navigate up to parent pages."
+---
+
+The `Breadcrumb` component provides a navigation trail showing where the current page sits within the site hierarchy. Use it on nested pages so users can easily retrace their steps.
+
+## Import
+
+```tsx
+import { Breadcrumb, BreadcrumbItem } from '@xlsmart/design-system';
+```
+
+## Basic usage
+
+```tsx breadcrumb-basic.tsx
+<Breadcrumb>
+  <BreadcrumbItem href="/">Home</BreadcrumbItem>
+  <BreadcrumbItem href="/projects">Projects</BreadcrumbItem>
+  <BreadcrumbItem href="/projects/alpha">Project Alpha</BreadcrumbItem>
+  <BreadcrumbItem>Settings</BreadcrumbItem>  {/* current page — no href */}
+</Breadcrumb>
+```
+
+## Custom separator
+
+```tsx breadcrumb-separator.tsx
+import { CaretRight } from '@phosphor-icons/react';
+
+<Breadcrumb separator={<CaretRight size={14} />}>
+  <BreadcrumbItem href="/">Home</BreadcrumbItem>
+  <BreadcrumbItem href="/docs">Docs</BreadcrumbItem>
+  <BreadcrumbItem>Components</BreadcrumbItem>
+</Breadcrumb>
+```
+
+## Collapsed breadcrumbs
+
+For deep hierarchies, breadcrumbs automatically collapse the middle items with an ellipsis:
+
+```tsx breadcrumb-collapsed.tsx
+<Breadcrumb maxItems={3}>
+  <BreadcrumbItem href="/">Home</BreadcrumbItem>
+  <BreadcrumbItem href="/level1">Level 1</BreadcrumbItem>
+  <BreadcrumbItem href="/level2">Level 2</BreadcrumbItem>
+  <BreadcrumbItem href="/level3">Level 3</BreadcrumbItem>
+  <BreadcrumbItem>Current</BreadcrumbItem>
+</Breadcrumb>
+```
+
+## Props — Breadcrumb
+
+<ParamField path="separator" type="ReactNode">
+  Custom separator element. Defaults to a `/` character.
+</ParamField>
+
+<ParamField path="maxItems" type="number">
+  Maximum visible breadcrumb items before collapsing. Middle items are hidden.
+</ParamField>
+
+## Props — BreadcrumbItem
+
+<ParamField path="href" type="string">
+  Link URL. Omit on the last (current) item.
+</ParamField>

@@ -1,0 +1,76 @@
+---
+title: "Tooltip: Contextual Hover Information"
+sidebarTitle: "Tooltip"
+description: "The XLSmart Tooltip component shows contextual information on hover and focus, with configurable placement and delay for accessible interaction."
+---
+
+The `Tooltip` component displays additional context when a user hovers over or focuses on an element. Use tooltips to clarify icon buttons, provide shortcut hints, or explain disabled states — not to convey essential information that only some users will see.
+
+## Import
+
+```tsx
+import { Tooltip } from '@xlsmart/design-system';
+```
+
+## Basic usage
+
+```tsx tooltip-basic.tsx
+<Tooltip content="Copy to clipboard">
+  <IconButton icon={<Copy />} aria-label="Copy" />
+</Tooltip>
+```
+
+## Placement
+
+```tsx tooltip-placement.tsx
+<Tooltip content="Top tooltip" placement="top">
+  <Button>Hover me</Button>
+</Tooltip>
+
+<Tooltip content="Right tooltip" placement="right">
+  <Button>Hover me</Button>
+</Tooltip>
+
+<Tooltip content="Bottom tooltip" placement="bottom">
+  <Button>Hover me</Button>
+</Tooltip>
+
+<Tooltip content="Left tooltip" placement="left">
+  <Button>Hover me</Button>
+</Tooltip>
+```
+
+## Disabled state explanation
+
+```tsx tooltip-disabled.tsx
+<Tooltip content="You need admin permissions to delete users.">
+  {/* Wrap disabled buttons in a span so tooltip events fire */}
+  <span>
+    <Button variant="danger" disabled>Delete user</Button>
+  </span>
+</Tooltip>
+```
+
+## Props
+
+<ParamField path="content" type="string | ReactNode" required>
+  The content displayed inside the tooltip.
+</ParamField>
+
+<ParamField path="placement" type="'top' | 'right' | 'bottom' | 'left' | 'top-start' | 'top-end' | 'bottom-start' | 'bottom-end'">
+  Where the tooltip appears relative to the trigger. Defaults to `'top'`.
+</ParamField>
+
+<ParamField path="delay" type="number">
+  Delay in milliseconds before the tooltip appears on hover. Defaults to `300`.
+</ParamField>
+
+<ParamField path="maxWidth" type="number">
+  Maximum width of the tooltip in pixels. Defaults to `240`.
+</ParamField>
+
+<ParamField path="disabled" type="boolean">
+  Prevents the tooltip from showing. Defaults to `false`.
+</ParamField>
+
+<Warning>Never put essential information only in a tooltip. Tooltips are invisible on touch devices and are missed by users who navigate with keyboards if not paired with visible text.</Warning>

@@ -1,0 +1,78 @@
+---
+title: "Checkbox: Single and Group Selection"
+sidebarTitle: "Checkbox"
+description: "The XLSmart Checkbox component supports checked, unchecked, and indeterminate states with label, helper text, and group layouts."
+---
+
+The `Checkbox` component is used for binary on/off selections and for multiple-choice lists. It supports three visual states — checked, unchecked, and indeterminate — and can be used standalone or as part of a `CheckboxGroup`.
+
+## Import
+
+```tsx
+import { Checkbox, CheckboxGroup } from '@xlsmart/design-system';
+```
+
+## Basic usage
+
+```tsx checkbox-basic.tsx
+<Checkbox
+  label="I agree to the terms and conditions"
+  checked={agreed}
+  onChange={setAgreed}
+/>
+```
+
+## Checkbox group
+
+```tsx checkbox-group.tsx
+<CheckboxGroup
+  label="Notification preferences"
+  value={selectedOptions}
+  onChange={setSelectedOptions}
+>
+  <Checkbox value="email" label="Email notifications" />
+  <Checkbox value="sms" label="SMS notifications" />
+  <Checkbox value="push" label="Push notifications" />
+</CheckboxGroup>
+```
+
+## Indeterminate state
+
+```tsx checkbox-indeterminate.tsx
+<Checkbox
+  label="Select all"
+  checked={allSelected}
+  indeterminate={someSelected && !allSelected}
+  onChange={toggleAll}
+/>
+```
+
+## Props
+
+<ParamField path="label" type="string" required>
+  Visible label text for the checkbox.
+</ParamField>
+
+<ParamField path="checked" type="boolean">
+  Controlled checked state.
+</ParamField>
+
+<ParamField path="indeterminate" type="boolean">
+  Shows the indeterminate state (–) for partially-selected groups. Defaults to `false`.
+</ParamField>
+
+<ParamField path="onChange" type="(checked: boolean) => void">
+  Callback fired when the checkbox is toggled.
+</ParamField>
+
+<ParamField path="disabled" type="boolean">
+  Disables the checkbox. Defaults to `false`.
+</ParamField>
+
+<ParamField path="helperText" type="string">
+  Secondary text below the label for additional context.
+</ParamField>
+
+<ParamField path="error" type="string">
+  Error message for invalid state.
+</ParamField>

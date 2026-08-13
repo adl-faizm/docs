@@ -1,0 +1,88 @@
+---
+title: "Iconography Guidelines and Icon Library"
+sidebarTitle: "Iconography"
+description: "XLSmart Design System icons cover usage guidelines, sizes, and how to use the icon library in your React components and designs."
+---
+
+XLSmart Design System includes a curated icon library built on [Phosphor Icons](https://phosphoricons.com/) — a consistent, well-maintained set with multiple weights. This page covers how to use icons in your components and the guidelines for applying them correctly.
+
+## Installing the icon library
+
+```bash npm
+npm install @phosphor-icons/react
+```
+
+Icons are not bundled inside `@xlsmart/design-system` — import them directly from `@phosphor-icons/react` to keep bundle sizes small via tree-shaking.
+
+## Basic usage
+
+```tsx icon-example.tsx
+import { MagnifyingGlass, Bell, User } from '@phosphor-icons/react';
+
+// Default (regular weight, 24px)
+<MagnifyingGlass />
+
+// Custom size and weight
+<Bell size={20} weight="fill" />
+
+// With accessible label
+<User aria-label="User profile" />
+```
+
+## Icon sizes
+
+Use these standard sizes to keep icons consistent with the type scale:
+
+| Size | Value | Usage |
+|------|-------|-------|
+| `xs` | 12px | Inline with small text, dense lists |
+| `sm` | 16px | Labels, form fields, body text |
+| `md` | 20px | Default size for most UI |
+| `lg` | 24px | Navigation, prominent actions |
+| `xl` | 32px | Feature icons, empty states |
+| `2xl` | 48px | Hero icons, illustrations |
+
+## Icon weights
+
+Phosphor provides six weights. Use these design system defaults:
+
+| Weight | Usage |
+|--------|-------|
+| `regular` | Default for most UI contexts |
+| `bold` | High-emphasis actions, selected states |
+| `fill` | Filled variant — use for active/selected states |
+| `duotone` | Two-tone — decorative icons, feature icons |
+| `thin` | Decorative contexts only; don't use for functional icons |
+
+## Using icons with components
+
+Many design system components accept an `icon` prop that accepts a Phosphor icon component:
+
+```tsx icon-button.tsx
+import { Button, IconButton, Alert } from '@xlsmart/design-system';
+import { Plus, X, CheckCircle } from '@phosphor-icons/react';
+
+<Button icon={<Plus />} variant="primary">
+  Add item
+</Button>
+
+<IconButton icon={<X />} aria-label="Remove item" />
+
+<Alert variant="success" icon={<CheckCircle weight="fill" />}>
+  Your changes have been saved.
+</Alert>
+```
+
+## Accessibility
+
+- Icons that are purely decorative should have `aria-hidden="true"`
+- Icons that convey meaning must have an `aria-label` or adjacent visible text
+- Never use icons as the sole means of communicating critical information
+
+```tsx accessible-icons.tsx
+// Decorative icon — hide from screen readers
+<Star aria-hidden="true" /> Favorites
+
+// Meaningful standalone icon — provide a label
+<IconButton icon={<Trash />} aria-label="Delete this item" />
+```

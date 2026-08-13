@@ -1,0 +1,63 @@
+---
+title: "Tag: Removable Label Component"
+sidebarTitle: "Tag"
+description: "The XLSmart Tag component displays removable labels for categories, filters, and multi-select inputs, with optional click and dismiss handlers."
+---
+
+The `Tag` component is a removable label used in filtering, categorization, and multi-value inputs. Unlike `Badge`, tags are interactive — they can be clicked to toggle a selection or dismissed to remove a value.
+
+## Import
+
+```tsx
+import { Tag } from '@xlsmart/design-system';
+```
+
+## Basic usage
+
+```tsx tag-basic.tsx
+// Static tag
+<Tag>Design</Tag>
+
+// Dismissible tag
+<Tag onDismiss={() => removeTag('design')}>Design</Tag>
+
+// Clickable tag (e.g., filter toggle)
+<Tag
+  selected={activeFilters.includes('design')}
+  onClick={() => toggleFilter('design')}
+>
+  Design
+</Tag>
+```
+
+## Color variants
+
+```tsx tag-colors.tsx
+<Tag color="orange">UX</Tag>
+<Tag color="teal">Engineering</Tag>
+<Tag color="blue">Research</Tag>
+<Tag color="green">Approved</Tag>
+<Tag color="red">Blocked</Tag>
+```
+
+## Props
+
+<ParamField path="color" type="'default' | 'orange' | 'teal' | 'blue' | 'green' | 'red' | 'purple'">
+  Color theme of the tag. Defaults to `'default'`.
+</ParamField>
+
+<ParamField path="selected" type="boolean">
+  Shows a selected/active state. Defaults to `false`.
+</ParamField>
+
+<ParamField path="onDismiss" type="() => void">
+  If provided, renders a dismiss (×) button inside the tag.
+</ParamField>
+
+<ParamField path="onClick" type="() => void">
+  Click handler. When provided, the tag renders as a button.
+</ParamField>
+
+<ParamField path="disabled" type="boolean">
+  Disables interactions. Defaults to `false`.
+</ParamField>

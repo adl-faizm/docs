@@ -1,0 +1,80 @@
+---
+title: "Responsive Design Guidelines and Breakpoints"
+sidebarTitle: "Responsive"
+description: "XLSmart Design System responsive guidelines cover breakpoints, fluid layouts, and component behavior across mobile, tablet, and desktop viewports."
+---
+
+XLSmart Design System is built mobile-first. Components are designed to work at every viewport size, and the layout system provides breakpoint tokens you can use to build responsive UIs without custom media queries.
+
+## Breakpoints
+
+| Token | Value | Typical device |
+|-------|-------|----------------|
+| `--breakpoint-xs` | 0px | All (mobile-first base) |
+| `--breakpoint-sm` | 480px | Large phones, landscape |
+| `--breakpoint-md` | 768px | Tablets |
+| `--breakpoint-lg` | 1024px | Laptops, small desktops |
+| `--breakpoint-xl` | 1280px | Large desktops |
+| `--breakpoint-2xl` | 1536px | Wide monitors |
+
+## Mobile-first approach
+
+Always write base styles for the smallest viewport, then add breakpoints to enhance larger screens:
+
+```css responsive.css
+.sidebar {
+  /* Mobile: full-width, stacked */
+  display: none;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    /* Tablet+: show sidebar */
+    display: block;
+    width: 240px;
+  }
+}
+```
+
+## Responsive props
+
+Many design system components accept responsive props as objects that map breakpoints to values:
+
+```tsx responsive-grid.tsx
+import { Grid } from '@xlsmart/design-system';
+
+// 1 column on mobile, 2 on tablet, 3 on desktop
+<Grid
+  cols={{ xs: 1, md: 2, lg: 3 }}
+  gap={{ xs: 4, md: 6 }}
+>
+  <Card />
+  <Card />
+  <Card />
+</Grid>
+```
+
+## Touch targets
+
+All interactive components meet the minimum **44×44px touch target size** recommended by WCAG 2.5.5. When building custom interactive elements, ensure they meet this requirement:
+
+```css touch-target.css
+.custom-button {
+  min-height: 44px;
+  min-width: 44px;
+  padding: var(--space-3) var(--space-4);
+}
+```
+
+## Component behavior at breakpoints
+
+| Component | Mobile behavior | Desktop behavior |
+|-----------|-----------------|------------------|
+| Navigation | Collapses to hamburger menu | Full horizontal nav |
+| Modal | Full-screen sheet | Centered dialog |
+| Table | Horizontal scroll | Full display |
+| Grid | 1 column | Up to 12 columns |
+| Sidebar | Hidden, toggle-triggered | Persistent sidebar |
+
+<Tip>Test every new feature on a real device, not just Chrome DevTools responsive mode. Touch interaction, scroll behavior, and font rendering differ on real hardware.</Tip>

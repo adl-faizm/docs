@@ -1,0 +1,82 @@
+---
+title: "Radio: Single Choice from a Group"
+sidebarTitle: "Radio"
+description: "The XLSmart Radio and RadioGroup components provide mutually exclusive option selection with accessible keyboard navigation and group labeling."
+---
+
+The `Radio` component is for selecting exactly one option from a set. Always use `RadioGroup` to wrap related `Radio` inputs — this ensures correct grouping, keyboard navigation, and ARIA labeling.
+
+## Import
+
+```tsx
+import { Radio, RadioGroup } from '@xlsmart/design-system';
+```
+
+## Basic usage
+
+```tsx radio-group.tsx
+<RadioGroup
+  label="Billing cycle"
+  value={billingCycle}
+  onChange={setBillingCycle}
+>
+  <Radio value="monthly" label="Monthly" />
+  <Radio value="annual" label="Annual" helperText="Save 20%" />
+</RadioGroup>
+```
+
+## Horizontal layout
+
+```tsx radio-horizontal.tsx
+<RadioGroup
+  label="Size"
+  value={size}
+  onChange={setSize}
+  direction="row"
+>
+  <Radio value="sm" label="S" />
+  <Radio value="md" label="M" />
+  <Radio value="lg" label="L" />
+  <Radio value="xl" label="XL" />
+</RadioGroup>
+```
+
+## Props — RadioGroup
+
+<ParamField path="label" type="string" required>
+  Label for the radio group. Renders as a `<legend>` for accessibility.
+</ParamField>
+
+<ParamField path="value" type="string">
+  Controlled selected value.
+</ParamField>
+
+<ParamField path="onChange" type="(value: string) => void">
+  Callback fired when selection changes.
+</ParamField>
+
+<ParamField path="direction" type="'column' | 'row'">
+  Layout direction of the radio options. Defaults to `'column'`.
+</ParamField>
+
+<ParamField path="error" type="string">
+  Error message for the group.
+</ParamField>
+
+## Props — Radio
+
+<ParamField path="value" type="string" required>
+  The value this option represents.
+</ParamField>
+
+<ParamField path="label" type="string" required>
+  Visible label text.
+</ParamField>
+
+<ParamField path="helperText" type="string">
+  Additional context below the label.
+</ParamField>
+
+<ParamField path="disabled" type="boolean">
+  Disables this option. Defaults to `false`.
+</ParamField>

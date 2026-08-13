@@ -1,0 +1,69 @@
+---
+title: "Toggle: On/Off Switch Control"
+sidebarTitle: "Toggle"
+description: "The XLSmart Toggle component provides an on/off switch for binary settings, with label, size, and disabled state support."
+---
+
+The `Toggle` component is an on/off switch for binary settings like enabling features, notifications, or permissions. Prefer `Toggle` over `Checkbox` when the setting takes effect immediately without a save action.
+
+## Import
+
+```tsx
+import { Toggle } from '@xlsmart/design-system';
+```
+
+## Basic usage
+
+```tsx toggle-basic.tsx
+<Toggle
+  label="Enable notifications"
+  checked={notificationsEnabled}
+  onChange={setNotificationsEnabled}
+/>
+```
+
+## Sizes
+
+```tsx toggle-sizes.tsx
+<Toggle label="Small" size="sm" checked={true} />
+<Toggle label="Medium" size="md" checked={true} />  {/* default */}
+```
+
+## Disabled state
+
+```tsx toggle-disabled.tsx
+<Toggle
+  label="Two-factor authentication"
+  checked={true}
+  disabled
+  helperText="Contact your admin to change this setting."
+/>
+```
+
+## Props
+
+<ParamField path="label" type="string" required>
+  Visible label for the toggle.
+</ParamField>
+
+<ParamField path="checked" type="boolean">
+  Controlled on/off state.
+</ParamField>
+
+<ParamField path="onChange" type="(checked: boolean) => void">
+  Callback fired when the toggle is switched.
+</ParamField>
+
+<ParamField path="size" type="'sm' | 'md'">
+  Size of the toggle switch. Defaults to `'md'`.
+</ParamField>
+
+<ParamField path="disabled" type="boolean">
+  Disables the toggle. Defaults to `false`.
+</ParamField>
+
+<ParamField path="helperText" type="string">
+  Secondary text below the label.
+</ParamField>
+
+<Tip>Use `Toggle` when the change takes immediate effect. Use `Checkbox` when the user must click a Save button to apply the change.</Tip>

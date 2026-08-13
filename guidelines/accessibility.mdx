@@ -1,0 +1,92 @@
+---
+title: "Accessibility Guidelines for XLSmart Components"
+sidebarTitle: "Accessibility"
+description: "Learn how XLSmart Design System components meet WCAG 2.1 AA standards and how to build accessible, inclusive interfaces with the system."
+---
+
+XLSmart Design System is built with accessibility as a first-class concern. Every component is designed to meet **WCAG 2.1 AA** standards out of the box. This page explains the accessibility features baked into the system and the practices you need to follow when using components in your product.
+
+## Built-in accessibility features
+
+<CardGroup cols={2}>
+  <Card title="Keyboard Navigation" icon="keyboard">
+    All interactive components are fully keyboard-navigable with visible focus indicators.
+  </Card>
+  <Card title="Screen Reader Support" icon="ear">
+    Components use semantic HTML and ARIA attributes for screen reader compatibility.
+  </Card>
+  <Card title="Color Contrast" icon="circle-half-stroke">
+    All text and UI component color pairings meet the 4.5:1 (AA) contrast ratio.
+  </Card>
+  <Card title="Reduced Motion" icon="wind">
+    All animations respect the `prefers-reduced-motion` media query automatically.
+  </Card>
+</CardGroup>
+
+## Keyboard interaction patterns
+
+| Component | Keys |
+|-----------|------|
+| Button | `Enter` or `Space` to activate |
+| Select / Dropdown | `Enter` to open, `Arrow` keys to navigate, `Escape` to close |
+| Modal | `Tab` cycles focus within modal, `Escape` closes |
+| Tabs | `Arrow` keys switch tabs, `Tab` moves to tab panel content |
+| Checkbox / Radio | `Space` toggles, `Arrow` keys navigate radio groups |
+| Tooltip | Appears on focus as well as hover |
+
+## Using ARIA attributes
+
+Design system components handle ARIA automatically. However, when you compose custom patterns, follow these rules:
+
+```tsx accessible-form.tsx
+// Always associate labels with inputs
+<label htmlFor="email-input">Email address</label>
+<Input id="email-input" type="email" aria-describedby="email-hint" />
+<span id="email-hint">We'll never share your email.</span>
+
+// Use aria-live for dynamic content
+<div aria-live="polite" aria-atomic="true">
+  {statusMessage}
+</div>
+
+// Provide text alternatives for icon-only buttons
+<IconButton icon="close" aria-label="Close dialog" />
+```
+
+## Focus management
+
+When building interactive flows, manage focus explicitly:
+
+- **Modals**: Move focus to the first focusable element on open; return focus to the trigger on close
+- **Toasts**: Do not auto-focus toasts; use `aria-live` to announce them to screen readers
+- **Dynamic content**: When new content appears (e.g., form errors), move focus to the first error or announce it via `aria-live`
+
+## Color usage
+
+Never use color as the only means of conveying information:
+
+<Tabs>
+  <Tab title="Do">
+    ```tsx
+    // Pair color with an icon and text
+    <Alert variant="error" icon="circle-x">
+      Error: Please fill in all required fields.
+    </Alert>
+    ```
+  </Tab>
+  <Tab title="Don't">
+    ```tsx
+    // Don't rely on color alone
+    <span style={{ color: 'red' }}>Error</span>
+    ```
+  </Tab>
+</Tabs>
+
+## Testing accessibility
+
+1. **Keyboard test** — Navigate your UI using only the keyboard. Can you reach and operate every interactive element?
+2. **Screen reader test** — Test with VoiceOver (macOS/iOS) or NVDA (Windows) to verify announcements make sense.
+3. **Contrast check** — Use a tool like [Colour Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) to verify all text/background combinations.
+4. **Automated scan** — Run axe DevTools or Lighthouse accessibility audit. Design system components should produce zero violations.
+
+<Tip>Start accessibility testing early. It is much easier to fix accessibility issues during development than after launch.</Tip>

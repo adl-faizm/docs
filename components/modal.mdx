@@ -1,0 +1,82 @@
+---
+title: "Modal: Dialog Overlay with Focus Trapping"
+sidebarTitle: "Modal"
+description: "The XLSmart Modal component renders an accessible dialog overlay with focus trapping, backdrop dismiss, and configurable sizes."
+---
+
+The `Modal` component displays content in a focused overlay layer, blocking interaction with the rest of the page until dismissed. It traps keyboard focus, responds to the Escape key, and manages scroll locking automatically.
+
+## Import
+
+```tsx
+import { Modal } from '@xlsmart/design-system';
+```
+
+## Basic usage
+
+```tsx modal-basic.tsx
+const [open, setOpen] = useState(false);
+
+<Button onClick={() => setOpen(true)}>Open Modal</Button>
+
+<Modal
+  open={open}
+  onClose={() => setOpen(false)}
+  title="Confirm action"
+>
+  <Text>Are you sure you want to continue? This cannot be undone.</Text>
+  <Stack direction="row" justify="end" gap={3} padding={{ top: 6 }}>
+    <Button variant="secondary" onClick={() => setOpen(false)}>Cancel</Button>
+    <Button variant="danger" onClick={handleConfirm}>Delete</Button>
+  </Stack>
+</Modal>
+```
+
+## Sizes
+
+```tsx modal-sizes.tsx
+<Modal size="sm" ...>Small dialog</Modal>
+<Modal size="md" ...>Default dialog</Modal>
+<Modal size="lg" ...>Wide dialog</Modal>
+<Modal size="xl" ...>Extra wide dialog</Modal>
+<Modal size="full" ...>Full-screen modal</Modal>
+```
+
+## Disable backdrop close
+
+```tsx modal-no-close.tsx
+<Modal
+  open={open}
+  onClose={() => setOpen(false)}
+  closeOnBackdropClick={false}
+  title="Required action"
+>
+  You must complete this form before continuing.
+</Modal>
+```
+
+## Props
+
+<ParamField path="open" type="boolean" required>
+  Controls whether the modal is visible.
+</ParamField>
+
+<ParamField path="onClose" type="() => void" required>
+  Called when the user dismisses the modal (Escape key, backdrop click, or close button).
+</ParamField>
+
+<ParamField path="title" type="string">
+  Heading text displayed at the top of the modal. Also sets `aria-labelledby`.
+</ParamField>
+
+<ParamField path="size" type="'sm' | 'md' | 'lg' | 'xl' | 'full'">
+  Width of the modal dialog. Defaults to `'md'`.
+</ParamField>
+
+<ParamField path="closeOnBackdropClick" type="boolean">
+  Whether clicking the backdrop closes the modal. Defaults to `true`.
+</ParamField>
+
+<ParamField path="closeOnEscape" type="boolean">
+  Whether pressing Escape closes the modal. Defaults to `true`.
+</ParamField>

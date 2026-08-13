@@ -1,0 +1,90 @@
+---
+title: "Select: Dropdown for Single and Multi-Select"
+sidebarTitle: "Select"
+description: "The XLSmart Select component provides an accessible dropdown for choosing one or multiple options, with search, grouping, and async support."
+---
+
+The `Select` component replaces the browser's native `<select>` with an accessible, keyboard-navigable dropdown. It supports single selection, multiple selection, option grouping, and async option loading.
+
+## Import
+
+```tsx
+import { Select } from '@xlsmart/design-system';
+```
+
+## Single select
+
+```tsx select-basic.tsx
+<Select
+  label="Country"
+  placeholder="Select a country"
+  options={[
+    { value: 'us', label: 'United States' },
+    { value: 'gb', label: 'United Kingdom' },
+    { value: 'ca', label: 'Canada' },
+  ]}
+  onChange={(value) => setCountry(value)}
+/>
+```
+
+## Multi-select
+
+```tsx select-multi.tsx
+<Select
+  label="Tags"
+  placeholder="Select tags"
+  multiple
+  options={tagOptions}
+  value={selectedTags}
+  onChange={(values) => setSelectedTags(values)}
+/>
+```
+
+## With search
+
+```tsx select-search.tsx
+<Select
+  label="User"
+  searchable
+  options={userOptions}
+  onChange={(value) => setUser(value)}
+/>
+```
+
+## Props
+
+<ParamField path="options" type="Option[]" required>
+  Array of `{ value: string, label: string, disabled?: boolean }` objects.
+</ParamField>
+
+<ParamField path="label" type="string">
+  Label rendered above the select.
+</ParamField>
+
+<ParamField path="placeholder" type="string">
+  Text shown when no option is selected.
+</ParamField>
+
+<ParamField path="multiple" type="boolean">
+  Enables multi-select mode. Defaults to `false`.
+</ParamField>
+
+<ParamField path="searchable" type="boolean">
+  Adds a search input inside the dropdown. Defaults to `false`.
+</ParamField>
+
+<ParamField path="value" type="string | string[]">
+  Controlled selected value(s).
+</ParamField>
+
+<ParamField path="onChange" type="(value: string | string[]) => void">
+  Callback fired when selection changes.
+</ParamField>
+
+<ParamField path="error" type="string">
+  Error message that puts the select in an error state.
+</ParamField>
+
+<ParamField path="disabled" type="boolean">
+  Disables the select. Defaults to `false`.
+</ParamField>

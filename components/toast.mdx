@@ -1,0 +1,83 @@
+---
+title: "Toast: Transient Notification Messages"
+sidebarTitle: "Toast"
+description: "XLSmart Toast notifications are brief, auto-dismissing messages that appear at the edge of the screen in response to user actions."
+---
+
+Toasts are non-blocking notifications that appear briefly to confirm an action, report a status change, or surface a non-critical error. They auto-dismiss after a few seconds and do not require user interaction.
+
+## Import
+
+```tsx
+import { toast } from '@xlsmart/design-system';
+```
+
+<Info>Toast is triggered via a function call, not a JSX component. Add `<ToastProvider />` once at the root of your app to enable toasts.</Info>
+
+## Setup
+
+```tsx app.tsx
+import { ToastProvider } from '@xlsmart/design-system';
+
+export default function App() {
+  return (
+    <ToastProvider position="bottom-right">
+      {/* rest of your app */}
+    </ToastProvider>
+  );
+}
+```
+
+## Triggering toasts
+
+```tsx toast-usage.tsx
+import { toast } from '@xlsmart/design-system';
+
+// Success
+toast.success('Changes saved successfully.');
+
+// Error
+toast.error('Failed to save. Please try again.');
+
+// Warning
+toast.warning('Your session will expire in 5 minutes.');
+
+// Info
+toast.info('New features are available.');
+
+// Custom duration (in ms)
+toast.success('Done!', { duration: 2000 });
+
+// With undo action
+toast.success('Item deleted.', {
+  action: { label: 'Undo', onClick: () => undoDelete() },
+});
+```
+
+## ToastProvider props
+
+<ParamField path="position" type="'top-left' | 'top-center' | 'top-right' | 'bottom-left' | 'bottom-center' | 'bottom-right'">
+  Where toasts appear on screen. Defaults to `'bottom-right'`.
+</ParamField>
+
+<ParamField path="duration" type="number">
+  Default auto-dismiss duration in milliseconds. Defaults to `4000`.
+</ParamField>
+
+<ParamField path="maxToasts" type="number">
+  Maximum number of toasts visible at once. Defaults to `5`.
+</ParamField>
+
+## toast() options
+
+<ParamField path="duration" type="number">
+  Override the default auto-dismiss duration for this toast.
+</ParamField>
+
+<ParamField path="action" type="{ label: string, onClick: () => void }">
+  Adds an action button (e.g., Undo) inside the toast.
+</ParamField>
+
+<ParamField path="id" type="string">
+  Custom ID for this toast. Prevents duplicate toasts with the same ID.
+</ParamField>

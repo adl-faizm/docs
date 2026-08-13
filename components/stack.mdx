@@ -1,0 +1,56 @@
+---
+title: "Stack: Flexbox Spacing Utility"
+sidebarTitle: "Stack"
+description: "The XLSmart Stack component arranges children in a row or column with consistent spacing from the design token scale."
+---
+
+The `Stack` component is the simplest way to space a group of elements. It wraps CSS flexbox and exposes spacing through the design token scale — no custom margin or padding needed.
+
+## Import
+
+```tsx
+import { Stack } from '@xlsmart/design-system';
+```
+
+## Basic usage
+
+```tsx stack-basic.tsx
+// Vertical stack with 16px (space-4) gap
+<Stack direction="column" gap={4}>
+  <Text>First item</Text>
+  <Text>Second item</Text>
+  <Text>Third item</Text>
+</Stack>
+
+// Horizontal stack with 8px (space-2) gap
+<Stack direction="row" gap={2} align="center">
+  <Icon name="check" />
+  <Text>Completed</Text>
+</Stack>
+```
+
+## Props
+
+<ParamField path="direction" type="'row' | 'column' | ResponsiveValue">
+  Direction of the stack. Defaults to `'column'`.
+</ParamField>
+
+<ParamField path="gap" type="number | ResponsiveValue<number>">
+  Space between children using the spacing scale (1–24). Defaults to `4`.
+</ParamField>
+
+<ParamField path="align" type="'start' | 'center' | 'end' | 'baseline' | 'stretch'">
+  Aligns children on the cross axis (`align-items`). Defaults to `'stretch'`.
+</ParamField>
+
+<ParamField path="justify" type="'start' | 'center' | 'end' | 'between' | 'around' | 'evenly'">
+  Distributes children along the main axis (`justify-content`). Defaults to `'start'`.
+</ParamField>
+
+<ParamField path="wrap" type="boolean">
+  Allows children to wrap to the next line. Defaults to `false`.
+</ParamField>
+
+<ParamField path="padding" type="number | ResponsiveValue<number>">
+  Padding inside the stack container, using the spacing scale.
+</ParamField>

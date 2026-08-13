@@ -1,0 +1,87 @@
+---
+title: "Color Tokens: XLSmart Design System Palette"
+sidebarTitle: "Colors"
+description: "Explore the XLSmart Design System color palette, semantic color tokens, and guidelines for applying color consistently across your UI."
+---
+
+Color tokens are the foundation of visual consistency in XLSmart Design System. Instead of using raw hex values in your code, use the semantic token names — this ensures colors update automatically when you switch themes or rebrand a product.
+
+## Token reference
+
+All color tokens are available as CSS custom properties (e.g. `var(--color-primary-500)`) and as JavaScript exports from `@xlsmart/design-system/tokens`.
+
+### Brand colors
+
+| Token | Value | Usage |
+|-------|-------|-------|
+| `--color-primary-50` | `#fdf2ec` | Tinted backgrounds, hover states |
+| `--color-primary-100` | `#fae0ce` | Light backgrounds, subtle highlights |
+| `--color-primary-300` | `#f5a876` | Borders, decorative elements |
+| `--color-primary-500` | `#ef7025` | Primary actions, links, key UI elements |
+| `--color-primary-700` | `#c45a15` | Hover and active states for primary |
+| `--color-primary-900` | `#7a3309` | Text on light backgrounds |
+
+### Neutral colors
+
+| Token | Value | Usage |
+|-------|-------|-------|
+| `--color-neutral-0` | `#ffffff` | Page backgrounds, card surfaces |
+| `--color-neutral-50` | `#f8f9fa` | Secondary backgrounds, table rows |
+| `--color-neutral-100` | `#f1f3f5` | Borders, dividers (subtle) |
+| `--color-neutral-200` | `#e9ecef` | Disabled backgrounds |
+| `--color-neutral-400` | `#adb5bd` | Placeholder text, disabled text |
+| `--color-neutral-600` | `#6c757d` | Secondary text, captions |
+| `--color-neutral-800` | `#343a40` | Primary body text |
+| `--color-neutral-900` | `#212529` | Headings, high-emphasis text |
+
+### Semantic colors
+
+| Token | Value | Usage |
+|-------|-------|-------|
+| `--color-success-500` | `#2e7d32` | Success states, positive feedback |
+| `--color-warning-500` | `#f57c00` | Warning states, cautionary feedback |
+| `--color-error-500` | `#c62828` | Error states, destructive actions |
+| `--color-info-500` | `#0277bd` | Informational messages, links |
+
+## Semantic aliases
+
+Semantic alias tokens map a role to a specific palette token. Always prefer aliases over raw palette tokens in component code.
+
+```css styles.css
+/* Use semantic aliases */
+color: var(--color-text-primary);       /* maps to --color-neutral-900 */
+background: var(--color-bg-surface);    /* maps to --color-neutral-0 */
+border-color: var(--color-border);      /* maps to --color-neutral-200 */
+color: var(--color-action-primary);     /* maps to --color-primary-500 */
+```
+
+## Using tokens in code
+
+<Tabs>
+  <Tab title="CSS">
+    ```css component.css
+    .my-button {
+      background-color: var(--color-primary-500);
+      color: var(--color-neutral-0);
+    }
+
+    .my-button:hover {
+      background-color: var(--color-primary-700);
+    }
+    ```
+  </Tab>
+  <Tab title="JavaScript">
+    ```ts tokens.ts
+    import { colors } from '@xlsmart/design-system/tokens';
+
+    const primaryColor = colors.primary[500]; // '#ef7025'
+    const textColor = colors.neutral[900];    // '#212529'
+    ```
+  </Tab>
+</Tabs>
+
+## Accessibility
+
+All color pairings in the system meet **WCAG 2.1 AA contrast requirements** (4.5:1 for body text, 3:1 for large text and UI components). Avoid using color as the only means of conveying information — always pair color with text, icons, or patterns.
+
+<Warning>Never hard-code hex values in component styles. Using raw hex values breaks theming support and makes future rebrand migrations significantly harder.</Warning>

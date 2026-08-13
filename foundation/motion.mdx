@@ -1,0 +1,62 @@
+---
+title: "Motion and Animation Tokens"
+sidebarTitle: "Motion"
+description: "XLSmart Design System motion tokens define easing curves, durations, and transition utilities for smooth, purposeful UI animations."
+---
+
+Motion in XLSmart Design System is purposeful and restrained. Animations should reinforce spatial relationships, provide feedback, and guide attention — never distract or delay. Use the motion tokens to keep transitions consistent across your product.
+
+## Duration tokens
+
+| Token | Value | Usage |
+|-------|-------|-------|
+| `--duration-instant` | 50ms | Micro-interactions (button press feedback) |
+| `--duration-fast` | 100ms | Hover states, focus rings |
+| `--duration-normal` | 200ms | Standard transitions (color, opacity) |
+| `--duration-slow` | 300ms | Expanding panels, dropdowns |
+| `--duration-slower` | 400ms | Modals entering, page transitions |
+| `--duration-slowest` | 600ms | Complex multi-step animations |
+
+## Easing tokens
+
+| Token | Value | Usage |
+|-------|-------|-------|
+| `--ease-linear` | `linear` | Progress bars, loading indicators |
+| `--ease-in` | `cubic-bezier(0.4, 0, 1, 1)` | Elements leaving the screen |
+| `--ease-out` | `cubic-bezier(0, 0, 0.2, 1)` | Elements entering the screen |
+| `--ease-in-out` | `cubic-bezier(0.4, 0, 0.2, 1)` | Elements that move within the screen |
+| `--ease-bounce` | `cubic-bezier(0.34, 1.56, 0.64, 1)` | Playful interactions, spring effects |
+
+## Applying motion tokens
+
+```css transitions.css
+.button {
+  transition: background-color var(--duration-fast) var(--ease-out),
+              box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.dropdown-menu {
+  transition: opacity var(--duration-normal) var(--ease-out),
+              transform var(--duration-normal) var(--ease-out);
+}
+
+.modal {
+  transition: opacity var(--duration-slower) var(--ease-out),
+              transform var(--duration-slower) var(--ease-out);
+}
+```
+
+## Reduced motion
+
+Always respect the `prefers-reduced-motion` media query. The design system's built-in components do this automatically, but if you write custom animations, follow this pattern:
+
+```css reduced-motion.css
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+```
+
+<Warning>Never rely on animation alone to communicate state changes. Always pair motion with a persistent visual change (color, text, icon) so users with reduced motion preferences still get the information.</Warning>

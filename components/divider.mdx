@@ -1,0 +1,48 @@
+---
+title: "Divider: Section Separator"
+sidebarTitle: "Divider"
+description: "The XLSmart Divider component renders a horizontal or vertical rule to visually separate content sections."
+---
+
+The `Divider` component draws a visual boundary between sections of content. Use it to separate list items, panel sections, or groups of form fields without adding structural elements.
+
+## Import
+
+```tsx
+import { Divider } from '@xlsmart/design-system';
+```
+
+## Usage
+
+```tsx divider-example.tsx
+// Horizontal divider (default)
+<Stack direction="column" gap={4}>
+  <Section title="Account" />
+  <Divider />
+  <Section title="Billing" />
+</Stack>
+
+// Vertical divider
+<Stack direction="row" align="center" gap={4}>
+  <NavItem>Home</NavItem>
+  <Divider orientation="vertical" height={20} />
+  <NavItem>Settings</NavItem>
+</Stack>
+
+// Divider with label
+<Divider label="OR" />
+```
+
+## Props
+
+<ParamField path="orientation" type="'horizontal' | 'vertical'">
+  Direction of the divider line. Defaults to `'horizontal'`.
+</ParamField>
+
+<ParamField path="label" type="string">
+  Optional text label centered on the divider, e.g., "OR" or "AND".
+</ParamField>
+
+<ParamField path="color" type="string">
+  Override the divider color using a CSS custom property or token. Defaults to `var(--color-neutral-200)`.
+</ParamField>

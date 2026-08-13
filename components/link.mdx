@@ -1,7 +1,7 @@
 ---
-title: "Link: Inline Navigation Element"
+title: "Link: Accessible Inline Navigation and Anchor Component"
 sidebarTitle: "Link"
-description: "The XLSmart Link component renders accessible inline hyperlinks with consistent styling and support for external, download, and router-based navigation."
+description: "The XLSmart Link component renders accessible inline hyperlinks with consistent styling for external, download, and router-based navigation patterns."
 ---
 
 The `Link` component wraps the HTML `<a>` element with consistent styling and accessibility features. Use it for inline navigation within text, standalone call-to-action links, and external references.
@@ -43,6 +43,10 @@ import { Link } from '@xlsmart/design-system';
   The URL the link points to.
 </ParamField>
 
+<ParamField path="children" type="ReactNode" required>
+  The link's visible label or content.
+</ParamField>
+
 <ParamField path="variant" type="'primary' | 'subtle' | 'danger'">
   Visual style of the link. Defaults to `'primary'`.
 </ParamField>
@@ -57,4 +61,8 @@ import { Link } from '@xlsmart/design-system';
 
 <ParamField path="underline" type="'always' | 'hover' | 'never'">
   Controls underline visibility. Defaults to `'hover'`.
+</ParamField>
+
+<ParamField path="onClick" type="(event: React.MouseEvent<HTMLAnchorElement>) => void">
+  Click handler function. Useful for tracking or preventing default navigation.
 </ParamField>

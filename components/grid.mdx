@@ -1,7 +1,7 @@
 ---
-title: "Grid: 12-Column Responsive Layout System"
+title: "Grid: Responsive 12-Column Layout System Component"
 sidebarTitle: "Grid"
-description: "The XLSmart Grid component provides a responsive 12-column layout system with configurable columns, gaps, and breakpoint-aware behavior."
+description: "Use the XLSmart Grid component to build responsive 12-column layouts with configurable columns, gaps, and per-breakpoint behavior for any viewport size."
 ---
 
 The `Grid` component is the primary layout container in XLSmart Design System. It implements a 12-column responsive grid that adapts to any viewport size, giving you precise control over how content is arranged at each breakpoint.
@@ -9,7 +9,7 @@ The `Grid` component is the primary layout container in XLSmart Design System. I
 ## Import
 
 ```tsx
-import { Grid } from '@xlsmart/design-system';
+import { Grid, GridItem } from '@xlsmart/design-system';
 ```
 
 ## Basic usage
@@ -40,7 +40,7 @@ Pass an object to `cols` to define different column counts at each breakpoint:
 
 ## Column span
 
-Child elements can span multiple columns using the `colSpan` prop:
+Child elements can span multiple columns using the `colSpan` prop on `GridItem`:
 
 ```tsx grid-span.tsx
 <Grid cols={12} gap={4}>
@@ -55,6 +55,8 @@ Child elements can span multiple columns using the `colSpan` prop:
 
 ## Props
 
+### Grid props
+
 <ParamField path="cols" type="number | ResponsiveValue<number>">
   Number of columns. Pass a number for fixed columns or a responsive object for breakpoint-based values. Accepts 1–12.
 </ParamField>
@@ -63,8 +65,12 @@ Child elements can span multiple columns using the `colSpan` prop:
   Gap between grid cells, using the spacing scale (1–24). Defaults to `4`.
 </ParamField>
 
+<ParamField path="colGap" type="number | ResponsiveValue<number>">
+  Horizontal gap between columns. Overrides `gap` for column spacing when set.
+</ParamField>
+
 <ParamField path="rowGap" type="number | ResponsiveValue<number>">
-  Vertical gap between rows. If omitted, uses the `gap` value.
+  Vertical gap between rows. Overrides `gap` for row spacing when set.
 </ParamField>
 
 <ParamField path="align" type="'start' | 'center' | 'end' | 'stretch'">
@@ -75,6 +81,10 @@ Child elements can span multiple columns using the `colSpan` prop:
   Justifies grid items along the main axis. Defaults to `'start'`.
 </ParamField>
 
+<ParamField path="as" type="React.ElementType">
+  The HTML element or component to render as the grid container. Defaults to `'div'`.
+</ParamField>
+
 ### GridItem props
 
 <ParamField path="colSpan" type="number | ResponsiveValue<number>">
@@ -83,4 +93,8 @@ Child elements can span multiple columns using the `colSpan` prop:
 
 <ParamField path="rowSpan" type="number">
   Number of rows the item spans. Defaults to `1`.
+</ParamField>
+
+<ParamField path="as" type="React.ElementType">
+  The HTML element or component to render as the grid item. Defaults to `'div'`.
 </ParamField>

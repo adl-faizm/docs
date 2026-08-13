@@ -1,7 +1,7 @@
 ---
-title: "Radio: Single Choice from a Group"
+title: "Radio Component: Single Choice from Exclusive Option Groups"
 sidebarTitle: "Radio"
-description: "The XLSmart Radio and RadioGroup components provide mutually exclusive option selection with accessible keyboard navigation and group labeling."
+description: "The XLSmart Radio and RadioGroup components enable mutually exclusive option selection with accessible keyboard navigation and ARIA group labeling."
 ---
 
 The `Radio` component is for selecting exactly one option from a set. Always use `RadioGroup` to wrap related `Radio` inputs — this ensures correct grouping, keyboard navigation, and ARIA labeling.
@@ -61,6 +61,14 @@ import { Radio, RadioGroup } from '@xlsmart/design-system';
 
 <ParamField path="error" type="string">
   Error message for the group.
+</ParamField>
+
+<ParamField path="disabled" type="boolean">
+  Disables all radio options in the group. Defaults to `false`.
+</ParamField>
+
+<ParamField path="name" type="string">
+  HTML `name` attribute shared across all radio inputs in the group. Auto-generated if omitted.
 </ParamField>
 
 ## Props — Radio

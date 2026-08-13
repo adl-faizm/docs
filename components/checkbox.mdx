@@ -1,7 +1,7 @@
 ---
-title: "Checkbox: Single and Group Selection"
+title: "Checkbox Component: Single Selections and Group Layout"
 sidebarTitle: "Checkbox"
-description: "The XLSmart Checkbox component supports checked, unchecked, and indeterminate states with label, helper text, and group layouts."
+description: "The XLSmart Checkbox supports checked, unchecked, and indeterminate states with label, helper text, error handling, and CheckboxGroup layouts."
 ---
 
 The `Checkbox` component is used for binary on/off selections and for multiple-choice lists. It supports three visual states — checked, unchecked, and indeterminate — and can be used standalone or as part of a `CheckboxGroup`.
@@ -75,4 +75,38 @@ import { Checkbox, CheckboxGroup } from '@xlsmart/design-system';
 
 <ParamField path="error" type="string">
   Error message for invalid state.
+</ParamField>
+
+<ParamField path="value" type="string">
+  The value this checkbox represents when used inside a `CheckboxGroup`. Identifies the item in the group's `value` array.
+</ParamField>
+
+<ParamField path="required" type="boolean">
+  Marks the checkbox as required. Defaults to `false`.
+</ParamField>
+
+<ParamField path="name" type="string">
+  HTML `name` attribute, used for standalone checkboxes in form submissions.
+</ParamField>
+
+## Props — CheckboxGroup
+
+<ParamField path="label" type="string" required>
+  Label for the checkbox group. Renders as a `<legend>` for accessibility.
+</ParamField>
+
+<ParamField path="value" type="string[]">
+  Controlled array of selected checkbox values.
+</ParamField>
+
+<ParamField path="onChange" type="(value: string[]) => void">
+  Callback fired when the selection changes in the group.
+</ParamField>
+
+<ParamField path="error" type="string">
+  Error message shown below the group.
+</ParamField>
+
+<ParamField path="disabled" type="boolean">
+  Disables all checkboxes in the group. Defaults to `false`.
 </ParamField>

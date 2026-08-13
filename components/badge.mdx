@@ -1,7 +1,7 @@
 ---
-title: "Badge: Status and Count Indicator"
+title: "Badge: Status Label and Numeric Count Indicator Component"
 sidebarTitle: "Badge"
-description: "The XLSmart Badge component displays short status labels or numeric counts, with semantic color variants for success, warning, error, and neutral states."
+description: "The XLSmart Badge component displays short status labels or numeric counts with semantic color variants for success, warning, error, and info states."
 ---
 
 The `Badge` component displays a small label or count attached to a UI element. Use badges to communicate status, indicate unread counts, or tag items with category labels.
@@ -62,9 +62,13 @@ import { CheckCircle } from '@phosphor-icons/react';
 </ParamField>
 
 <ParamField path="maxCount" type="number">
-  Maximum count value before showing "N+". Defaults to `99`.
+  Maximum count value before showing `"N+"`. Defaults to `99`.
 </ParamField>
 
 <ParamField path="icon" type="ReactNode">
-  Optional icon before the label text.
+  Optional icon displayed before the label text.
+</ParamField>
+
+<ParamField path="dot" type="boolean">
+  When `true`, renders a small dot indicator instead of a label — useful for unread notifications. Defaults to `false`.
 </ParamField>

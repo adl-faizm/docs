@@ -1,7 +1,7 @@
 ---
-title: "Button: Primary Action Component"
+title: "Button: Primary Action and Interaction UI Component"
 sidebarTitle: "Button"
-description: "The XLSmart Button component supports primary, secondary, ghost, and danger variants with built-in loading, disabled, and icon states."
+description: "The XLSmart Button component supports primary, secondary, ghost, and danger variants with built-in loading, disabled, and icon states for any user action."
 ---
 
 The `Button` component is the most commonly used interactive element in XLSmart Design System. It supports four visual variants, multiple sizes, icon placement, loading states, and full keyboard and screen reader accessibility.
@@ -100,7 +100,15 @@ import { Plus, ArrowRight } from '@phosphor-icons/react';
   HTML button type attribute. Defaults to `'button'`.
 </ParamField>
 
-<ParamField path="onClick" type="(event: MouseEvent) => void">
+<ParamField path="as" type="React.ElementType">
+  Render the button as a different element or component, e.g., a router `Link`. Defaults to `'button'`.
+</ParamField>
+
+<ParamField path="href" type="string">
+  When set alongside `as="a"`, turns the button into an anchor link.
+</ParamField>
+
+<ParamField path="onClick" type="(event: React.MouseEvent<HTMLButtonElement>) => void">
   Click handler function.
 </ParamField>
 

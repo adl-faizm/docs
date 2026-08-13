@@ -1,7 +1,7 @@
 ---
-title: "Divider: Section Separator"
+title: "Divider: Horizontal and Vertical Section Separator"
 sidebarTitle: "Divider"
-description: "The XLSmart Divider component renders a horizontal or vertical rule to visually separate content sections."
+description: "Use the XLSmart Divider component to render a horizontal or vertical rule that visually separates content sections, with optional inline labels."
 ---
 
 The `Divider` component draws a visual boundary between sections of content. Use it to separate list items, panel sections, or groups of form fields without adding structural elements.
@@ -40,7 +40,19 @@ import { Divider } from '@xlsmart/design-system';
 </ParamField>
 
 <ParamField path="label" type="string">
-  Optional text label centered on the divider, e.g., "OR" or "AND".
+  Optional text label centered on the divider, e.g., `"OR"` or `"AND"`.
+</ParamField>
+
+<ParamField path="height" type="number">
+  Height in pixels for a vertical divider. Has no effect on horizontal dividers.
+</ParamField>
+
+<ParamField path="thickness" type="number">
+  Thickness of the divider line in pixels. Defaults to `1`.
+</ParamField>
+
+<ParamField path="spacing" type="number">
+  Vertical margin (for horizontal) or horizontal margin (for vertical) around the divider, using the spacing scale.
 </ParamField>
 
 <ParamField path="color" type="string">

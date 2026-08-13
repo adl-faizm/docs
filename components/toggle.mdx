@@ -1,7 +1,7 @@
 ---
-title: "Toggle: On/Off Switch Control"
+title: "Toggle Component: Accessible On/Off Switch Control"
 sidebarTitle: "Toggle"
-description: "The XLSmart Toggle component provides an on/off switch for binary settings, with label, size, and disabled state support."
+description: "The XLSmart Toggle provides an on/off switch for binary settings that take immediate effect, with label, size, helper text, and disabled state support."
 ---
 
 The `Toggle` component is an on/off switch for binary settings like enabling features, notifications, or permissions. Prefer `Toggle` over `Checkbox` when the setting takes effect immediately without a save action.
@@ -64,6 +64,18 @@ import { Toggle } from '@xlsmart/design-system';
 
 <ParamField path="helperText" type="string">
   Secondary text below the label.
+</ParamField>
+
+<ParamField path="id" type="string">
+  HTML `id` attribute for the underlying input. Auto-generated if omitted.
+</ParamField>
+
+<ParamField path="name" type="string">
+  HTML `name` attribute for the underlying input, used in form submissions.
+</ParamField>
+
+<ParamField path="required" type="boolean">
+  Marks the toggle as required. Defaults to `false`.
 </ParamField>
 
 <Tip>Use `Toggle` when the change takes immediate effect. Use `Checkbox` when the user must click a Save button to apply the change.</Tip>

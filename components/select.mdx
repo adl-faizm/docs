@@ -1,7 +1,7 @@
 ---
-title: "Select: Dropdown for Single and Multi-Select"
+title: "Select Component: Accessible Dropdown with Multi-Select"
 sidebarTitle: "Select"
-description: "The XLSmart Select component provides an accessible dropdown for choosing one or multiple options, with search, grouping, and async support."
+description: "The XLSmart Select component provides an accessible dropdown for choosing one or multiple options, with search, grouping, and async loading support."
 ---
 
 The `Select` component replaces the browser's native `<select>` with an accessible, keyboard-navigable dropdown. It supports single selection, multiple selection, option grouping, and async option loading.
@@ -87,4 +87,24 @@ import { Select } from '@xlsmart/design-system';
 
 <ParamField path="disabled" type="boolean">
   Disables the select. Defaults to `false`.
+</ParamField>
+
+<ParamField path="helperText" type="string">
+  Secondary text below the select providing additional context.
+</ParamField>
+
+<ParamField path="loading" type="boolean">
+  Shows a loading spinner inside the dropdown while options are being fetched asynchronously. Defaults to `false`.
+</ParamField>
+
+<ParamField path="groups" type="OptionGroup[]">
+  Array of `{ label: string, options: Option[] }` objects for rendering grouped options inside the dropdown.
+</ParamField>
+
+<ParamField path="required" type="boolean">
+  Marks the select as required. Defaults to `false`.
+</ParamField>
+
+<ParamField path="name" type="string">
+  HTML `name` attribute, used when the select is part of a form submission.
 </ParamField>

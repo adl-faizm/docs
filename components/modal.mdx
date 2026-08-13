@@ -1,7 +1,7 @@
 ---
-title: "Modal: Dialog Overlay with Focus Trapping"
+title: "Modal Component: Accessible Dialog with Focus Trapping"
 sidebarTitle: "Modal"
-description: "The XLSmart Modal component renders an accessible dialog overlay with focus trapping, backdrop dismiss, and configurable sizes."
+description: "The XLSmart Modal renders an accessible dialog overlay with focus trapping, Escape key handling, backdrop dismiss, and configurable width sizes."
 ---
 
 The `Modal` component displays content in a focused overlay layer, blocking interaction with the rest of the page until dismissed. It traps keyboard focus, responds to the Escape key, and manages scroll locking automatically.
@@ -79,4 +79,20 @@ const [open, setOpen] = useState(false);
 
 <ParamField path="closeOnEscape" type="boolean">
   Whether pressing Escape closes the modal. Defaults to `true`.
+</ParamField>
+
+<ParamField path="children" type="ReactNode">
+  The body content rendered inside the modal dialog.
+</ParamField>
+
+<ParamField path="description" type="string">
+  Optional subtitle or description below the title. Also sets `aria-describedby` for screen readers.
+</ParamField>
+
+<ParamField path="hideCloseButton" type="boolean">
+  Hides the default close (×) button in the top-right corner. Defaults to `false`.
+</ParamField>
+
+<ParamField path="initialFocus" type="RefObject<HTMLElement>">
+  Ref to the element that should receive focus when the modal opens. Defaults to the first focusable element inside the modal.
 </ParamField>

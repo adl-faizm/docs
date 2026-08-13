@@ -1,7 +1,7 @@
 ---
-title: "Stack: Flexbox Spacing Utility"
+title: "Stack: Flexbox Spacing and Alignment Layout Utility"
 sidebarTitle: "Stack"
-description: "The XLSmart Stack component arranges children in a row or column with consistent spacing from the design token scale."
+description: "Use the XLSmart Stack component to arrange children in a row or column with consistent spacing from the design token scale — no custom margins needed."
 ---
 
 The `Stack` component is the simplest way to space a group of elements. It wraps CSS flexbox and exposes spacing through the design token scale — no custom margin or padding needed.
@@ -31,7 +31,7 @@ import { Stack } from '@xlsmart/design-system';
 
 ## Props
 
-<ParamField path="direction" type="'row' | 'column' | ResponsiveValue">
+<ParamField path="direction" type="'row' | 'column' | ResponsiveValue<'row' | 'column'>">
   Direction of the stack. Defaults to `'column'`.
 </ParamField>
 
@@ -53,4 +53,8 @@ import { Stack } from '@xlsmart/design-system';
 
 <ParamField path="padding" type="number | ResponsiveValue<number>">
   Padding inside the stack container, using the spacing scale.
+</ParamField>
+
+<ParamField path="as" type="React.ElementType">
+  The HTML element or component to render as the stack container. Defaults to `'div'`.
 </ParamField>

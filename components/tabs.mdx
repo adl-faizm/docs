@@ -1,5 +1,5 @@
 ---
-title: "Tabs: Horizontal and Vertical Navigation Panels"
+title: "Tabs Component: Horizontal and Vertical Navigation Panels"
 sidebarTitle: "Tabs"
 description: "The XLSmart Tabs component provides accessible tabbed navigation for switching between related content panels within a single view."
 ---
@@ -102,4 +102,22 @@ import { Badge } from '@xlsmart/design-system';
 
 <ParamField path="badge" type="ReactNode">
   Badge element rendered after the tab label.
+</ParamField>
+
+## Props — TabPanel
+
+<ParamField path="value" type="string" required>
+  The tab value this panel is associated with. Rendered when the matching tab is active.
+</ParamField>
+
+<ParamField path="children" type="ReactNode" required>
+  Content to render inside the panel.
+</ParamField>
+
+<ParamField path="keepMounted" type="boolean">
+  When `true`, the panel stays in the DOM even when inactive. Useful for preserving state. Defaults to `false`.
+</ParamField>
+
+<ParamField path="className" type="string">
+  Additional CSS class name applied to the panel container.
 </ParamField>

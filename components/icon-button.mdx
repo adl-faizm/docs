@@ -1,7 +1,7 @@
 ---
-title: "IconButton: Accessible Icon-Only Button"
+title: "IconButton: Accessible Icon-Only Square Action Button"
 sidebarTitle: "Icon Button"
-description: "The XLSmart IconButton renders a button with an icon and no visible label, with built-in accessibility via aria-label."
+description: "The XLSmart IconButton renders a square button containing only an icon, with required aria-label support, loading state, and all standard button variants."
 ---
 
 The `IconButton` component is a square button containing only an icon. Use it for compact UI actions like close, delete, edit, or expand. Because there is no visible text label, an `aria-label` is required for screen reader users.
@@ -25,9 +25,23 @@ import { X, Pencil, DotsThree } from '@phosphor-icons/react';
 ## Variants and sizes
 
 ```tsx icon-button-variants.tsx
+import { X, Pencil, Trash } from '@phosphor-icons/react';
+
 <IconButton icon={<X />} variant="ghost" size="sm" aria-label="Dismiss" />
 <IconButton icon={<Pencil />} variant="secondary" size="md" aria-label="Edit" />
 <IconButton icon={<Trash />} variant="danger" size="lg" aria-label="Delete" />
+```
+
+## Loading state
+
+```tsx icon-button-loading.tsx
+import { CloudArrowUp } from '@phosphor-icons/react';
+
+<IconButton
+  icon={<CloudArrowUp />}
+  aria-label="Upload file"
+  loading={isUploading}
+/>
 ```
 
 ## Props
@@ -48,8 +62,16 @@ import { X, Pencil, DotsThree } from '@phosphor-icons/react';
   Size of the button. Defaults to `'md'`.
 </ParamField>
 
+<ParamField path="loading" type="boolean">
+  Shows a spinner and disables the button when `true`. Defaults to `false`.
+</ParamField>
+
 <ParamField path="disabled" type="boolean">
   Disables the button. Defaults to `false`.
+</ParamField>
+
+<ParamField path="onClick" type="(event: React.MouseEvent<HTMLButtonElement>) => void">
+  Click handler function.
 </ParamField>
 
 <Warning>The `aria-label` prop is required on every `IconButton`. Omitting it will fail accessibility audits and make the button unusable for screen reader users.</Warning>

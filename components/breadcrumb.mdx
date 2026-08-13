@@ -1,7 +1,7 @@
 ---
-title: "Breadcrumb: Hierarchical Navigation Trail"
+title: "Breadcrumb Component: Hierarchical Page Navigation Trail"
 sidebarTitle: "Breadcrumb"
-description: "The XLSmart Breadcrumb component shows the current page's location within a site hierarchy and allows users to navigate up to parent pages."
+description: "The XLSmart Breadcrumb component shows the current page location within a site hierarchy and lets users navigate back to any parent page."
 ---
 
 The `Breadcrumb` component provides a navigation trail showing where the current page sits within the site hierarchy. Use it on nested pages so users can easily retrace their steps.
@@ -61,6 +61,18 @@ For deep hierarchies, breadcrumbs automatically collapse the middle items with a
 
 ## Props — BreadcrumbItem
 
+<ParamField path="children" type="ReactNode" required>
+  Label text or element displayed for this breadcrumb item.
+</ParamField>
+
 <ParamField path="href" type="string">
-  Link URL. Omit on the last (current) item.
+  Link URL. Omit on the last (current) item to render it as plain text.
+</ParamField>
+
+<ParamField path="aria-current" type="'page' | boolean">
+  Set to `'page'` on the last item to indicate the current page to assistive technologies. Applied automatically when `href` is omitted.
+</ParamField>
+
+<ParamField path="className" type="string">
+  Additional CSS class name applied to the item element.
 </ParamField>

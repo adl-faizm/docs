@@ -27,12 +27,11 @@
           {
             "group": "Foundation",
             "pages": [
-              "foundation/colors",
+              "foundation/untitled-page",
               "foundation/typography",
               "foundation/spacing",
               "foundation/elevation",
-              "foundation/motion",
-              "foundation/untitled-page"
+              "foundation/motion"
             ]
           },
           {

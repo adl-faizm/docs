@@ -31,7 +31,8 @@
               "foundation/typography",
               "foundation/spacing",
               "foundation/elevation",
-              "foundation/motion"
+              "foundation/motion",
+              "foundation/untitled-page"
             ]
           },
           {

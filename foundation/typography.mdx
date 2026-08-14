@@ -1,73 +1,69 @@
 ---
 title: "Typography Tokens, Type Scale, and Font Guidelines"
 sidebarTitle: "Typography"
-description: "XLSmart Design System typography tokens define the type scale, font families, weights, and line heights used across all components."
+description: "Typography is our system of fonts and text styles. It enhances communication, reinforces brand, and guides users' emotions."
 ---
 
-Typography tokens define the visual hierarchy of text in your UI. XLSmart Design System ships with a modular type scale, system font stacks, and weight utilities that keep text consistent and readable across all products.
+1. Overview & Principles
+2. Brand Fonts File
+3. Typeface & Font Weights
+4. Type Scale
+5. Usage & Hierarchy
+6. Accessibility & Readability
 
-## Font families
+<Tabs>
+  <Tab title="Overview">
+    ## A. Overview & Principles
 
-| Token | Value | Usage |
-|-------|----------|-------|
-| `--font-family-sans` | `'Inter', system-ui, sans-serif` | Body text, UI labels, everything by default |
-| `--font-family-mono` | `'JetBrains Mono', 'Fira Code', monospace` | Code blocks, technical strings |
+    The XLSMART typography system creates a clear and consistent visual hierarchy across digital experiences. It defines how typeface, size, weight, line height, and letter spacing work together to improve readability and help users understand content.<br />These guidelines apply to all XLSMART digital products, including web applications, mobile applications, internal tools, dashboards, and brand-specific experiences.
+  </Tab>
+</Tabs>
 
-## Type scale
+<Columns cols={3}>
+  <Column>
+    <Card title="Optimize for readability" icon="eye">
+      Make content easy to read and understand for everyone. Prioritize clarity, accessibility, and a comfortable reading experience across all interfaces.
+    </Card>
+  </Column>
+  <Column>
+    <Card title="Create visual harmony" icon="book-open">
+      Maintain consistency through thoughtful typography choices. Use hierarchy, spacing, and alignment to organize information and create balanced layouts.
+    </Card>
+  </Column>
+  <Column>
+    <Card title="Adapt to user context" icon="font">
+      Design typography that works across different devices, platforms, and user preferences while supporting how people consume and process information.
+    </Card>
+  </Column>
+</Columns>
 
-The type scale uses a modular ratio to ensure consistent visual hierarchy.
+## **B. Brand Fonts File**
 
-| Token | Size | Line Height | Usage |
-|-------|------|-------------|-------|
-| `--text-xs` | 12px / 0.75rem | 1.5 | Captions, helper text, labels |
-| `--text-sm` | 14px / 0.875rem | 1.5 | Secondary body, form labels |
-| `--text-base` | 16px / 1rem | 1.6 | Primary body text |
-| `--text-lg` | 18px / 1.125rem | 1.5 | Large body, lead paragraphs |
-| `--text-xl` | 20px / 1.25rem | 1.4 | Section headings (H4/H5) |
-| `--text-2xl` | 24px / 1.5rem | 1.35 | Page sub-headings (H3) |
-| `--text-3xl` | 30px / 1.875rem | 1.3 | Page headings (H2) |
-| `--text-4xl` | 36px / 2.25rem | 1.25 | Hero headings (H1) |
-| `--text-5xl` | 48px / 3rem | 1.1 | Display / hero text |
+<img
+  src="/images/Typography.png"
+  alt="Typography"
+  title="Typography"
+  style={{ width:"26%" }}
+/>
 
-## Font weights
+14 Font Available
 
-| Token | Value | Usage |
-|-------|-------|-------|
-| `--font-weight-regular` | 400 | Body text |
-| `--font-weight-medium` | 500 | Labels, UI text |
-| `--font-weight-semibold` | 600 | Subheadings, emphasis |
-| `--font-weight-bold` | 700 | Headings, strong emphasis |
+[<u>Download Link</u>](https://drive.google.com/drive/folders/1_xEVJyvhUY-4zJC9jKI-W625OpZtbQG4)
 
-## Using typography tokens
+## C. Typeface & Font Weight
 
-```css component.css
-.card-title {
-  font-family: var(--font-family-sans);
-  font-size: var(--text-xl);
-  font-weight: var(--font-weight-semibold);
-  line-height: 1.4;
-  color: var(--color-neutral-900);
-}
+XLSMART is the primary typeface used across XLSMART digital experiences. Approved fallback fonts must be used when the primary typeface is unavailable or does not support the required language or character set.
 
-.card-body {
-  font-size: var(--text-base);
-  font-weight: var(--font-weight-regular);
-  color: var(--color-neutral-800);
-}
-```
+### 1. Font Weight
 
-## Heading hierarchy
+Use only the approved font weights. Avoid using font weight as the only method of communicating meaning or hierarchy.
 
-Use heading elements (`h1`–`h6`) semantically for document structure, then style them with typography tokens:
+| Weight | Usage |
+| --- | --- |
+| Regular, 400 | Body text, description, supporting text |
+| Semibold, 600 | Title, heading, button label |
 
-```tsx headings.tsx
-import { Text, Heading } from '@xlsmart/design-system';
+Additional Rules:
 
-<Heading level={1} size="4xl">Page Title</Heading>
-<Heading level={2} size="3xl">Section Title</Heading>
-<Heading level={3} size="2xl">Subsection</Heading>
-<Text size="base">Body paragraph text.</Text>
-<Text size="sm" color="secondary">Caption or helper text.</Text>
-```
-
-<Tip>Always set heading levels based on document structure, not visual appearance. Use the `size` prop to control visual scale independently of semantic level.</Tip>
+- Regular for the majority of content
+- Semibold for emphasis

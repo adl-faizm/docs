@@ -124,5 +124,8 @@
   "logo": {
     "light": "/images/Logo-Light.svg",
     "dark": "/images/Logo-Dark.svg"
+  },
+  "thumbnails": {
+    "appearance": "light"
   }
 }

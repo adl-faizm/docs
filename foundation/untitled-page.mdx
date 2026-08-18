@@ -4,301 +4,326 @@ description: "Explore the XLSmart Design System color palette, semantic color to
 icon: "droplet"
 ---
 
-Colors represent XLSMART’s identity, from primary, secondary, and neutral colors, to semantic colors. To maintain visual consistency, accessibility (WCAG), and a clear interaction hierarchy across all XLSMART digital products, XLSMART Blue and XLSMART Magenta are assigned distinct systemic roles (Semantic Separation). This avoids color meaning conflicts and ensures an intuitive, consistent user experience.<br />Here’s why we separated the roles of primary blue and magenta:<br />
+Colors represent XLSMART’s identity, from primary, secondary, and neutral colors, to semantic colors. To maintain visual consistency, accessibility (WCAG), and a clear interaction hierarchy across all XLSMART digital products, XLSMART Blue and XLSMART Magenta are assigned distinct systemic roles (Semantic Separation). This avoids color meaning conflicts and ensures an intuitive, consistent user experience.<br />Here’s why we separated the roles of primary blue and magenta:
 
 1. Interaction Clarity (UX Safety & Clarity)<br /> In UI/UX psychology, red/magenta tones naturally signal warnings or errors. Using XLSMART Blue as the Primary Interactive Color ensures users can easily spot main actions (buttons, links, controls) without worrying it's an error.
 2. Accessibility Compliance (WCAG Compliance)<br />XLSMART Blue (#1e22aa) offers a higher, more stable contrast ratio on light or white backgrounds, meeting [<u>WCAG 2.1</u>](https://www.w3.org/TR/WCAG21/) AA standards for text and interactive elements.
 3. High-Impact Brand Moments<br /> XLSMART Magenta (#e5005a) and the Future Gradient are super vibrant and high energy. Using them selectively as Brand Accents creates a much stronger visual impact for promo and marketing elements, rather than overusing them on every UI button.
 
-## Color Scale Intent & Recommended Usage (Light Mode)
-
-| Shade Scale | Intent & Recommended Usage |
-| :-- | :-- |
-| **50** | Subtle Surface / Background Highlight (Latar belakang alert/toast/card) |
-| **100 – 200** | Disabled States, Subtle Borders, Divider (Disable Button, Disable Text, etc.) |
-| **300 – 400** | Component Borders, Focus Rings, Placeholder Icons (Card Border, focused state, etc.) |
-| **500 – 600** | Primary Brand & Main Interactive Elements (Tombol Utama) |
-| **700 – 800** | Hover / Pressed States & Sub-headers |
-| **900** | Primary Text (Light Mode) |
-| **950** | Dark Mode Surfaces / Deep Contrast Text |
-
-> **Note:** The shade mapping above is a base guide (recommended usage) to keep UI components consistent. Shade usage can be adjusted for special cases (like Dark Mode, high contrast, or complex components), as long as it still meets WCAG 2.1 AA contrast standards.
-
----
-
-## A. Brand Colors
-
-### Core Brand
-
-#### 1.1 Primary (XLSMART Blue)
-
-Use this color exclusively for **action-driven user interactions**:
-
-- **Primary Action Buttons:** Buttons like "Buy Now", "Continue", "Save".
-- **Active States:** Selected tab states, active toggle switches, active pagination pages.
-- **Text Links & Interactive Icons:** Clickable text within paragraphs or active navigation icons.
-
-| Visual | Shade | HEX Code | Note / Main Color |
-| :-: | :-- | :-- | :-- |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#ECF2FF', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **50** | `#ECF2FF` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#DCE7FF', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **100** | `#DCE7FF` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#BFD2FF', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **200** | `#BFD2FF` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#99B4FF', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **300** | `#99B4FF` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#708AFF', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **400** | `#708AFF` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#4F62FF', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **500** | `#4F62FF` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#2F36FC', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **600** | `#2F36FC` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#2326DF', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **700** | `#2326DF` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#1E22AA', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **800** | `#1E22AA` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#22288D', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **900** ⭐ | `#22288D` | **Main Base Color** |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#141652', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **950** | `#141652` |  |
-
-_All color pairings in this palette are verified against WCAG 2.1 AA standards using contrast ratio testing._
-
-- **DO:** Use XLSMART Blue for all main Primary Action buttons across the app.
-- **DON'T:** Avoid using XLSMART Magenta for general Primary Action buttons to prevent confusion with cancel or danger actions.
-
----
-
-#### 1.2 Accent (XLSMART Magenta)
-
-Use this color exclusively to **draw visual attention to promo or brand content**:
-
-- **Badges & Tags:** Labels like "50% Off", "Best Seller", "Cashback".
-- **Notification Indicators:** Badge dots marking new promos or messages in the menu.
-- **Marketing Highlights:** Highlighted borders on top-recommended subscription plans (Featured Cards).
-
-| Visual | Shade | HEX Code | Note / Main Color |
-| :-: | :-- | :-- | :-- |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FFF0F3', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **50** | `#FFF0F3` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FFE1E8', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **100** | `#FFE1E8` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FFC8D7', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **200** | `#FFC8D7` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FF9BB6', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **300** | `#FF9BB6` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FF6391', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **400** | `#FF6391` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FF2C70', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **500** | `#FF2C70` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#F60860', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **600** | `#F60860` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#E5005A', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **700** | `#E5005A` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#AE034C', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **800** ⭐ | `#AE034C` | **Main Base Color** |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#940747', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **900** | `#940747` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#530024', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **950** | `#530024` |  |
-
-- **DO:** Use XLSMART Magenta or the Future Gradient on Hero Banners and Promo Cards to maintain brand identity.
-- **DON'T:**
-  - Don't mix Primary Blue and Primary Magenta buttons on the same viewport/screen.
-  - Don't apply the magenta accent color to warning or red UI components, as it creates confusion over whether it's an error state or a brand color.
-
----
-
-### Secondary Brand
-
-Secondary brand colors provide depth and flexibility for supporting marketing elements, accents, and subtle brand expressions without competing with the primary brand identity.
-
-#### Burgundy
-
-| Visual | Shade | HEX | Note / Main Color |
-| :-: | :-- | :-- | :-- |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#FDF2F9', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **50** | `#FDF2F9` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#FCE7F5', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **100** | `#FCE7F5` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#FBCFED', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **200** | `#FBCFED` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#FAA7DD', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **300** | `#FAA7DD` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#F571C4', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **400** | `#F571C4` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#EE46AB', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **500** | `#EE46AB` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#DD258B', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **600** | `#DD258B` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#C0166F', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **700** | `#C0166F` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#9E165C', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **800** | `#9E165C` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#791548', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **900** ⭐ | `#791548` | **Main Base Color** |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#51062C', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **950** | `#51062C` |  |
-
-#### Soft Magenta
-
-| Visual | Shade | HEX | Note / Main Color |
-| :-: | :-- | :-- | :-- |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#FDF2F7', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **50** | `#FDF2F7` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#FDE6F1', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **100** | `#FDE6F1` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#FDCDE3', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **200** | `#FDCDE3` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#FC9AC4', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **300** ⭐ | `#FC9AC4` | **Main Base Color** |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#F96DA6', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **400** | `#F96DA6` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#F34185', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **500** | `#F34185` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#E22060', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **600** | `#E22060` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#C51147', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **700** | `#C51147` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#A2123C', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **800** | `#A2123C` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#871435', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **900** | `#871435` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#53041A', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **950** | `#53041A` |  |
-
-#### Future Violet
-
-| Visual | Shade | HEX | Note / Main Color |
-| :-: | :-- | :-- | :-- |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#F4F2FF', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **50** | `#F4F2FF` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#ECE8FF', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **100** | `#ECE8FF` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#DAD4FF', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **200** | `#DAD4FF` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#C0B2FF', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **300** | `#C0B2FF` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#A186FF', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **400** | `#A186FF` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#8455FD', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **500** | `#8455FD` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#7431F5', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **600** ⭐ | `#7431F5` | **Main Base Color** |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#6620E1', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **700** | `#6620E1` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#551ABD', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **800** | `#551ABD` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#47189A', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **900** | `#47189A` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#2A0C69', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **950** | `#2A0C69` |  |
-
-#### Livender
-
-| Visual | Shade | HEX | Note / Main Color |
-| :-: | :-- | :-- | :-- |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#EEF1FF', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **50** | `#EEF1FF` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#DFE4FF', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **100** | `#DFE4FF` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#C6CEFF', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **200** | `#C6CEFF` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#A4ADFD', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **300** | `#A4ADFD` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#8083FA', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **400** ⭐ | `#8083FA` | **Main Base Color** |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#6861F3', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **500** | `#6861F3` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#5843E8', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **600** | `#5843E8` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#4B36CC', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **700** | `#4B36CC` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#3D2EA5', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **800** | `#3D2EA5` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#362D82', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **900** | `#362D82` |  |
-| <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#211A4C', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **950** | `#211A4C` |  |
-
----
-
-## B. Neutral Colors (Base/UI Shell)
-
-Neutral colors create a clean and stylish background that helps images and text stand out. Using colors like beige, gray, and white gives a calm and professional feel, improving user experience and readability.
-
-| Visual | Shade | HEX Code | Note / Main Color |
-| :-: | :-- | :-- | :-- |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FFFFFF', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **50** ⭐ | `#FFFFFF` | **Main Base Surface** |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#F4F4F3', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **100** | `#F4F4F3` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#E8E9E8', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **200** | `#E8E9E8` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#DCDFDD', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **300** | `#DCDFDD` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#D1D3D4', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **400** ⭐ | `#D1D3D4` | **Main Secondary Surface / Border** |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#9FAFBB', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **500** | `#9FAFBB` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#6A7A94', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **600** | `#6A7A94` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#49597F', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **700** | `#49597F` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#2F3A6A', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **800** | `#2F3A6A` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#1A1F54', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **900** | `#1A1F54` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#0B0B3F', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **950** ⭐ | `#0B0B3F` | **Main Primary Text Color** |
-
----
-
-## C. Semantic Colors
-
-Semantic colors are used exclusively to communicate system status, provide feedback, and give intuitive visual cues to users following universal UI/UX psychology standards.
-
-### Info
-
-Used to convey neutral information, system hints, or non-critical updates that need user attention without any urgency (e.g., toast notifications, information banners, helper text).
-
-| Visual | Shade | HEX Code | Note / Main Color |
-| :-: | :-- | :-- | :-- |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#F0F9FF', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **50** ⭐ | `#F0F9FF` | **Main Base Surface** |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#E0F2FE', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **100** | `#E0F2FE` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#BAE6FD', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **200** | `#BAE6FD` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#7DD3FC', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **300** | `#7DD3FC` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#38BDF8', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **400** | `#38BDF8` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#0EA5E9', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **500** | `#0EA5E9` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#0284C7', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **600** | `#0284C7` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#0369A1', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **700** | `#0369A1` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#075985', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **800** | `#075985` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#0C4A6E', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **900** | `#0C4A6E` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#082F49', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **950** | `#082F49` |  |
-
----
-
-### Success
-
-Used to mark successfully completed actions, safe processes, or positive system states (e.g., payment success badges, complete states, success toasts).
-
-| Visual | Shade | HEX Code | Note / Main Color |
-| :-: | :-- | :-- | :-- |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#F0FDF4', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **50** ⭐ | `#F0FDF4` | **Main Base Surface** |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#DCFCE7', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **100** | `#DCFCE7` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#BBF7D0', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **200** | `#BBF7D0` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#86EFAC', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **300** | `#86EFAC` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#4ADE80', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **400** | `#4ADE80` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#22C55E', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **500** | `#22C55E` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#16A34A', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **600** | `#16A34A` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#15803D', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **700** | `#15803D` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#166534', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **800** | `#166534` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#14532D', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **900** | `#14532D` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#052E16', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **950** | `#052E16` |  |
-
----
-
-### Warning
-
-Used to give early warnings or signal caution for conditions that require user attention before proceeding (e.g., system maintenance alerts, pending payments, storage limit warnings).
-
-| Visual | Shade | HEX Code | Note / Main Color |
-| :-: | :-- | :-- | :-- |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FFFBEB', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **50** ⭐ | `#FFFBEB` | **Main Base Surface** |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FEF3C7', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **100** | `#FEF3C7` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FDE68A', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **200** | `#FDE68A` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FCD34D', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **300** | `#FCD34D` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FBBF24', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **400** | `#FBBF24` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#F59E0B', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **500** | `#F59E0B` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#D97706', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **600** | `#D97706` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#B45309', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **700** | `#B45309` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#92400E', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **800** | `#92400E` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#78350F', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **900** | `#78350F` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#451A03', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **950** | `#451A03` |  |
-
----
-
-### Error
-
-Used strictly to indicate system failures, invalid inputs, or high-risk destructive actions (e.g., form validation errors, failed transaction alerts, delete action confirmations).
-
-| Visual | Shade | HEX Code | Note / Main Color |
-| :-: | :-- | :-- | :-- |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FEF2F2', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **50** ⭐ | `#FEF2F2` | **Main Base Surface** |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FEE2E2', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **100** | `#FEE2E2` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FECACA', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **200** | `#FECACA` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FCA5A5', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **300** | `#FCA5A5` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#F87171', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **400** | `#F87171` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#EF4444', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **500** | `#EF4444` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#DC2626', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **600** | `#DC2626` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#B91C1C', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **700** | `#B91C1C` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#991B1B', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **800** | `#991B1B` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#7F1D1D', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **900** | `#7F1D1D` |  |
-| <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#450A0A', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **950** | `#450A0A` |  |
-
----
-
-## D. Future Gradient
-
-Future Gradient is our main gradient color used for branding needs of XLSMART. Can be used as a background and it can appear in two orientations: vertical and horizontal. To maintain consistency, always position the XLSMART Magenta color on top of vertical layout, and on the left side of the horizontal layout.
-
-<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '16px', margin: '20px 0' }}>
-  {/* Vertical Gradient Card */}
-
-  <svg width="100%" height="180" viewBox="0 0 320 180" style={{ borderRadius: '16px' }}>
-    <defs>
-      <linearGradient id="gradVertical" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stopColor="#E5005A" />
-
-        <stop offset="100%" stopColor="#1E22AA" />
-      </linearGradient>
-    </defs>
-
-    <rect width="100%" height="100%" rx="16" fill="url(#gradVertical)" />
-
-    <text x="290" y="36" fontSize="20" fill="#ffffff" textAnchor="middle">⭐</text>
-  </svg>
-
-  {/* Horizontal Gradient Card */}
-
-  <svg width="100%" height="180" viewBox="0 0 320 180" style={{ borderRadius: '16px' }}>
-    <defs>
-      <linearGradient id="gradHorizontal" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stopColor="#E5005A" />
-
-        <stop offset="100%" stopColor="#1E22AA" />
-      </linearGradient>
-    </defs>
-
-    <rect width="100%" height="100%" rx="16" fill="url(#gradHorizontal)" />
-
-    <text x="290" y="36" fontSize="20" fill="#ffffff" textAnchor="middle">⭐</text>
-  </svg>
-</div>
-
-- **Vertical Layout:** XLSMART Magenta MUST be positioned on **top**.
-- **Horizontal Layout:** XLSMART Magenta MUST be positioned on the **left side**.
+<Tabs>
+  <Tab title="Overview">
+    ## Color Scale Intent & Recommended Usage (Light Mode)
+
+    | Shade Scale | Intent & Recommended Usage |
+    | :-- | :-- |
+    | **50** | Subtle Surface / Background Highlight (Latar belakang alert/toast/card) |
+    | **100 – 200** | Disabled States, Subtle Borders, Divider (Disable Button, Disable Text, etc.) |
+    | **300 – 400** | Component Borders, Focus Rings, Placeholder Icons (Card Border, focused state, etc.) |
+    | **500 – 600** | Primary Brand & Main Interactive Elements (Tombol Utama) |
+    | **700 – 800** | Hover / Pressed States & Sub-headers |
+    | **900** | Primary Text (Light Mode) |
+    | **950** | Dark Mode Surfaces / Deep Contrast Text |
+
+    > **Note:** The shade mapping above is a base guide (recommended usage) to keep UI components consistent. Shade usage can be adjusted for special cases (like Dark Mode, high contrast, or complex components), as long as it still meets WCAG 2.1 AA contrast standards.
+
+    ## A. Brand Colors
+
+    ### 1. Core Brand
+
+    #### 1.1 Primary (XLSMART Blue)
+
+    Use this color exclusively for **action-driven user interactions**:
+
+    - **Primary Action Buttons:** Buttons like "Buy Now", "Continue", "Save".
+    - **Active States:** Selected tab states, active toggle switches, active pagination pages.
+    - **Text Links & Interactive Icons:** Clickable text within paragraphs or active navigation icons.
+
+    | Visual | Shade | HEX Code | Note / Main Color |
+    | :-: | :-- | :-- | :-- |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#ECF2FF', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **50** | `#ECF2FF` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#DCE7FF', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **100** | `#DCE7FF` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#BFD2FF', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **200** | `#BFD2FF` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#99B4FF', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **300** | `#99B4FF` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#708AFF', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **400** | `#708AFF` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#4F62FF', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **500** | `#4F62FF` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#2F36FC', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **600** | `#2F36FC` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#2326DF', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **700** | `#2326DF` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#1E22AA', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **800** | `#1E22AA` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#22288D', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **900** ⭐ | `#22288D` | **Main Base Color** |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#141652', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **950** | `#141652` |  |
+
+    _All color pairings in this palette are verified against WCAG 2.1 AA standards using contrast ratio testing._
+
+    - **DO:** Use XLSMART Blue for all main Primary Action buttons across the app.
+    - **DON'T:** Avoid using XLSMART Magenta for general Primary Action buttons to prevent confusion with cancel or danger actions.
+
+    ---
+
+    #### 1.2 Accent (XLSMART Magenta)
+
+    Use this color exclusively to **draw visual attention to promo or brand content**:
+
+    - **Badges & Tags:** Labels like "50% Off", "Best Seller", "Cashback".
+    - **Notification Indicators:** Badge dots marking new promos or messages in the menu.
+    - **Marketing Highlights:** Highlighted borders on top-recommended subscription plans (Featured Cards).
+
+    | Visual | Shade | HEX Code | Note / Main Color |
+    | :-: | :-- | :-- | :-- |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FFF0F3', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **50** | `#FFF0F3` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FFE1E8', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **100** | `#FFE1E8` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FFC8D7', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **200** | `#FFC8D7` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FF9BB6', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **300** | `#FF9BB6` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FF6391', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **400** | `#FF6391` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FF2C70', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **500** | `#FF2C70` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#F60860', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **600** | `#F60860` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#E5005A', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **700** | `#E5005A` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#AE034C', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **800** ⭐ | `#AE034C` | **Main Base Color** |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#940747', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **900** | `#940747` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#530024', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **950** | `#530024` |  |
+
+    - **DO:** Use XLSMART Magenta or the Future Gradient on Hero Banners and Promo Cards to maintain brand identity.
+    - **DON'T:**
+      - Don't mix Primary Blue and Primary Magenta buttons on the same viewport/screen.
+      - Don't apply the magenta accent color to warning or red UI components, as it creates confusion over whether it's an error state or a brand color.
+
+    ---
+
+    ### Secondary Brand
+
+    Secondary brand colors provide depth and flexibility for supporting marketing elements, accents, and subtle brand expressions without competing with the primary brand identity.
+
+    #### Burgundy
+
+    | Visual | Shade | HEX | Note / Main Color |
+    | :-: | :-- | :-- | :-- |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#FDF2F9', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **50** | `#FDF2F9` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#FCE7F5', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **100** | `#FCE7F5` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#FBCFED', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **200** | `#FBCFED` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#FAA7DD', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **300** | `#FAA7DD` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#F571C4', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **400** | `#F571C4` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#EE46AB', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **500** | `#EE46AB` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#DD258B', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **600** | `#DD258B` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#C0166F', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **700** | `#C0166F` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#9E165C', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **800** | `#9E165C` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#791548', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **900** ⭐ | `#791548` | **Main Base Color** |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#51062C', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **950** | `#51062C` |  |
+
+    #### Soft Magenta
+
+    | Visual | Shade | HEX | Note / Main Color |
+    | :-: | :-- | :-- | :-- |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#FDF2F7', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **50** | `#FDF2F7` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#FDE6F1', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **100** | `#FDE6F1` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#FDCDE3', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **200** | `#FDCDE3` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#FC9AC4', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **300** ⭐ | `#FC9AC4` | **Main Base Color** |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#F96DA6', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **400** | `#F96DA6` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#F34185', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **500** | `#F34185` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#E22060', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **600** | `#E22060` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#C51147', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **700** | `#C51147` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#A2123C', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **800** | `#A2123C` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#871435', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **900** | `#871435` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#53041A', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **950** | `#53041A` |  |
+
+    #### Future Violet
+
+    | Visual | Shade | HEX | Note / Main Color |
+    | :-: | :-- | :-- | :-- |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#F4F2FF', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **50** | `#F4F2FF` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#ECE8FF', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **100** | `#ECE8FF` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#DAD4FF', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **200** | `#DAD4FF` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#C0B2FF', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **300** | `#C0B2FF` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#A186FF', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **400** | `#A186FF` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#8455FD', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **500** | `#8455FD` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#7431F5', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **600** ⭐ | `#7431F5` | **Main Base Color** |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#6620E1', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **700** | `#6620E1` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#551ABD', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **800** | `#551ABD` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#47189A', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **900** | `#47189A` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#2A0C69', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **950** | `#2A0C69` |  |
+
+    #### Livender
+
+    | Visual | Shade | HEX | Note / Main Color |
+    | :-: | :-- | :-- | :-- |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#EEF1FF', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **50** | `#EEF1FF` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#DFE4FF', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **100** | `#DFE4FF` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#C6CEFF', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **200** | `#C6CEFF` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#A4ADFD', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **300** | `#A4ADFD` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#8083FA', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **400** ⭐ | `#8083FA` | **Main Base Color** |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#6861F3', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **500** | `#6861F3` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#5843E8', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **600** | `#5843E8` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#4B36CC', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **700** | `#4B36CC` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#3D2EA5', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **800** | `#3D2EA5` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#362D82', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **900** | `#362D82` |  |
+    | <span style={{ display: 'inline-block', width: '24px', height: '24px', backgroundColor: '#211A4C', borderRadius: '4px', border: '1px solid #DCDFDD' }} /> | **950** | `#211A4C` |  |
+
+    ---
+
+    ## B. Neutral Colors (Base/UI Shell)
+
+    Neutral colors create a clean and stylish background that helps images and text stand out. Using colors like beige, gray, and white gives a calm and professional feel, improving user experience and readability.
+
+    | Visual | Shade | HEX Code | Note / Main Color |
+    | :-: | :-- | :-- | :-- |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FFFFFF', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **50** ⭐ | `#FFFFFF` | **Main Base Surface** |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#F4F4F3', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **100** | `#F4F4F3` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#E8E9E8', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **200** | `#E8E9E8` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#DCDFDD', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **300** | `#DCDFDD` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#D1D3D4', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **400** ⭐ | `#D1D3D4` | **Main Secondary Surface / Border** |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#9FAFBB', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **500** | `#9FAFBB` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#6A7A94', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **600** | `#6A7A94` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#49597F', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **700** | `#49597F` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#2F3A6A', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **800** | `#2F3A6A` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#1A1F54', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **900** | `#1A1F54` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#0B0B3F', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **950** ⭐ | `#0B0B3F` | **Main Primary Text Color** |
+
+    ---
+
+    ## C. Semantic Colors
+
+    Semantic colors are used exclusively to communicate system status, provide feedback, and give intuitive visual cues to users following universal UI/UX psychology standards.
+
+    ### Info
+
+    Used to convey neutral information, system hints, or non-critical updates that need user attention without any urgency (e.g., toast notifications, information banners, helper text).
+
+    | Visual | Shade | HEX Code | Note / Main Color |
+    | :-: | :-- | :-- | :-- |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#F0F9FF', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **50** | `#F0F9FF` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#E0F2FE', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **100** | `#E0F2FE` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#BAE6FD', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **200** | `#BAE6FD` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#7DD3FC', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **300** | `#7DD3FC` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#38BDF8', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **400** | `#38BDF8` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#0EA5E9', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **500** | `#0EA5E9` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#0284C7', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **600** ⭐ | `#0284C7` | **Main Color** |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#0369A1', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **700** | `#0369A1` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#075985', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **800** | `#075985` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#0C4A6E', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **900** | `#0C4A6E` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#082F49', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **950** | `#082F49` |  |
+
+    ---
+
+    ### Success
+
+    Used to mark successfully completed actions, safe processes, or positive system states (e.g., payment success badges, complete states, success toasts).
+
+    | Visual | Shade | HEX Code | Note / Main Color |
+    | :-: | :-- | :-- | :-- |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#F0FDF4', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **50** | `#F0FDF4` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#DCFCE7', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **100** | `#DCFCE7` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#BBF7D0', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **200** | `#BBF7D0` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#86EFAC', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **300** | `#86EFAC` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#4ADE80', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **400** | `#4ADE80` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#22C55E', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **500** | `#22C55E` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#16A34A', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **600** ⭐ | `#16A34A` | **Main Color** |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#15803D', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **700** | `#15803D` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#166534', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **800** | `#166534` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#14532D', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **900** | `#14532D` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#052E16', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **950** | `#052E16` |  |
+
+    ---
+
+    ### Warning
+
+    Used to give early warnings or signal caution for conditions that require user attention before proceeding (e.g., system maintenance alerts, pending payments, storage limit warnings).
+
+    | Visual | Shade | HEX Code | Note / Main Color |
+    | :-: | :-- | :-- | :-- |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FFFBEB', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **50** | `#FFFBEB` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FEF3C7', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **100** | `#FEF3C7` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FDE68A', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **200** | `#FDE68A` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FCD34D', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **300** | `#FCD34D` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FBBF24', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **400** | `#FBBF24` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#F59E0B', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **500** | `#F59E0B` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#D97706', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **600** ⭐ | `#D97706` | **Main Color** |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#B45309', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **700** | `#B45309` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#92400E', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **800** | `#92400E` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#78350F', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **900** | `#78350F` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#451A03', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **950** | `#451A03` |  |
+
+    ---
+
+    ### Error
+
+    Used strictly to indicate system failures, invalid inputs, or high-risk destructive actions (e.g., form validation errors, failed transaction alerts, delete action confirmations).
+
+    | Visual | Shade | HEX Code | Note / Main Color |
+    | :-: | :-- | :-- | :-- |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FEF2F2', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **50** | `#FEF2F2` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FEE2E2', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **100** | `#FEE2E2` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FECACA', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **200** | `#FECACA` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#FCA5A5', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **300** | `#FCA5A5` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#F87171', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **400** | `#F87171` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#EF4444', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **500** | `#EF4444` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#DC2626', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **600** ⭐ | `#DC2626` | **Main Color** |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#B91C1C', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **700** | `#B91C1C` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#991B1B', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **800** | `#991B1B` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#7F1D1D', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **900** | `#7F1D1D` |  |
+    | <span style={{ display: 'inline-block', width: '28px', height: '28px', backgroundColor: '#450A0A', borderRadius: '6px', border: '1px solid #DCDFDD' }} /> | **950** | `#450A0A` |  |
+
+    ---
+
+    ## D. Future Gradient
+
+    Future Gradient is our main gradient color used for branding needs of XLSMART. Can be used as a background and it can appear in two orientations: vertical and horizontal. To maintain consistency, always position the XLSMART Magenta color on top of vertical layout, and on the left side of the horizontal layout.
+
+    <Columns cols={2}>
+      <Column>
+        <Frame>
+          ![Gradient Vertical](/images/gradient-vertical.png "Gradient Vertical")
+        </Frame>
+      </Column>
+      <Column>
+        <Frame>
+          ![Gradient Horizontal](/images/gradient-horizontal.png "Gradient Horizontal")
+        </Frame>
+      </Column>
+    </Columns>
+
+    - **Vertical Layout:** XLSMART Magenta MUST be positioned on **top**.
+    - **Horizontal Layout:** XLSMART Magenta MUST be positioned on the **left side**.
+
+    ---
+  </Tab>
+  <Tab title="Token">
+    ## Design Token
+
+    ### 1. Text Color
+
+    Use text color variables to manage all text fill colors in your designs across segments & light/dark mode.
+
+    | Token & Description | Value |
+    | --- | --- |
+    | `color.text.primary`<br />**Primary Text**<br />Use for primary text such as title, sentence case header, light button | <div style={{ display: 'inline-block', width: '36px', height: '36px', backgroundColor: '#0B0B3F', border: '1px solid rgba(0, 0, 0, 0.1)', borderRadius: '8px' }} /><br />**color.text.primary**<br />`#neutral.950` |
+    | `color.text.primary-on-background`<br />**Primary On Background Text**<br />Use for primary text such as title, sentence case header **on dark background** | <div style={{ display: 'inline-block', width: '36px', height: '36px', backgroundColor: '#FFFFFF', border: '1px solid rgba(0, 0, 0, 0.1)', borderRadius: '8px' }} /><br />**color.text.primary-on-background**<br />`#neutral.50` |
+    | `color.text.secondary`<br />**Secondary Text**<br />Use for secondary text like subtitles or secondary buttons | <div style={{ display: 'inline-block', width: '36px', height: '36px', backgroundColor: '#1A1F54', border: '1px solid rgba(0, 0, 0, 0.1)', borderRadius: '8px' }} /><br />**color.text.secondary**<br />`#neutral.900` |
+    | `color.text.disabled`<br />**Disabled**<br />Use for placeholder text & disabled component | <div style={{ display: 'inline-block', width: '36px', height: '36px', backgroundColor: '#E8E9E8', border: '1px solid rgba(0, 0, 0, 0.1)', borderRadius: '8px' }} /><br />**color.text.disabled**<br />`#neutral.200` |
+    | `color.text.brand`<br />**brand Text**<br />Use for text that need highlight of brand color. Usually on higlight badge,thematic cards, etc | <div style={{ display: 'inline-block', width: '36px', height: '36px', backgroundColor: '#1E22AA', border: '1px solid rgba(0, 0, 0, 0.1)', borderRadius: '8px' }} /><br />**color.text.brand**<br />`#corebrand.primary.800` |
+    | `color.text.accent`<br />**Accent Text**<br />Use for highlight with secondary brand color | <div style={{ display: 'inline-block', width: '36px', height: '36px', backgroundColor: '#F60860', border: '1px solid rgba(0, 0, 0, 0.1)', borderRadius: '8px' }} /><br />**color.text.accent**<br />`#corebrand.accent.600` |
+    | `color.text.success`<br />**Success Text**<br />Use for success messages or confirmations, conveying positive feedback | <div style={{ display: 'inline-block', width: '36px', height: '36px', backgroundColor: '#16A34A', border: '1px solid rgba(0, 0, 0, 0.1)', borderRadius: '8px' }} /><br />**color.text.success**<br />`#success.600` |
+    | `color.text.error`<br />**Error Text**<br />Use for error messages or alerts, drawing attention to issues | <div style={{ display: 'inline-block', width: '36px', height: '36px', backgroundColor: '#DC2626', border: '1px solid rgba(0, 0, 0, 0.1)', borderRadius: '8px' }} /><br />**color.text.danger**<br />`#error.600` |
+    | `color.text.warning`<br />**Warning Text**<br />Use for alert message that need attention but the urgency more lower than error | <div style={{ display: 'inline-block', width: '36px', height: '36px', backgroundColor: '#D97706', border: '1px solid rgba(0, 0, 0, 0.1)', borderRadius: '8px' }} /><br />**color.text.warning**<br />`#warning.600` |
+    | `color.text.info`<br />**Info Text**<br />Use for alert message for informational | <div style={{ display: 'inline-block', width: '36px', height: '36px', backgroundColor: '#0284C7', border: '1px solid rgba(0, 0, 0, 0.1)', borderRadius: '8px' }} /><br />**color.text.info**<br />`#info.600` |
+
+    ---
+
+    ### 2. Border Color
+
+    Use border color variables to manage all stroke colors in your designs across segments & light/dark mode.
+
+    | Token & Description | Value |
+    | --- | --- |
+    | `color.border.neutral.default`<br />**Neutral Border**<br />Use to visually group or separate UI elements, such as flat cards or side panel dividers. | <div style={{ display: 'inline-block', width: '140px', height: '32px', backgroundColor: '#FFFFFF', border: '2px solid #E2E8F0', borderRadius: '6px', marginBottom: '8px' }} /><br />**color.border.neutral.default**<br />`#neutral.200` |
+    | `color.border.neutral.disabled`<br />**Disabled Border**<br />Use for borders of elements in a disabled state | <div style={{ display: 'inline-block', width: '140px', height: '32px', backgroundColor: '#FFFFFF', border: '2px solid #F1F5F9', borderRadius: '6px', marginBottom: '8px' }} /><br />**color.border.neutral.disabled**<br />`#neutral.100` |
+    | `color.border.danger.solid`<br />`color.border.danger.subtle`<br />**Danger Border**<br />Use for borders of elements in a error state | <div style={{ display: 'inline-block', width: '140px', height: '32px', backgroundColor: '#FFFFFF', border: '2px solid #DC2626', borderRadius: '6px', marginBottom: '8px' }} /><br />**color.border.danger.solid**<br />`#error.600`<br /><br /><div style={{ display: 'inline-block', width: '140px', height: '32px', backgroundColor: '#FFFFFF', border: '2px solid #FCA5A5', borderRadius: '6px', marginBottom: '8px' }} /><br />**color.border.danger.subtle**<br />`#error.300` |
+    | `color.border.warning.solid`<br />`color.border.warning.subtle`<br />**Warning Border**<br />Use for borders of elements that require attention | <div style={{ display: 'inline-block', width: '140px', height: '32px', backgroundColor: '#FFFFFF', border: '2px solid #D97706', borderRadius: '6px', marginBottom: '8px' }} /><br />**color.border.warning.solid**<br />`#warning.600`<br /><br /><div style={{ display: 'inline-block', width: '140px', height: '32px', backgroundColor: '#FFFFFF', border: '2px solid #FCD34D', borderRadius: '6px', marginBottom: '8px' }} /><br />**color.border.warning.subtle**<br />`#warning.300` |
+    | `color.border.success.solid`<br />`color.border.success.subtle`<br />**Success Border**<br />Use for borders of elements that indicate success | <div style={{ display: 'inline-block', width: '140px', height: '32px', backgroundColor: '#FFFFFF', border: '2px solid #16A34A', borderRadius: '6px', marginBottom: '8px' }} /><br />**color.border.success.solid**<br />`#success.600`<br /><br /><div style={{ display: 'inline-block', width: '140px', height: '32px', backgroundColor: '#FFFFFF', border: '2px solid #86EFAC', borderRadius: '6px', marginBottom: '8px' }} /><br />**color.border.success.subtle**<br />`#success.300` |
+    | `color.border.info.solid`<br />`color.border.info.subtle`<br />**Information Border**<br />Use for borders of elements that information | <div style={{ display: 'inline-block', width: '140px', height: '32px', backgroundColor: '#FFFFFF', border: '2px solid #0284C7', borderRadius: '6px', marginBottom: '8px' }} /><br />**color.border.info.solid**<br />`#info.600`<br /><br /><div style={{ display: 'inline-block', width: '140px', height: '32px', backgroundColor: '#FFFFFF', border: '2px solid #7DD3FC', borderRadius: '6px', marginBottom: '8px' }} /><br />**color.border.info.subtle**<br />`#info.300` |
+    | `color.border.brand.solid`<br />`color.border.brand.subtle`<br />**Brand Border**<br />Use for borders of components that represent brand color | <div style={{ display: 'inline-block', width: '140px', height: '32px', backgroundColor: '#FFFFFF', border: '2px solid #253EA7', borderRadius: '6px', marginBottom: '8px' }} /><br />**color.border.brand.solid**<br />`#primary.800`<br /><br /><div style={{ display: 'inline-block', width: '140px', height: '32px', backgroundColor: '#FFFFFF', border: '2px solid #A5B4FC', borderRadius: '6px', marginBottom: '8px' }} /><br />**color.border.brand.subtle**<br />`#primary.300` |
+
+    ---
+
+    ### 3. Background Color
+
+    Use background color variables to manage all fill colors for elements in your designs across segments & light/dark mode.
+  </Tab>
+</Tabs>

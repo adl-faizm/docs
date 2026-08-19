@@ -1,10 +1,10 @@
 ---
-title: "Quickstart: Install XLSmart Design System in Minutes"
+title: "Quickstart: Install XLSMART Design System in Minutes"
 sidebarTitle: "Quickstart"
-description: "Install XLSmart Design System, import the base stylesheet, and render your first accessible React component in under five minutes."
+description: "Install the Design System, import the base stylesheet, and render your first accessible React component in under five minutes."
 ---
 
-XLSmart Design System is distributed as an npm package. This guide walks you through installing the package, setting up styles, and rendering your first component in a React project.
+XLSMART Design System is distributed as an npm package. This guide walks you through installing the package, setting up styles, and rendering your first component in a React project.
 
 ## Prerequisites
 
@@ -18,21 +18,24 @@ Before you begin, make sure you have:
 
 <Steps>
   <Step title="Install the package">
-    Add the XLSmart Design System package to your project:
+    Add the  Design System package to your project:
 
     <CodeGroup>
+
     ```bash npm
     npm install @xlsmart/design-system
     ```
+
     ```bash yarn
     yarn add @xlsmart/design-system
     ```
+
     ```bash pnpm
     pnpm add @xlsmart/design-system
     ```
+
     </CodeGroup>
   </Step>
-
   <Step title="Import global styles">
     Import the base stylesheet at the root of your application. In a Next.js project, add it to `_app.tsx` or `layout.tsx`. In a Vite/CRA project, add it to `main.tsx` or `index.tsx`.
 
@@ -41,15 +44,16 @@ Before you begin, make sure you have:
     import App from './App';
     ```
 
-    <Tip>The base stylesheet loads all design tokens as CSS custom properties. Without it, components will not render correctly.</Tip>
+    <Tip>
+      The base stylesheet loads all design tokens as CSS custom properties. Without it, components will not render correctly.
+    </Tip>
   </Step>
-
   <Step title="Use your first component">
     Import a component and use it in your application:
 
     ```tsx App.tsx
     import { Button } from '@xlsmart/design-system';
-
+    
     export default function App() {
       return (
         <Button variant="primary" onClick={() => alert('Hello!')}>
@@ -59,7 +63,6 @@ Before you begin, make sure you have:
     }
     ```
   </Step>
-
   <Step title="Explore components">
     Browse the [Components](/components/button) section to discover all available components, their props, and usage examples.
   </Step>
@@ -71,6 +74,7 @@ Before you begin, make sure you have:
   <Card title="Next.js" icon="n" href="/resources/installation#nextjs">
     Set up XLSmart Design System in a Next.js app.
   </Card>
+
   <Card title="Vite + React" icon="bolt" href="/resources/installation#vite">
     Configure the system for a Vite React project.
   </Card>
@@ -80,7 +84,7 @@ Before you begin, make sure you have:
 
 Now that you have the design system installed, explore what's available:
 
-- **[Design Tokens](/foundation/colors)** — understand the foundational values that power every component
-- **[Components](/components/button)** — browse all UI components with live examples
-- **[Theming](/resources/theming)** — customize colors and typography for your product
-- **[Accessibility](/guidelines/accessibility)** — learn how to build inclusive interfaces
+- [**Design Tokens**](/foundation/colors) — understand the foundational values that power every component
+- [**Components**](/components/button) — browse all UI components with live examples
+- [**Theming**](/resources/theming) — customize colors and typography for your product
+- [**Accessibility**](/guidelines/accessibility) — learn how to build inclusive interfaces

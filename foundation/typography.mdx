@@ -1,12 +1,14 @@
 ---
-title: "Typography Tokens, Type Scale, and Font Guidelines"
+title: "Typography"
 sidebarTitle: "Typography"
 description: "Typography is our system of fonts and text styles. It enhances communication, reinforces brand, and guides users' emotions."
 icon: "text"
 ---
 
+<Icon icon="square-figma" color="#2d2d2d" /> Figma Link: [Typography](https://www.figma.com/design/XZrj3ZSfMpQIe7Ce4Lnj4t/XLSMART-Design-System?node-id=7635-47522&t=AxIfNosrDl2CbZAz-1)
+
 <Tabs>
-  <Tab title="Overview">
+  <Tab title="Overview & Principles">
     1. Overview & Principles
     2. Brand Fonts File
     3. Typeface & Font Weights
@@ -37,7 +39,7 @@ icon: "text"
          title="Typography"
          style={{ width:"26%" }}
        />
-       14 Font Available [<u>Download Link</u>](https://drive.google.com/drive/folders/1_xEVJyvhUY-4zJC9jKI-W625OpZtbQG4)
+       14 Font Available<br />[<u>Download Link</u>](https://drive.google.com/drive/folders/1_xEVJyvhUY-4zJC9jKI-W625OpZtbQG4)
        ## C. Typeface & Font Weight
        ### 1. Typeface & System Fallback
        XLSMART is the primary typeface used across XLSMART digital experiences. Approved fallback fonts must be used when the primary typeface is unavailable or does not support the required language or character set.
@@ -52,6 +54,9 @@ icon: "text"
        | Windows Ecosystem | **Segoe UI** |
        | Android Ecosystem | **Roboto** |
        | Universal Fallback | **sans-serif** |
+       <Info>
+         _Note: Menggunakan Native System Fonts sebagai fallback memastikan konten tetap dapat dimuat seketika (zero layout shift) tanpa adanya "Flash of Unstyled Text" (FOUT) jika font utama mengalami gangguan jaringan._
+       </Info>
        ### 2. Font Weight
        Use only the approved font weights. Avoid using font weight as the only method of communicating meaning or hierarchy.
        | Weight | Usage |
@@ -62,9 +67,6 @@ icon: "text"
          - Use Regular weight for most content.
          - Use Semibold weight for emphasis.
        </Card>
-       <Info>
-         **_Note_**_: Using native system fonts as a fallback ensures that content remains instantly available (zero layout shift) without any "Flash of Unstyled Text" (FOUT) if the primary font encounters network-related issues._
-       </Info>
        ## D. Type Scale
        Each typography style is a predefined combination of font family, font size, line height, font weight, and letter spacing. Do not modify individual properties or create custom text styles unless an approved style cannot support the intended use case.
        ### 1. Display
@@ -128,7 +130,7 @@ icon: "text"
 
     ### 4. Body
 
-    Use for titles within components or smaller content sections.
+    Used for main body copy, paragraphs, form labels, and long-form reading content across all interfaces.
 
     | **Figma Text Style** | **Token** | **Size / Line height** | **Weight** | **Line Spacing** | Usage |
     | --- | --- | --- | --- | --- | --- |

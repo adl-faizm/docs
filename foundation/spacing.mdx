@@ -1,9 +1,11 @@
 ---
-title: "Spacing Tokens: 4px Base Scale for Layout and Components"
+title: "Spacing"
 sidebarTitle: "Spacing"
-description: "XLSmart Design System spacing tokens provide a consistent 4px-base scale for margins, padding, gaps, and layout measurements across all components."
+description: "Spacing defines the vertical and horizontal distance between UI components. Built on a 4px / 8px Spatial Grid Standard, this system maintains visual rhythm, readability, and layout efficiency across all XLSMART digital products."
 icon: "distribute-spacing-horizontal"
 ---
+
+<Icon icon="square-figma" color="#2d2d2d" /> Figma Link: [Spacing](https://www.figma.com/design/XZrj3ZSfMpQIe7Ce4Lnj4t/XLSMART-Design-System?node-id=7648-48016&t=AxIfNosrDl2CbZAz-1)
 
 <Tabs>
   <Tab title="Overview">
@@ -11,27 +13,21 @@ icon: "distribute-spacing-horizontal"
 
     ## A. Overview & Principle
 
-    The XLSMART spacing system defines consistent distances within components and across layouts. It helps establish visual relationships, hierarchy, rhythm, and alignment across XLSMART digital experiences.<br />Spacing must use approved tokens instead of arbitrary values.
+    The XLSMART spacing system defines consistent distances within components and across layouts. It helps establish visual relationships, hierarchy, rhythm, and alignment across XLSMART digital experiences. Spacing must use approved tokens instead of arbitrary values.
 
     <Columns cols={3}>
       <Column>
-        <Frame>
-          ![Padding](/images/Padding.png "Padding")
-        </Frame>
+        ![Padding](/images/Padding.png "Padding")
 
         **Padding**<br />Space inside a component or container.
       </Column>
       <Column>
-        <Frame>
-          ![Gap](/images/Gap.png "Gap")
-        </Frame>
+        ![Gap](/images/Gap.png "Gap")
 
         **Gap**<br />Space between elements within a layout or component.
       </Column>
       <Column>
-        <Frame>
-          ![Margin](/images/Margin-1.png "Margin")
-        </Frame>
+        ![Margin](/images/Margin-1.png "Margin")
 
         **Layout Spacing**<br />Space between section
       </Column>
@@ -96,18 +92,30 @@ icon: "distribute-spacing-horizontal"
     #### 2.2 Card
 
     <img
-      src="/images/Example-Card-Spacing.png"
       alt="Example Card Spacing"
       title="Example Card Spacing"
       style={{ width:"42%" }}
+      lightAlt="Example Card Spacing"
+      darkAlt="Example Card Spacing"
+      src="/images/Example-Card-Spacing-1.png"
+      className="dark:hidden"
+    />
+    <img
+      alt="Example Card Spacing"
+      title="Example Card Spacing"
+      style={{ width:"42%" }}
+      lightAlt="Example Card Spacing"
+      darkAlt="Example Card Spacing"
+      src="/images/Example-Card-Spacing.png"
+      className="hidden dark:block"
     />
 
     | Spacing Token | Value |
     | --- | --- |
-    | <div style={{ display: 'inline-block', width: '12px', height: '12px', backgroundColor: '#E071D0', borderRadius: '50%', marginRight: '8px', verticalAlign: 'middle' }} />`spacing.gap.lg` | `#space.300` |
-    | <div style={{ display: 'inline-block', width: '12px', height: '12px', backgroundColor: '#E071D0', borderRadius: '50%', marginRight: '8px', verticalAlign: 'middle' }} />`spacing.gap.sm` | `#space.100` |
-    | <div style={{ display: 'inline-block', width: '12px', height: '12px', backgroundColor: '#A7E8EB', borderRadius: '50%', marginRight: '8px', verticalAlign: 'middle' }} />`spacing.padding.lg` | `#space.500` |
-    | <div style={{ display: 'inline-block', width: '12px', height: '12px', backgroundColor: '#A7E8EB', borderRadius: '50%', marginRight: '8px', verticalAlign: 'middle' }} />`spacing.padding.md` | `#space.300` |
+    | <div style={{ display: 'inline-block', width: '12px', height: '12px', backgroundColor: '#F2FF9F', borderRadius: '50%', marginRight: '8px', verticalAlign: 'middle' }} />`spacing.gap.sm` | `#space.200` |
+    | <div style={{ display: 'inline-block', width: '12px', height: '12px', backgroundColor: '#FC9FFF', borderRadius: '50%', marginRight: '8px', verticalAlign: 'middle' }} />`spacing.gap.lg` | `#space.500` |
+    | <div style={{ display: 'inline-block', width: '12px', height: '12px', backgroundColor: '#9FFFF9', borderRadius: '50%', marginRight: '8px', verticalAlign: 'middle' }} />`spacing.padding.md` | `#space.300` |
+    | <div style={{ display: 'inline-block', width: '12px', height: '12px', backgroundColor: '#9FD4FF', borderRadius: '50%', marginRight: '8px', verticalAlign: 'middle' }} />`spacing.padding.lg` | `#space.500` |
 
     #### 2.3 Form
 
@@ -120,9 +128,8 @@ icon: "distribute-spacing-horizontal"
 
     | Spacing Token | Value |
     | --- | --- |
-    | <div style={{ display: 'inline-block', width: '12px', height: '12px', backgroundColor: '#E071D0', borderRadius: '50%', marginRight: '8px', verticalAlign: 'middle' }} />`spacing.gap.sm` | `#space.100` |
-    | <div style={{ display: 'inline-block', width: '12px', height: '12px', backgroundColor: '#A7E8EB', borderRadius: '50%', marginRight: '8px', verticalAlign: 'middle' }} />`spacing.padding.lg` | `#space.500` |
-    | <div style={{ display: 'inline-block', width: '12px', height: '12px', backgroundColor: '#CBE59B', borderRadius: '50%', marginRight: '8px', verticalAlign: 'middle' }} />`spacing.padding.md` | `#space.200` |
+    | <div style={{ display: 'inline-block', width: '12px', height: '12px', backgroundColor: '#E071D0', borderRadius: '50%', marginRight: '8px', verticalAlign: 'middle' }} />`spacing.gap.2xs` | `#space.100` |
+    | <div style={{ display: 'inline-block', width: '12px', height: '12px', backgroundColor: '#CBE59B', borderRadius: '50%', marginRight: '8px', verticalAlign: 'middle' }} />`spacing.gap.md` | `#space.200` |
 
     ### 3. Layout Spacing
 
@@ -153,7 +160,7 @@ icon: "distribute-spacing-horizontal"
   <Tab title="Token">
     ## A. Spacing Gap Token
 
-    Digunakan khusus untuk jarak di antara 2 elemen atau lebih (contoh: Icon ke Text, Label ke Field, Field ke Field, Button Group).
+    Used exclusively for spacing between two or more elements _(e.g., Icon to Text, Label to Field, Field to Field, Button Group)_.
 
     | Token Name | Token Alias | Value | Pixels | Usage |
     | --- | --- | --- | --- | --- |
@@ -168,7 +175,7 @@ icon: "distribute-spacing-horizontal"
 
     ## B. Spacing Padding Token
 
-    Digunakan khusus untuk jarak internal di dalam sebuah _container_ atau komponen (contoh: Button Padding, Card Inner Padding, Modal Content Padding).
+    Used exclusively for internal spacing within a container or component (e.g., Button Padding, Card Inner Padding, Modal Content Padding).
 
     | Token Name | Token Alias | Value | Pixels | Usage |
     | --- | --- | --- | --- | --- |
@@ -176,21 +183,21 @@ icon: "distribute-spacing-horizontal"
     | `spacing.padding.xs` | `space.100` | 0.5rem | 8px | Vertical padding Small Button, Toast Notification inner space. |
     | `spacing.padding.sm` | `space.200` | 0.75rem | 12px | Vertical padding Medium/Large Button, Input Field inner padding. |
     | `spacing.padding.md` | `space.300` | 1rem | 16px | **Default Card/Container Padding** (Horizontal Button, Alert Box, Dropdown). |
-    | `spacing.padding.lg` | `space.500` | 1.5rem | 24px | Medium Container Padding (Card besar, Drawer, Table Container). |
-    | `spacing.padding.xl` | `space.600` | 2rem | 32px | Large Container Padding (Modal Dialog, Popover besar). |
+    | `spacing.padding.lg` | `space.500` | 1.5rem | 24px | Medium Container Padding (Large Cards, Drawers, Table Containers). |
+    | `spacing.padding.xl` | `space.600` | 2rem | 32px | Large Container Padding (Modal Dialogs, Large Popovers). |
     | `spacing.spacing.2xl` | `space.700` | 2.5rem | 40px | Hero Card / Banner Content Padding. |
 
     ## C. Spacing Layout Token
 
-    Digunakan khusus untuk batas hirarki halaman besar (contoh: Jarak antar-Section, Page Margin Kiri-Kanan, Hero Section Padding).
+    Used exclusively for high-level page hierarchy boundaries (e.g., Section-to-Section spacing, Left-Right Page Margins, Hero Section Padding).
 
     | Token Name | Token Alias | Value | Pixels | Usage |
     | --- | --- | --- | --- | --- |
-    | `spacing.padding.xs` | `space.600` | 2rem | 32px | Page Margin Kiri-Kanan (Desktop Small / Tablet Landscape). |
-    | `spacing.padding.sm` | `space.800` | 3rem | 48px | **Section Gap Small** (Jarak antar Section Form ringan/Sub-section). |
-    | `spacing.padding.md` | `space.900` | 4rem | 64px | **Default Section Gap** (Jarak antar Section utama, e.g., Profile ke Address). |
-    | `spacing.padding.lg` | `space.1000` | 5rem | 80px | Outer Page Margin (Desktop Ultra-wide), Major Landing Page Section Gap. |
-    | `spacing.padding.xl` | `space.1200` | 6rem | 96px | Hero Section Top/Bottom Space, Marketing Banner Clearance. |
+    | `spacing.layout.xs` | `space.600` | 2rem | 32px | Page Margin Kiri-Kanan (Desktop Small / Tablet Landscape). |
+    | `spacing.layout.sm` | `space.800` | 3rem | 48px | **Section Gap Small** (Jarak antar Section Form ringan/Sub-section). |
+    | `spacing.layout.md` | `space.900` | 4rem | 64px | **Default Section Gap** (Jarak antar Section utama, e.g., Profile ke Address). |
+    | `spacing.layout.lg` | `space.1000` | 5rem | 80px | Outer Page Margin (Desktop Ultra-wide), Major Landing Page Section Gap. |
+    | `spacing.layout.xl` | `space.1200` | 6rem | 96px | Hero Section Top/Bottom Space, Marketing Banner Clearance. |
   </Tab>
   <Tab title="Code">
     ## JSON
@@ -218,42 +225,40 @@ icon: "distribute-spacing-horizontal"
       }
     }
     ```
+
+    ### 2. Semantic Token
+
+    ```json5
+    {
+      "spacing": {
+        "gap": {
+          "0": { "$value": "{spacing.0}", "$type": "dimension" },
+          "2xs": { "$value": "{spacing.50}", "$type": "dimension" },
+          "xs":  { "$value": "{spacing.100}", "$type": "dimension" },
+          "sm":  { "$value": "{spacing.200}", "$type": "dimension" },
+          "md":  { "$value": "{spacing.300}", "$type": "dimension" },
+          "lg":  { "$value": "{spacing.500}", "$type": "dimension" },
+          "xl":  { "$value": "{spacing.600}", "$type": "dimension" },
+          "2xl": { "$value": "{spacing.700}", "$type": "dimension" }
+        },
+        "padding": {
+          "2xs": { "$value": "{spacing.50}", "$type": "dimension" },
+          "xs":  { "$value": "{spacing.100}", "$type": "dimension" },
+          "sm":  { "$value": "{spacing.200}", "$type": "dimension" },
+          "md":  { "$value": "{spacing.300}", "$type": "dimension" },
+          "lg":  { "$value": "{spacing.500}", "$type": "dimension" },
+          "xl":  { "$value": "{spacing.600}", "$type": "dimension" },
+          "2xl": { "$value": "{spacing.700}", "$type": "dimension" }
+        },
+        "layout": {
+          "xs":  { "$value": "{spacing.600}", "$type": "dimension" },
+          "sm":  { "$value": "{spacing.800}", "$type": "dimension" },
+          "md":  { "$value": "{spacing.900}", "$type": "dimension" },
+          "lg":  { "$value": "{spacing.1000}", "$type": "dimension" },
+          "xl":  { "$value": "{spacing.1200}", "$type": "dimension" }
+        }
+      }
+    }
+    ```
   </Tab>
 </Tabs>
-
-### 2. Semantic Token
-
-```json5
-{
-  "spacing": {
-    "gap": {
-      "3xs": { "$value": "{spacing.2}", "$type": "dimension" },
-      "2xs": { "$value": "{spacing.4}", "$type": "dimension" },
-      "xs":  { "$value": "{spacing.8}", "$type": "dimension" },
-      "sm":  { "$value": "{spacing.12}", "$type": "dimension" },
-      "md":  { "$value": "{spacing.16}", "$type": "dimension" },
-      "lg":  { "$value": "{spacing.24}", "$type": "dimension" },
-      "xl":  { "$value": "{spacing.32}", "$type": "dimension" },
-      "2xl": { "$value": "{spacing.40}", "$type": "dimension" }
-    },
-    "padding": {
-      "3xs": { "$value": "{spacing.2}", "$type": "dimension" },
-      "2xs": { "$value": "{spacing.4}", "$type": "dimension" },
-      "xs":  { "$value": "{spacing.8}", "$type": "dimension" },
-      "sm":  { "$value": "{spacing.12}", "$type": "dimension" },
-      "md":  { "$value": "{spacing.16}", "$type": "dimension" },
-      "lg":  { "$value": "{spacing.24}", "$type": "dimension" },
-      "xl":  { "$value": "{spacing.32}", "$type": "dimension" },
-      "2xl": { "$value": "{spacing.40}", "$type": "dimension" }
-    },
-    "layout": {
-      "xs":  { "$value": "{spacing.32}", "$type": "dimension" },
-      "sm":  { "$value": "{spacing.48}", "$type": "dimension" },
-      "md":  { "$value": "{spacing.64}", "$type": "dimension" },
-      "lg":  { "$value": "{spacing.80}", "$type": "dimension" },
-      "xl":  { "$value": "{spacing.96}", "$type": "dimension" },
-      "2xl": { "$value": "{spacing.128}", "$type": "dimension" }
-    }
-  }
-}
-```

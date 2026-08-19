@@ -2,68 +2,139 @@
 title: "Typography Tokens, Type Scale, and Font Guidelines"
 sidebarTitle: "Typography"
 description: "Typography is our system of fonts and text styles. It enhances communication, reinforces brand, and guides users' emotions."
+icon: "text"
 ---
-
-1. Overview & Principles
-2. Brand Fonts File
-3. Typeface & Font Weights
-4. Type Scale
-5. Usage & Hierarchy
-6. Accessibility & Readability
 
 <Tabs>
   <Tab title="Overview">
-    ## A. Overview & Principles
+    1. Overview & Principles
+    2. Brand Fonts File
+    3. Typeface & Font Weights
+    4. Type Scale
+       ## A. Overview & Principles
+       The XLSMART typography system creates a clear and consistent visual hierarchy across digital experiences. It defines how typeface, size, weight, line height, and letter spacing work together to improve readability and help users understand content.<br />These guidelines apply to all XLSMART digital products, including web applications, mobile applications, internal tools, dashboards, and brand-specific experiences.
+       <Columns cols={3}>
+         <Column>
+           <Card title="Optimize for readability" icon="eye">
+             Make content easy to read and understand for everyone. Prioritize clarity, accessibility, and a comfortable reading experience across all interfaces.
+           </Card>
+         </Column>
+         <Column>
+           <Card title="Create visual harmony" icon="book-open">
+             Maintain consistency through thoughtful typography choices. Use hierarchy, spacing, and alignment to organize information and create balanced layouts.
+           </Card>
+         </Column>
+         <Column>
+           <Card title="Adapt to user context" icon="font">
+             Design typography that works across different devices, platforms, and user preferences while supporting how people consume and process information.
+           </Card>
+         </Column>
+       </Columns>
+       ## **B. Brand Fonts File**
+       <img
+         src="/images/Typography.png"
+         alt="Typography"
+         title="Typography"
+         style={{ width:"26%" }}
+       />
+       14 Font Available [<u>Download Link</u>](https://drive.google.com/drive/folders/1_xEVJyvhUY-4zJC9jKI-W625OpZtbQG4)
+       ## C. Typeface & Font Weight
+       ### 1. Typeface & System Fallback
+       XLSMART is the primary typeface used across XLSMART digital experiences. Approved fallback fonts must be used when the primary typeface is unavailable or does not support the required language or character set.
+       <Check>
+         Main Font: **XLSMART Sans**
+       </Check>
+       #### ⚠️ System Fallback
+       Approved fallback fonts must be used when the primary typeface is unavailable or does not support the required language or character set.
+       | Operating System | Font |
+       | --- | --- |
+       | Apple Ecosystem (iOS/macOS) | **SF Pro (-apple-system)** |
+       | Windows Ecosystem | **Segoe UI** |
+       | Android Ecosystem | **Roboto** |
+       | Universal Fallback | **sans-serif** |
+       ### 2. Font Weight
+       Use only the approved font weights. Avoid using font weight as the only method of communicating meaning or hierarchy.
+       | Weight | Usage |
+       | --- | --- |
+       | Regular, 400 | Body text, description, supporting text |
+       | Semibold, 600 | Title, heading, button label |
+       <Card title="Additional Rules:" type="info">
+         - Use Regular weight for most content.
+         - Use Semibold weight for emphasis.
+       </Card>
+       <Info>
+         **_Note_**_: Using native system fonts as a fallback ensures that content remains instantly available (zero layout shift) without any "Flash of Unstyled Text" (FOUT) if the primary font encounters network-related issues._
+       </Info>
+       ## D. Type Scale
+       Each typography style is a predefined combination of font family, font size, line height, font weight, and letter spacing. Do not modify individual properties or create custom text styles unless an approved style cannot support the intended use case.
+       ### 1. Display
+       | **Style** | **Size / Line height** | **Weight** | **Line Spacing** |
+       | --- | --- | --- | --- |
+       | Large | 64px / 88px | Semibold | -1% |
+       | Medium | 48px / 64px | Semibold | -0.5% |
+       | Small | 40px/ 56px | Semibold | 0% |
+       ### 2. Heading
+       | **Style** | **Size / Line height** | **Weight** | **Line Spacing** |
+       | --- | --- | --- | --- |
+       | Large | 36px / 48px | Semibold | 0% |
+       | Medium | 32px / 44px | Semibold | 0% |
+       | Small | 28px / 40px | Semibold | 0% |
+       ### 3. Title
+       | **Style** | **Size / Line height** | **Weight** | **Line Spacing** |
+       | --- | --- | --- | --- |
+       | Large | 24px / 36px | Semibold | 0% |
+       | Medium | 20px / 28px | Semibold | 0% |
+       | Small | 18px / 24px | Semibold | 0% |
+       ### 4. Body
+       | **Style** | **Size / Line height** | **Weight** | **Line Spacing** |
+       | --- | --- | --- | --- |
+       | Large | 18px / 24px | Reguler | 0% |
+       | Medium | 16px / 24px | Reguler | 0% |
+       | Small | 14px/ 20px | Reguler | 0% |
+       | XSmall | 12px/ 20px | Reguler | 0% |
+  </Tab>
+  <Tab title="Token">
+    ## A. Applying Typography, Usage, and Hierarchy
 
-    The XLSMART typography system creates a clear and consistent visual hierarchy across digital experiences. It defines how typeface, size, weight, line height, and letter spacing work together to improve readability and help users understand content.<br />These guidelines apply to all XLSMART digital products, including web applications, mobile applications, internal tools, dashboards, and brand-specific experiences.
+    ### 1. Display
+
+    Use for short, prominent messages, hero content, or significant data. Display styles should not be used for paragraphs or component content.
+
+    | **Figma Text Style** | **Token** | **Size / Line height** | **Weight** | **Line Spacing** | Usage |
+    | --- | --- | --- | --- | --- | --- |
+    | Large | `font.display.large` | 64px / 88px | Semibold | -1% | <ul><li>Hero section sekunder</li><li>Product page headline</li><li>Major section opener</li><li>Marketing content yang masih perlu sangat menonjol</li></ul> |
+    | Medium | `font.display.medium` | 48px / 64px | Semibold | -0.5% | <ul><li>Hero section sekunder</li><li>Product page headline</li><li>Major section opener</li><li>Marketing content yang masih perlu sangat menonjol</li></ul> |
+    | Small | `font.display.small` | 40px/ 56px | Semibold | 0% | <ul><li>Section headline besar</li><li>Feature highlight title</li><li>Page header yang tidak membutuhkan hero treatment</li></ul> |
+
+    ### 2. Heading
+
+    Use to introduce pages, sections, and major content groups.
+
+    | **Figma Text Style** | **Token** | **Size / Line height** | **Weight** | **Line Spacing** | Usage |
+    | --- | --- | --- | --- | --- | --- |
+    | Large | `font.heading.large` | 36px / 48px | Semibold | 0% | <ul><li>Primary page heading</li><li>H1 pada halaman internal</li><li>Judul section utama setelah hero</li></ul> |
+    | Medium | `font.heading.medium` | 32px / 44px | Semibold | 0% | <ul><li>Major section heading</li><li>H2 dalam konten</li><li>Pembatas kelompok informasi besar</li></ul> |
+    | Small | `font.heading.small` | 28px / 40px | Semibold | 0% | <ul><li>Subsection heading</li><li>H3 dalam konten</li><li>Pengelompokan informasi yang lebih detail</li></ul> |
+
+    ### 3. Title
+
+    Use for titles within components or smaller content sections.
+
+    | **Figma Text Style** | **Token** | **Size / Line height** | **Weight** | **Line Spacing** | Usage |
+    | --- | --- | --- | --- | --- | --- |
+    | Large | `font.title.large` | 24px / 36px | Semibold | 0% | <ul><li>Card title yang penting</li><li>Modal title</li><li>Drawer title</li><li>Widget title utama</li><li>Featured content title</li></ul> |
+    | Medium | `font.title.medium` | 20px / 28px | Semibold | 0% | <ul><li>Standard card title</li><li>Section title dalam component</li><li>Accordion title</li><li>Form group title</li></ul> |
+    | Small | `font.title.small` | 18px / 24px | Semibold | 0% | <ul><li>Compact card title</li><li>List section title</li><li>Table group title</li><li>Secondary component title</li></ul> |
+
+    ### 4. Body
+
+    Use for titles within components or smaller content sections.
+
+    | **Figma Text Style** | **Token** | **Size / Line height** | **Weight** | **Line Spacing** | Usage |
+    | --- | --- | --- | --- | --- | --- |
+    | Large | `font.body.large` | 18px / 24px | Reguler | 0% | <ul><li>Long-form content yang ingin lebih nyaman dibaca</li><li>Introductory text</li><li>Deskripsi utama pada landing page</li><li>Empty state description</li></ul> |
+    | Medium | `font.body.medium` | 16px / 24px | Reguler | 0% | <ul><li>Default body text</li><li>Paragraph content</li><li>Form description</li><li>Most application content</li></ul> |
+    | Small | `font.body.small` | 14px/ 20px | Reguler | 0% | <ul><li>Secondary information</li><li>Helper text</li><li>Supporting descriptions</li><li>Metadata</li></ul> |
+    | XSmall | `font.body.xsmall` | 12px/ 20px | Reguler | 0% | <ul><li>Captions</li><li>Labels dengan ruang terbatas</li><li>Footnotes</li><li>Fine print</li><li>Disclaimer text</li></ul> |
   </Tab>
 </Tabs>
-
-<Columns cols={3}>
-  <Column>
-    <Card title="Optimize for readability" icon="eye">
-      Make content easy to read and understand for everyone. Prioritize clarity, accessibility, and a comfortable reading experience across all interfaces.
-    </Card>
-  </Column>
-  <Column>
-    <Card title="Create visual harmony" icon="book-open">
-      Maintain consistency through thoughtful typography choices. Use hierarchy, spacing, and alignment to organize information and create balanced layouts.
-    </Card>
-  </Column>
-  <Column>
-    <Card title="Adapt to user context" icon="font">
-      Design typography that works across different devices, platforms, and user preferences while supporting how people consume and process information.
-    </Card>
-  </Column>
-</Columns>
-
-## **B. Brand Fonts File**
-
-<img
-  src="/images/Typography.png"
-  alt="Typography"
-  title="Typography"
-  style={{ width:"26%" }}
-/>
-
-14 Font Available
-
-[<u>Download Link</u>](https://drive.google.com/drive/folders/1_xEVJyvhUY-4zJC9jKI-W625OpZtbQG4)
-
-## C. Typeface & Font Weight
-
-XLSMART is the primary typeface used across XLSMART digital experiences. Approved fallback fonts must be used when the primary typeface is unavailable or does not support the required language or character set.
-
-### 1. Font Weight
-
-Use only the approved font weights. Avoid using font weight as the only method of communicating meaning or hierarchy.
-
-| Weight | Usage |
-| --- | --- |
-| Regular, 400 | Body text, description, supporting text |
-| Semibold, 600 | Title, heading, button label |
-
-Additional Rules:
-
-- Regular for the majority of content
-- Semibold for emphasis

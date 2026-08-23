@@ -21,7 +21,8 @@
             "pages": [
               "introduction",
               "quickstart",
-              "contributing"
+              "contributing",
+              "resources/changelog"
             ]
           },
           {
@@ -30,6 +31,8 @@
               "foundation/untitled-page",
               "foundation/typography",
               "foundation/spacing",
+              "foundation/spacing-2",
+              "foundation/spacing-2-2",
               "foundation/elevation",
               "foundation/motion"
             ]
@@ -109,8 +112,7 @@
             "group": "For Developers",
             "pages": [
               "resources/installation",
-              "resources/theming",
-              "resources/changelog"
+              "resources/theming"
             ]
           }
         ]

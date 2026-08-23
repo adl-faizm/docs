@@ -1,0 +1,177 @@
+---
+title: "Radius"
+sidebarTitle: "Spacing"
+description: "The XLSMART radius system defines the corner roundness of components and containers across digital experiences. Consistent radius usage helps create a cohesive visual language, clarify component relationships, and maintain the XLSMART brand expression."
+icon: "border-top-left"
+---
+
+<Icon icon="square-figma" color="#2d2d2d" /> Figma Link: [Radius](https://www.figma.com/design/XZrj3ZSfMpQIe7Ce4Lnj4t/XLSMART-Design-System?node-id=7716-57132&t=3zESlc2CdREJqA4L-1)
+
+<Tabs>
+  <Tab title="Overview">
+    A. Overview & Principle<br />B. Radius Scale<br />C. Usage
+
+    ## A. Overview & Principle
+
+    <img
+      alt="Border Thumbnail"
+      title="Border Thumbnail"
+      lightAlt="Border Thumbnail"
+      darkAlt="Border Thumbnail"
+      src="/images/Radius-Thumbnail-1.png"
+      className="dark:hidden"
+    />
+    <img
+      alt="Border Thumbnail"
+      title="Border Thumbnail"
+      lightAlt="Border Thumbnail"
+      darkAlt="Border Thumbnail"
+      src="/images/border-thumbnail.png"
+      className="hidden dark:block"
+    />
+
+    Border radius determines how rounded the corners of a UI element are. Using a structured approach to radiuses not only delivers a consistent visual aesthetic, but also creates a clear visual hierarchy between small interactive components and large containers.
+
+    Border radius helps to:
+
+    <Icon icon="eye" />  Create visual consistency
+
+    <Icon icon="sort-size-down" />  Differentiate element size and function
+
+    <Icon icon="layer-group" />  Group related elements
+
+    <Icon icon="border-outer" />  Establish component-to-container hierarchy
+
+    <Icon icon="check-circle" />  Keep XLSMART’s brand identity modern and fresh
+
+    ## B. **Radius Scale**
+
+    Final numbers must align with XLSMART’s visual style and existing component audits. Don't bloat the scale just to make every component's radius unique.
+
+    | Token | Value |
+    | --- | --- |
+    | `border.radius.xs` | 2px |
+    | `border.radius.sm` | 4px |
+    | `border.radius.md` | 8px |
+    | `border.radius.lg` | 12px |
+    | `border.radius.xl` | 16px |
+    | `border.radius.2xl` | 24px |
+    | `border.radius.full` | 9999px |
+
+    ## C. Usage
+
+    ### 1. Choose based on size and function
+
+    Smaller or compact elements should generally use a smaller radius, while larger containers may use a larger radius. (For more details see in Token)
+
+    #### 1.1. **Small Elements**
+
+    Use small radius for full-bleed elements that sit flush against the edge of the screen:
+
+    - Full-width Banners
+    - Table Headers
+    - Fully expanded Bottom Sheets
+
+    #### **1.2. Medium Elements**
+
+    Use medium radius as standard baseline for most primary interactive components
+
+    - Input Fields
+    - Dropdown Menus
+    - Alerts
+
+    #### 1.3. Large Elements
+
+    Used for prominent or floating primary modules:
+
+    - Modals
+    - Dialogs
+    - Large Cards
+    - Hero Banners
+    - Button
+
+    ### 2. Nested Radius Formula
+
+    When nesting components (like Buttons or Images) inside a Card or Container with padding, use this math formula to keep the inner and outer corners concentric:
+
+    <div style={{ backgroundColor: '#F1F5F9', borderRadius: '12px', padding: '16px 24px', textAlign: 'center', color: '#1E293B', fontSize: '18px', display: 'inline-block', marginTop: '16px' }}>
+  Inner Radius = Outer Radius - Container Padding
+</div>
+
+    ### 3. Connected Elements
+
+    Connected components should use radius only on their outer corners to preserve the visual relationship between items. Example:
+
+    <div style={{ backgroundColor: '#F8FAFC', padding: '0px 24px', border: '1px solid #E2E8F0', borderRadius: '20px', display: 'inline-block', maxWidth: '320px' }}>
+  ![Example Preview](/images/tab.png)
+</div>
+
+    ### 4. Focus Ring
+
+    Focus indicators must follow the shape of the component and must not be clipped by the component container. Example:
+
+    <div style={{ backgroundColor: '#F8FAFC', padding: '0px 24px', border: '1px solid #E2E8F0', borderRadius: '20px', display: 'inline-block', maxWidth: '240px' }}>
+  ![Example Preview](/images/buttonFocused.png)
+</div>
+  </Tab>
+  <Tab title="Token">
+    ## **Token**
+
+    | Token | Value | Usage |
+    | --- | --- | --- |
+    | `border.radius.xs` | 2px | Micro Curve: Used for the smallest indicator elements (e.g., Checkboxes, Small Tooltips, Thin Progress Bars). |
+    | `border.radius.sm` | 4px | Compact Components: Used for small-to-medium UI elements (e.g., Tags, Badges, Small Inputs, Toast Notifications). |
+    | `border.radius.md` | 8px | Default Component Radius: Standard baseline for most core interactive components (e.g., Input Fields, Dropdown Menus, Alerts). |
+    | `border.radius.lg` | 12px | Medium Containers: Used for component groupings and standard cards (e.g., Standard Cards, Flyout Menus, Popover Containers). |
+    | `border.radius.xl` | 16px | Large Containers: Used for prominent or floating primary modules (e.g., Modals, Dialogs, Large Cards, Hero Banners). |
+    | `border.radius.2xl` | 24px | Extra Large Containers: Reserved specifically for Onboarding Cards, Marketing Hero Sections, or large overlay panels. |
+    | `border.radius.full` | 9999px | Pill / Circular Shape: Used for fully rounded, circular, or pill-shaped elements (e.g., Avatars, Pill Buttons, Status Badges, Toggle Switches). |
+  </Tab>
+  <Tab title="Code">
+    ## JSON
+
+    ```json5
+    {
+      "border": {
+        "radius": {
+          "xs": {
+            "$value": "2px",
+            "$type": "borderRadius",
+            "$description": "Micro Curve. Used for the smallest indicator elements (e.g., Checkboxes, Small Tooltips, Thin Progress Bars)."
+          },
+          "sm": {
+            "$value": "4px",
+            "$type": "borderRadius",
+            "$description": "Compact Components. Used for small-to-medium UI elements (e.g., Tags, Badges, Small Inputs, Toast Notifications)."
+          },
+          "md": {
+            "$value": "8px",
+            "$type": "borderRadius",
+            "$description": "Default Component Radius. Standard baseline for most core interactive components (e.g., Buttons, Input Fields, Dropdown Menus, Alerts)."
+          },
+          "lg": {
+            "$value": "12px",
+            "$type": "borderRadius",
+            "$description": "Medium Containers. Used for component groupings and standard cards (e.g., Standard Cards, Flyout Menus, Popover Containers)."
+          },
+          "xl": {
+            "$value": "16px",
+            "$type": "borderRadius",
+            "$description": "Large Containers. Used for prominent or floating primary modules (e.g., Modals, Dialogs, Large Cards, Hero Banners)."
+          },
+          "2xl": {
+            "$value": "24px",
+            "$type": "borderRadius",
+            "$description": "Extra Large Containers. Reserved specifically for Onboarding Cards, Marketing Hero Sections, or large overlay panels."
+          },
+          "full": {
+            "$value": "9999px",
+            "$type": "borderRadius",
+            "$description": "Pill / Circular Shape. Used for fully rounded, circular, or pill-shaped elements (e.g., Avatars, Pill Buttons, Status Badges, Toggle Switches)."
+          }
+        }
+      }
+    }
+    ```
+  </Tab>
+</Tabs>

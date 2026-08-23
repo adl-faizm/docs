@@ -1,0 +1,400 @@
+---
+title: "Border"
+sidebarTitle: "Spacing"
+description: "The XLSMART border system defines boundaries, separates content, and communicates interactive states consistently across digital experiences. "
+icon: "border-outer"
+---
+
+<Icon icon="square-figma" color="#2d2d2d" /> Figma Link: [Border](https://www.figma.com/design/XZrj3ZSfMpQIe7Ce4Lnj4t/XLSMART-Design-System?node-id=7686-53382&t=AxIfNosrDl2CbZAz-1)
+
+<Tabs>
+  <Tab title="Overview">
+    A. Overview & Principle<br />B. Border Scale<br />C. Usage
+
+    ## A. Overview & Principle
+
+    <img
+      src="/images/border-thumbnail-1.png"
+      alt="Border Thumbnail"
+      title="Border Thumbnail"
+      lightAlt="Border Thumbnail"
+      darkAlt="Border Thumbnail"
+      className="dark:hidden"
+    />
+    <img
+      src="/images/border-thumbnail.png"
+      alt="Border Thumbnail"
+      title="Border Thumbnail"
+      lightAlt="Border Thumbnail"
+      darkAlt="Border Thumbnail"
+      className="hidden dark:block"
+    />
+
+    Borders are created by combining border width and semantic border color tokens. Use borders only when they improve structure, hierarchy, or interaction clarity.
+
+    <Columns cols={3}>
+      <Column>
+        <Card title="Define component boundaries" icon="sparkles">
+        </Card>
+      </Column>
+      <Column>
+        <Card title="Separate content or sections" icon="sparkles">
+        </Card>
+      </Column>
+      <Column>
+        <Card title="Indicate interactive states" icon="sparkles">
+        </Card>
+      </Column>
+    </Columns>
+
+    <Columns cols={2}>
+      <Column>
+        <Card title="Communicate selection, focus, error, or disabled states" icon="sparkles">
+        </Card>
+      </Column>
+      <Column>
+        <Card title="Improve visibility against adjacent backgrounds" icon="sparkles">
+        </Card>
+      </Column>
+    </Columns>
+
+    ## B. Border Width
+
+    | Token | Value |
+    | --- | --- |
+    | `border.width.sm` | 1 px |
+    | `border.width.md` | 2 px |
+
+    ## C. Usage
+
+    ### 1. Small Border
+
+    Use the default border to define subtle component boundaries and separate related content without creating unnecessary visual noise.
+
+    - Input boundary
+    - Card outline, jika memang diperlukan
+    - Divider
+    - Table separator
+    - Checkbox atau radio outline
+    - Container boundary
+    - Subtle structural separation
+
+    ### 2. Medium Border
+
+    Use strong borders only for states or elements that require additional emphasis. Do not use strong borders as the default outline for all components.
+
+    - Selected state
+    - Active navigation or tab
+    - Focus indicator
+    - Emphasized boundary
+    - State yang memerlukan visibilitas lebih kuat
+
+    ### 3. Pair width with semantic color
+
+    Border width tidak boleh digunakan sendirian. Pair dengan semantic color sesuai konteks:
+
+    #### Default State
+
+    <div
+  style={{
+display: 'inline-block',
+border: '1px solid #E2E8F0',
+borderRadius: '16px',
+overflow: 'hidden',
+backgroundColor: '#FFFFFF',
+marginTop: '16px',
+marginBottom: '16px',
+width: 'fit-content',
+maxWidth: '100%'
+}}
+>
+  <div style={{ border: '1px solid #E2E8F0', borderRadius: '16px', overflow: 'hidden' }}>
+    <div style={{ padding: '0px 24px' }}>
+      <img src="/images/Text-field.png" alt="Default Boundary Preview" style={{ width: '240px', maxWidth: '240px', height: 'auto', display: 'block', borderRadius: '8px' }} />
+    </div>
+  </div>
+
+  <div
+    style={{
+backgroundColor: '#F8FAFC',
+padding: '16px 24px',
+display: 'flex',
+alignItems: 'center',
+gap: '12px',
+fontSize: '16px',
+color: '#0F172A'
+}}
+  >
+    <code style={{
+                                                                      backgroundColor: '#E2E8F0',
+                                                                      color: '#1E293B',
+                                                                      padding: '6px 12px',
+                                                                      borderRadius: '4px',
+                                                                      fontSize: '13px',
+                                                                      fontFamily: 'monospace',
+                                                                      border: 'none'
+                                                                    }}>border.width.sm</code>
+
+    <span style={{ fontWeight: 'bold' }}>+</span>
+
+    <code style={{
+                                                                      backgroundColor: '#E2E8F0',
+                                                                      color: '#1E293B',
+                                                                      padding: '6px 12px',
+                                                                      borderRadius: '4px',
+                                                                      fontSize: '13px',
+                                                                      fontFamily: 'monospace',
+                                                                      border: 'none'
+                                                                    }}>color.border.neutral.default</code>
+  </div>
+</div>
+
+    #### Pressed State
+
+    <div
+  style={{
+display: 'inline-block',
+border: '1px solid #E2E8F0',
+borderRadius: '16px',
+overflow: 'hidden',
+backgroundColor: '#FFFFFF',
+marginTop: '16px',
+marginBottom: '16px',
+width: 'fit-content',
+maxWidth: '100%'
+}}
+>
+  <div style={{ border: '1px solid #E2E8F0', borderRadius: '16px', overflow: 'hidden' }}>
+    <div style={{ padding: '0px 24px' }}>
+      <img src="/images/Text-field-selected.png" alt="Pressed State" style={{ width: '240px', maxWidth: '240px', height: 'auto', display: 'block', borderRadius: '8px' }} />
+    </div>
+  </div>
+
+  <div
+    style={{
+backgroundColor: '#F8FAFC',
+padding: '16px 24px',
+display: 'flex',
+alignItems: 'center',
+gap: '12px',
+fontSize: '16px',
+color: '#0F172A'
+}}
+  >
+    <code style={{
+                                                                      backgroundColor: '#E2E8F0',
+                                                                      color: '#1E293B',
+                                                                      padding: '6px 12px',
+                                                                      borderRadius: '4px',
+                                                                      fontSize: '13px',
+                                                                      fontFamily: 'monospace',
+                                                                      border: 'none'
+                                                                    }}>border.width.md</code>
+
+    <span style={{ fontWeight: 'bold' }}>+</span>
+
+    <code style={{
+                                                                      backgroundColor: '#E2E8F0',
+                                                                      color: '#1E293B',
+                                                                      padding: '6px 12px',
+                                                                      borderRadius: '4px',
+                                                                      fontSize: '13px',
+                                                                      fontFamily: 'monospace',
+                                                                      border: 'none'
+                                                                    }}>color.border.brand.solid</code>
+  </div>
+</div>
+
+    #### Focus State
+
+    <div
+  style={{
+display: 'inline-block',
+border: '1px solid #E2E8F0',
+borderRadius: '16px',
+overflow: 'hidden',
+backgroundColor: '#FFFFFF',
+marginTop: '16px',
+marginBottom: '16px',
+width: 'fit-content',
+maxWidth: '100%'
+}}
+>
+  <div style={{ border: '1px solid #E2E8F0', borderRadius: '16px', overflow: 'hidden' }}>
+    <div style={{ padding: '0px 24px' }}>
+      <img src="/images/Text-field-focus.png" alt="Focused State" style={{ width: '240px', maxWidth: '240px', height: 'auto', display: 'block', borderRadius: '8px' }} />
+    </div>
+  </div>
+
+  <div
+    style={{
+backgroundColor: '#F8FAFC',
+padding: '16px 24px',
+display: 'flex',
+alignItems: 'center',
+gap: '12px',
+fontSize: '16px',
+color: '#0F172A'
+}}
+  >
+    <code style={{
+                                                                      backgroundColor: '#E2E8F0',
+                                                                      color: '#1E293B',
+                                                                      padding: '6px 12px',
+                                                                      borderRadius: '4px',
+                                                                      fontSize: '13px',
+                                                                      fontFamily: 'monospace',
+                                                                      border: 'none'
+                                                                    }}>border.width.md</code>
+
+    <span style={{ fontWeight: 'bold' }}>+</span>
+
+    <code style={{
+                                                                      backgroundColor: '#E2E8F0',
+                                                                      color: '#1E293B',
+                                                                      padding: '6px 12px',
+                                                                      borderRadius: '4px',
+                                                                      fontSize: '13px',
+                                                                      fontFamily: 'monospace',
+                                                                      border: 'none'
+                                                                    }}>color.border.brand.subtle</code>
+  </div>
+</div>
+
+    #### Error State
+
+    <div
+  style={{
+display: 'inline-block',
+border: '1px solid #E2E8F0',
+borderRadius: '16px',
+overflow: 'hidden',
+backgroundColor: '#FFFFFF',
+marginTop: '16px',
+marginBottom: '16px',
+width: 'fit-content',
+maxWidth: '100%'
+}}
+>
+  <div style={{ border: '1px solid #E2E8F0', borderRadius: '16px', overflow: 'hidden' }}>
+    <div style={{ padding: '0px 24px' }}>
+      <img src="/images/Text-field-error.png" alt="Error State" style={{ width: '240px', maxWidth: '240px', height: 'auto', display: 'block', borderRadius: '8px' }} />
+    </div>
+  </div>
+
+  <div
+    style={{
+backgroundColor: '#F8FAFC',
+padding: '16px 24px',
+display: 'flex',
+alignItems: 'center',
+gap: '12px',
+fontSize: '16px',
+color: '#0F172A'
+}}
+  >
+    <code style={{
+                                                                      backgroundColor: '#E2E8F0',
+                                                                      color: '#1E293B',
+                                                                      padding: '6px 12px',
+                                                                      borderRadius: '4px',
+                                                                      fontSize: '13px',
+                                                                      fontFamily: 'monospace',
+                                                                      border: 'none'
+                                                                    }}>border.width.md</code>
+
+    <span style={{ fontWeight: 'bold' }}>+</span>
+
+    <code style={{
+                                                                      backgroundColor: '#E2E8F0',
+                                                                      color: '#1E293B',
+                                                                      padding: '6px 12px',
+                                                                      borderRadius: '4px',
+                                                                      fontSize: '13px',
+                                                                      fontFamily: 'monospace',
+                                                                      border: 'none'
+                                                                    }}>color.border.danger.solid</code>
+  </div>
+</div>
+
+    #### Disable State
+
+    <div
+  style={{
+display: 'inline-block',
+border: '1px solid #E2E8F0',
+borderRadius: '16px',
+overflow: 'hidden',
+backgroundColor: '#FFFFFF',
+marginTop: '16px',
+marginBottom: '16px',
+width: 'fit-content',
+maxWidth: '100%'
+}}
+>
+  <div style={{ border: '1px solid #E2E8F0', borderRadius: '16px', overflow: 'hidden' }}>
+    <div style={{ padding: '0px 24px' }}>
+      <img src="images/Text-field-disable.png" alt="Disable State" style={{ width: '240px', maxWidth: '240px', height: 'auto', display: 'block', borderRadius: '8px' }} />
+    </div>
+  </div>
+
+  <div
+    style={{
+backgroundColor: '#F8FAFC',
+padding: '16px 24px',
+display: 'flex',
+alignItems: 'center',
+gap: '12px',
+fontSize: '16px',
+color: '#0F172A'
+}}
+  >
+    <code style={{
+                                                                      backgroundColor: '#E2E8F0',
+                                                                      color: '#1E293B',
+                                                                      padding: '6px 12px',
+                                                                      borderRadius: '4px',
+                                                                      fontSize: '13px',
+                                                                      fontFamily: 'monospace',
+                                                                      border: 'none'
+                                                                    }}>border.width.sm</code>
+
+    <span style={{ fontWeight: 'bold' }}>+</span>
+
+    <code style={{
+                                                                      backgroundColor: '#E2E8F0',
+                                                                      color: '#1E293B',
+                                                                      padding: '6px 12px',
+                                                                      borderRadius: '4px',
+                                                                      fontSize: '13px',
+                                                                      fontFamily: 'monospace',
+                                                                      border: 'none'
+                                                                    }}>color.border.neutral.disabled</code>
+  </div>
+</div>
+  </Tab>
+  <Tab title="Token">
+    ## Token
+
+    Border width sets the visual stroke thickness to define hierarchy, contrast, and boundaries between elements.
+
+    | Token | Value | Usage |
+    | --- | --- | --- |
+    | `border.width.sm` | 1px | Default Border Width. Digunakan untuk 90% komponen UI (Card, Input Field, Table divider, Badge, Outlined Button). |
+    | `border.width.md` | 2px | Active & Focus States. Digunakan untuk penanda visual yang lebih tegas (Selected Card, Active Tab indicator, Checkbox/Radio border, Focus Ring). |
+  </Tab>
+  <Tab title="Code">
+    ## JSON
+
+    ```json5
+    {
+      "border": {
+        "width": {
+          "sm":   { "$value": "1px", "$type": "borderWidth" },
+          "md":   { "$value": "2px", "$type": "borderWidth" }
+        }
+      }
+    }
+    ```
+  </Tab>
+</Tabs>

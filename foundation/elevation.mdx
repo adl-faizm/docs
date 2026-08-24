@@ -1,15 +1,103 @@
 ---
-title: "Elevation Tokens: Box Shadows and Z-Index Scale Guide"
+title: "Elevation"
 sidebarTitle: "Elevation"
-description: "Use XLSmart elevation tokens to apply consistent box shadows and z-index values that communicate depth, hierarchy, and stacking order across your UI."
+description: "Elevation may be represented through shadows, surface colors, or a combination of both."
+icon: "copy"
 ---
 
-Elevation tokens give you a consistent set of shadow values to communicate depth and hierarchy. Use higher elevation values for elements that appear on top of others — like modals, dropdowns, and tooltips.
+<Icon icon="square-figma" color="#2d2d2d" /> Figma Link: [Elevation](https://www.figma.com/design/XZrj3ZSfMpQIe7Ce4Lnj4t/XLSMART-Design-System?node-id=298-251&t=3zESlc2CdREJqA4L-1)
+
+<Tabs>
+  <Tab title="Overview">
+    A. Overview<br />B. Elevation Levels<br />C. Usage
+  </Tab>
+  <Tab title="Token">
+  </Tab>
+</Tabs>
+
+## A. Overview
+
+<img
+  src="/images/Shadow-Thumbnail-1.png"
+  alt="Shadow Thumbnail"
+  title="Shadow Thumbnail"
+  lightAlt="Shadow Thumbnail"
+  darkAlt="Shadow Thumbnail"
+  className="dark:hidden"
+/>
+<img
+  src="/images/Shadow-Thumbnail.png"
+  alt="Shadow Thumbnail"
+  title="Shadow Thumbnail"
+  lightAlt="Shadow Thumbnail"
+  darkAlt="Shadow Thumbnail"
+  className="hidden dark:block"
+/>
+
+The XLSMART elevation system communicates visual hierarchy and the spatial relationship between surfaces. Elevation helps users identify which elements are on the base surface, raised above content, or temporarily displayed as overlays.
+
+## B. Elevation Levels
+
+| Token | Level | Example |
+| --- | --- | --- |
+| shadow-0 | 0 | <div style={{ display: 'inline-block', width: '48px', height: '48px', backgroundColor: '#FFFFFF', border: '1px solid #E2E8F0', borderRadius: '8px', boxShadow: 'none' }} /><br />`none` |
+| shadow-100 | 1 | <div style={{ display: 'inline-block', width: '48px', height: '48px', backgroundColor: '#FFFFFF', borderRadius: '8px', boxShadow: '0px 1px 4px 0px rgba(12, 37, 86, 0.07)' }} /><br />`0px 1px 4px 0px rgba(12, 37, 86, 0.07)` |
+| shadow-200 | 2 | <div style={{ display: 'inline-block', width: '48px', height: '48px', backgroundColor: '#FFFFFF', borderRadius: '8px', boxShadow: '0px 3px 8px -1px rgba(12, 37, 86, 0.07)' }} /><br />`0px 3px 8px -1px rgba(12, 37, 86, 0.07)` |
+| shadow-300 | 3 | <div style={{ display: 'inline-block', width: '48px', height: '48px', backgroundColor: '#FFFFFF', borderRadius: '8px', boxShadow: '0px 4px 6px -2px rgba(12, 37, 86, 0.20)' }} /><br />`0px 4px 6px -2px rgba(12, 37, 86, 0.20)` |
+| shadow-400 | 4 | <div style={{ display: 'inline-block', width: '48px', height: '48px', backgroundColor: '#FFFFFF', borderRadius: '8px', boxShadow: '0px 8px 16px -4px rgba(12, 37, 86, 0.22)' }} /><br />`0px 8px 16px -4px rgba(12, 37, 86, 0.22)` |
+| shadow-500 | 5 | <div style={{ display: 'inline-block', width: '48px', height: '48px', backgroundColor: '#FFFFFF', borderRadius: '8px', boxShadow: '0px 12px 20px -8px rgba(12, 37, 86, 0.24)' }} /><br />`0px 12px 20px -8px rgba(12, 37, 86, 0.24)` |
+| shadow-600 | 6 | <div style={{ display: 'inline-block', width: '48px', height: '48px', backgroundColor: '#FFFFFF', borderRadius: '8px', boxShadow: '0px 20px 20px -8px rgba(12, 37, 86, 0.18)' }} /><br />`0px 20px 20px -8px rgba(12, 37, 86, 0.18)` |
+
+## C. Usage
+
+### 1. Shadow 0: Base
+
+Used for flat surfaces that sit directly on the page or application background.
+
+<img
+  src="/images/Shadow-0-1.png"
+  alt="Shadow 0"
+  title="Shadow 0"
+  lightAlt="Shadow 0"
+  darkAlt="Shadow 0"
+  className="dark:hidden"
+/>
+<img
+  src="/images/Shadow-0.png"
+  alt="Shadow 0"
+  title="Shadow 0"
+  lightAlt="Shadow 0"
+  darkAlt="Shadow 0"
+  className="hidden dark:block"
+/>
+
+- Page background
+- Default content area
+- Flat card
+- Form section
+- Outlined component
+- Table surface
+
+### 2. Shadow 1: Subtle
+
+Used for surfaces that require subtle separation from the background.
+
+![Shadow 1 Subtle](/images/Shadow-1_-Subtle.png "Shadow 1 Subtle")
+
+- Elevated card
+- Search container
+- Sticky section
+- Clickable tile
+- Low-emphasis floating surface
+
+### 3. **Shadow 2: Raised**
+
+Used for raised or persistent interface elements that sit above the main content.
 
 ## Shadow scale
 
 | Token | Value | Usage |
-|-------|-------|-------|
+| --- | --- | --- |
 | `--shadow-none` | `none` | Flat surfaces, no depth |
 | `--shadow-xs` | `0 1px 2px rgba(0,0,0,0.05)` | Subtle separation (table rows, avatars) |
 | `--shadow-sm` | `0 1px 3px rgba(0,0,0,0.10), 0 1px 2px rgba(0,0,0,0.06)` | Cards, contained components |
@@ -23,7 +111,7 @@ Elevation tokens give you a consistent set of shadow values to communicate depth
 Elevation is also communicated through z-index. Use the provided z-index tokens to avoid stacking conflicts:
 
 | Token | Value | Usage |
-|-------|-------|-------|
+| --- | --- | --- |
 | `--z-base` | 0 | Normal document flow |
 | `--z-raised` | 10 | Sticky headers, inline overlays |
 | `--z-dropdown` | 100 | Dropdowns, select menus |
@@ -51,4 +139,6 @@ Elevation is also communicated through z-index. Use the provided z-index tokens 
 }
 ```
 
-<Tip>Never use arbitrary z-index values like `z-index: 9999`. Always use a token from the z-index scale to avoid stacking conflicts across components.</Tip>
+<Tip>
+  Never use arbitrary z-index values like `z-index: 9999`. Always use a token from the z-index scale to avoid stacking conflicts across components.
+</Tip>

@@ -24,7 +24,7 @@ Every page layout is built on 3 core elements:
 
 ### Mobile
 
-- Full-width content: 4 columns - Two side-by-side items: 2 \+ 2 columns - Avoid 3 \+ 1 column layouts for main content as they tend to be too narrow
+- Full-width content: 4 columns - Two side-by-side items: 2 + 2 columns - Avoid 3 + 1 column layouts for main content as they tend to be too narrow
 
 <div
   style={{
@@ -77,7 +77,7 @@ color: '#0F172A'
 
 ### Tablet
 
-- Full-width content: 8 columns - Main content \+ sidebar: 5 \+ 3 or 6 \+ 2 columns - Two side-by-side areas: 4 \+ 4 columns
+- Full-width content: 8 columns - Main content + sidebar: 5 + 3 or 6 + 2 columns - Two side-by-side areas: 4 + 4 columns
 
 <div
   style={{
@@ -130,7 +130,7 @@ color: '#0F172A'
 
 ### Desktop
 
-- Full-width content: 12 columns - Main content \+ sidebar: 8 \+ 4 columns - Two side-by-side areas: 6 \+ 6 columns - Three side-by-side areas: 4 \+ 4 \+ 4 columns
+- Full-width content: 12 columns - Main content + sidebar: 8 + 4 columns - Two side-by-side areas: 6 + 6 columns - Three side-by-side areas: 4 + 4 + 4 columns
 
 <div
   style={{
@@ -190,14 +190,17 @@ Breakpoints represent points where the layout needs to adapt, not specific devic
 | Mobile | 320px – 767px | 4 | 16px | 16px | 100% |
 | Tablet | 768px – 1023px | 8 | 24px | 24px | 100% |
 | Desktop | 1024px – 1439px | 12 | 24px | 64px | 1024px |
-| Large Desktop | 1440px\+ | 12 | 24px | Auto | 1200px |
+| Large Desktop | 1440px+ | 12 | 24px | Auto | 1200px |
 
 ## D. Layout Behaviour Models
 
 ### 1. Centered Layout (Default for Web Portal & Marketing)
 
-- **Concept**: Used for public websites, onboarding pages, e-commerce, and article-based content. - **Rule**: Main content width is capped at **Max-Width: 1200px**. When the screen expands beyond 1440px, the content stays symmetrically centered. - **UX Value**: Prevents text lines and cards from stretching too wide on ultra-wide monitors, reducing eye strain.
+- **Concept**: Used for public websites, onboarding pages, e-commerce, and article-based content.
+- **Rule**: Main content width is capped at **Max-Width: 1200px**. When the screen expands beyond 1440px, the content stays symmetrically centered.
+- **UX Value**: Prevents text lines and cards from stretching too wide on ultra-wide monitors, reducing eye strain.
 
 ### 2. Full-Bleed / Fluid Layout (For Dashboards & Complex SaaS Apps)
 
-- **Concept**: Reserved for internal tools, analytics dashboards, and data-dense applications (e.g., data tables). - **Rule**: Content expands to fill 100% of the screen width while locking the **Outer Margin** at **32px** or **48px**. Grid columns stretch dynamically to adapt to the user's monitor resolution.
+- **Concept**: Reserved for internal tools, analytics dashboards, and data-dense applications (e.g., data tables).
+- **Rule**: Content expands to fill 100% of the screen width while locking the **Outer Margin** at **32px** or **48px**. Grid columns stretch dynamically to adapt to the user's monitor resolution.
